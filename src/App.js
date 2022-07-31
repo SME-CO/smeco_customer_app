@@ -36,19 +36,23 @@ import AboutUs from './components/AboutUs';
 import FAQ from './components/FAQ';
 // import Navigation from './components/Navigation';
 import Navbar from "./components/Navbar";
+import Login from './components/Login';
+import SignUp from './components/SignUp';
  
 class App extends Component {
   render() {
     return (      
        <BrowserRouter>
         <div>
-          <Navbar /><br />
+          <Navbar />
             <Routes>
              <Route path="/" element={<Land />} exact/>
              <Route path="/shops" element={<Shops />}/>
              <Route path="/products" element={<Products />}/>
              <Route path="/aboutus" element={<AboutUs />}/>
              <Route path="/faq" element={<FAQ />}/>
+             <Route path="/login" element={<Login />}/>
+             <Route path="/SignUp" element={<SignUp />}/>
            </Routes>
         </div> 
       </BrowserRouter>

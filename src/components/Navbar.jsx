@@ -7,7 +7,7 @@ const Navbar = () => {
   const [nav, setNav] = useState (false)
   const handleClick = () => setNav(!nav)
   return (
-    <div className='w-screen h-[80px] z-10 bg bg-[#ffff] md:drop-shadow-xl fixed drop-shadlow-lg'>
+    <div className='w-screen h-[70px] z-10 bg bg-[#ffff] md:drop-shadow-xl fixed drop-shadlow-lg'>
       <div className='px-2 flex justify-between items-center w-full h-full'>
         <div className='flex items-center'>
           <img className='object-contain h-20' src={logoImg} alt="logo" />
@@ -21,8 +21,8 @@ const Navbar = () => {
         </div>
     
         <div className='hidden md:flex pr-4'>
-          <button className='border-none bg-transparent text-black mr-5 hover:bg-transparent hover:text-[#FF8C32]'>Login</button>
-          <button className='border-none px-4 py-1'>Sign Up</button>
+          <button className='border-none bg-transparent text-black mr-5 hover:bg-transparent hover:text-[#FF8C32]'><Link to="/login">Login</Link></button>
+          <button className='border-none px-4 py-1'><Link to="/SignUp">Sign Up</Link></button>
         </div>
 
         <div className='md:hidden' onClick={handleClick}>
