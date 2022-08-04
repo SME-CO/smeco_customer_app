@@ -14,14 +14,15 @@ import React from 'react'
 import { Disclosure } from '@headlessui/react'
 import { ChevronUpIcon } from '@heroicons/react/solid'
 
+
 export default function FAQ() {
   return (
-    <div className="w-full px-4 pt-16">
-      <div className="mx-auto w-full max-w-md rounded-2xl bg-white p-2">
+    <div className="w-full px-4 pt-16"><br /><br />
+      <div className="mx-auto w-full max-w-[1000px] rounded-2xl bg-white p-2">
         <Disclosure>
           {({ open }) => (
             <>
-              <Disclosure.Button className="flex w-full justify-between rounded-lg bg-purple-100 px-4 py-2 text-left text-sm font-medium text-purple-900 hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+              <Disclosure.Button className="flex w-full justify-between rounded-lg bg-[#90E0EF] px-4 py-2 text-left text-sm font-medium text-black hover:bg-[#00B4D8] focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                 <span>What is your refund policy?</span>
                 <ChevronUpIcon
                   className={`${
