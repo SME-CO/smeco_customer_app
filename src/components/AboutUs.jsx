@@ -20,7 +20,7 @@ const AboutUs = () => {
                   your daily expenses and accruals by claiming these offers.</p><br />
                   
                <p className='text-5xl text-[#FF8C32] font-bold'>Join Your hands with us<br />
-                  & enjoy your day!<br /></p>
+                  & enjoy your day!!!<br /></p>
             </div>
             <div>
                <img className='w-[550px] mx-auto my-4' src={aboutusImg} alt="/" />
