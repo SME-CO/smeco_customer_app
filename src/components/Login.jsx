@@ -69,7 +69,7 @@ export default function Login() {
           >
             <img className='object-contain h-20' src={logoImg} alt="logo" />
             <Typography component="h1" variant="h5">
-              Sign in
+            Login to SMECO
             </Typography>
             <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
               <TextField
