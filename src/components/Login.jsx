@@ -1,223 +1,130 @@
-import React from 'react'
 
-const login = () => {
+
+import * as React from 'react';
+import Button from '@mui/material/Button';
+import CssBaseline from '@mui/material/CssBaseline';
+import TextField from '@mui/material/TextField';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import Checkbox from '@mui/material/Checkbox';
+import Link from '@mui/material/Link';
+import Paper from '@mui/material/Paper';
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import logoImg from '../assets/logo.png'
+
+function Copyright(props) {
   return (
-    <div>login</div>
-  )
+    <Typography variant="body2" color="text.secondary" align="center" {...props}>
+      {'Copyright © '}
+      <Link color="inherit" href="https://mui.com/">
+        Your Website
+      </Link>{' '}
+      {new Date().getFullYear()}
+      {'.'}
+    </Typography>
+  );
 }
 
-export default login
+const theme = createTheme();
+
+export default function Login() {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const data = new FormData(event.currentTarget);
+    console.log({
+      email: data.get('email'),
+      password: data.get('password'),
+    });
+  };
+
+  return (
+    <ThemeProvider theme={theme}>
+      <Grid container component="main" sx={{ height: '100vh' }}>
+        <CssBaseline />
+        <Grid
+          item
+          xs={false}
+          sm={4}
+          md={7}
+          sx={{
+            backgroundImage: 'url(https://source.unsplash.com/random)',
+            backgroundRepeat: 'no-repeat',
+            backgroundColor: (t) =>
+              t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        />
+        <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+          <Box
+            sx={{
+              my: 8,
+              mx: 4,
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+            }}
+          >
+            <img className='object-contain h-20' src={logoImg} alt="logo" />
+            <Typography component="h1" variant="h5">
+              Sign in
+            </Typography>
+            <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
+              <TextField
+                margin="normal"
+                required
+                fullWidth
+                id="email"
+                label="Email Address/Phone Number"
+                name="email"
+                autoComplete="email"
+                autoFocus
+              />
+              <TextField
+                margin="normal"
+                required
+                fullWidth
+                name="password"
+                label="Password"
+                type="password"
+                id="password"
+                autoComplete="current-password"
+              />
+              <FormControlLabel
+                control={<Checkbox value="remember" color="primary" />}
+                label="Remember me"
+              />
+              <Button
+                type="submit"
+                fullWidth
+                variant="contained"
+                sx={{ mt: 3, mb: 2 }}
+              >
+                Login
+              </Button>
+              <Grid container>
+                <Grid item xs>
+                  <Link href="#" variant="body2">
+                    Forgot password?
+                  </Link>
+                </Grid>
+                <Grid item>
+                  <Link href="#" variant="body2">
+                    {"Don't have an account? Sign Up"}
+                  </Link>
+                </Grid>
+              </Grid>
+            </Box>
+          </Box>
+        </Grid>
+      </Grid>
+    </ThemeProvider>
+  );
+}
 
 
-// import { useRouter } from "next/router";
-// import React, { useState } from "react";
-// import { useForm } from "react-hook-form";
-// import { yupResolver } from "@hookform/resolvers/yup";
-// import * as yup from "yup";
 
-// import UserService from "../services/UserService";
 
-// function Login() {
-//    const router = useRouter();
-
-//    const [user, setUser] = useState({
-//       id: "",
-//       username: "",
-//       email: "",
-//       password: "",
-//    });
-
-//    const handleChange = (e) => {
-//       const value = e.target.value;
-//       setUser({ ...user, [e.target.name]: value });
-//    };
-
-//    const validationSchema = yup.object().shape({
-//       username: yup.string().required("Username is required"),
-//       email: yup
-//          .string()
-//          .required("Email is required")
-//          .email("Email is invalid"),
-//       password: yup
-//          .string()
-//          .required("Password is required")
-//          .matches(
-//             /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/,
-//             "Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and One Special Case Character"
-//          ),
-//       confirmPassword: yup
-//          .string()
-//          .oneOf([yup.ref("password"), null], "Passwords must match")
-//          .required("Confirm password is required"),
-//    });
-
-//    const formOptions = { resolver: yupResolver(validationSchema) };
-
-//    const { register, handleSubmit, reset, formState } = useForm(formOptions);
-//    const { errors } = formState;
-
-//    const onSubmit = (e) => {
-//       const userData = { ...user, role: "nomad" };
-//       console.log(userData);
-//       // UserService.addUser(userData).then((res) => {
-//       //   console.log(res);
-//       //   router.push("/login");
-//       // })
-//       // .catch((err) => {
-//       //   console.log(err);
-//       // });
-//    };
-
-//    return (
-//       <div>
-//          <form
-//             className="w-5/6 sm:w-2/3 mx-auto text-center"
-//             onSubmit={handleSubmit(onSubmit)}
-//          >
-//             <div className="">
-//                <h2 className="text-3xl font-bold text-[#055E70] lg:text-left text-center">
-//                   Sign up
-//                </h2>
-//                <p className="sm:hidden place-content-center mt-10 font-normal text-sm">
-//                   if you already have an account
-//                </p>
-//                <p className="sm:hidden font-normal text-sm">
-//                   you can{" "}
-//                   <a
-//                      onClick={() => router.push("/signin")}
-//                      className="text-[#4D47C3] link font-semibold"
-//                   >
-//                      Sign in here!
-//                   </a>
-//                </p>
-//             </div>
-//             <div className="mt-8">
-//                <div className="my-6">
-//                   <div className="">
-//                      <div className="">
-//                         <input
-//                            type="text"
-//                            name="email"
-//                            {...register("email")}
-//                            value={user.email}
-//                            onChange={(e) => handleChange(e)}
-//                            className="w-full bg-[#059AB7] bg-opacity-10 px-4 py-3 outline-none transition-colors duration-150 ease-in-out rounded-lg border-none"
-//                            placeholder="Enter your email"
-//                         />
-//                         {/* invalid message */}
-//                         <div>
-//                            <p className="text-red-500 text-xs italic text-left">
-//                               {errors.email?.message}
-//                            </p>
-//                         </div>
-//                      </div>
-//                   </div>
-//                </div>
-
-//                <div className="my-6">
-//                   <div className="">
-//                      <div className="">
-//                         <input
-//                            type="text"
-//                            name="username"
-//                            {...register("username")}
-//                            value={user.username}
-//                            onChange={(e) => handleChange(e)}
-//                            className="w-full bg-[#059AB7] bg-opacity-10 px-4 py-3 outline-none transition-colors duration-150 ease-in-out rounded-lg border-none"
-//                            placeholder="Create a username"
-//                         />
-
-//                         {/* invalid message */}
-//                         <div>
-//                            <p className="text-red-500 text-xs italic text-left">
-//                               {errors.username?.message}
-//                            </p>
-//                         </div>
-//                      </div>
-//                   </div>
-//                </div>
-
-//                <div className="my-6">
-//                   <div className="">
-//                      <div className="">
-//                         <input
-//                            type="password"
-//                            name="password"
-//                            {...register("password")}
-//                            onChange={(e) => handleChange(e)}
-//                            value={user.password}
-//                            className="w-full bg-[#059AB7] bg-opacity-10 px-4 py-3 outline-none transition-colors duration-150 ease-in-out rounded-lg border-none"
-//                            placeholder="Enter password"
-//                         />
-//                         {/* invalid message */}
-//                         <div>
-//                            <p className="text-red-500 text-xs italic text-left">
-//                               {errors.password?.message}
-//                            </p>
-//                         </div>
-//                      </div>
-//                   </div>
-//                </div>
-
-//                <div className="my-6">
-//                   <div className="">
-//                      <div className="">
-//                         <input
-//                            type="password"
-//                            name="confirmPassword"
-//                            {...register("confirmPassword")}
-//                            className="w-full bg-[#059AB7] bg-opacity-10 px-4 py-3 outline-none transition-colors duration-150 ease-in-out rounded-lg border-none"
-//                            placeholder="Confirm password"
-//                         />
-//                         {/* invalid message */}
-//                         <div>
-//                            <p className="text-red-500 text-xs italic text-left">
-//                               {errors.confirmPassword?.message}
-//                            </p>
-//                         </div>
-//                      </div>
-//                   </div>
-//                </div>
-//                <div className="my-2">
-//                   <p className="text-left">
-//                      <button
-//                         type="button"
-//                         onClick={() => reset()}
-//                         className="text-[#059AB7] text-sm italic link px-1"
-//                      >
-//                         Reset
-//                      </button>
-//                   </p>
-//                </div>
-
-//                <div className="my-6">
-//                   <button className="inline-block button w-full" type="submit">
-//                      Sign up
-//                   </button>
-//                </div>
-//                <div className="mt-4">
-//                   <p className="text-gray-800 text-center">Or continue with</p>
-//                   <div className="mt-2 flex text-2xl justify-center gap-2">
-//                      <a onClick={() => router.push("/")}>
-//                         <img
-//                            src="icons8-facebook-50.png"
-//                            alt="facebook"
-//                            className="w-8 h-8 cursor-pointer"
-//                         />
-//                      </a>
-//                      <a onClick={() => router.push("/")}>
-//                         <img
-//                            src="icons8-google-50.png"
-//                            alt="google"
-//                            className="w-8 h-8 cursor-pointer"
-//                         />
-//                      </a>
-//                   </div>
-//                </div>
-//             </div>
-//          </form>
-//       </div>
-//    );
-// }
-
-// export default Login;
+ 

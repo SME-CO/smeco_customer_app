@@ -69,12 +69,9 @@ export default function SignUp() {
               alignItems: 'center',
             }}
           >
-            {/* <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-              <LockOutlinedIcon />
-            </Avatar> */}
             <img className='object-contain h-20' src={logoImg} alt="logo" />
             <Typography component="h1" variant="h5">
-              Sign in
+             Create Account
             </Typography>
             <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
             <TextField
@@ -117,10 +114,6 @@ export default function SignUp() {
                 id="password"
                 autoComplete="current-password"
               />
-              <FormControlLabel
-                control={<Checkbox value="remember" color="primary" />}
-                label="Remember me"
-              />
               <Button
                 type="submit"
                 fullWidth
@@ -129,19 +122,7 @@ export default function SignUp() {
               >
                 Sign Up
               </Button>
-              <Grid container>
-                <Grid item xs>
-                  <Link href="#" variant="body2">
-                    Forgot password?
-                  </Link>
-                </Grid>
-                <Grid item>
-                  <Link href="#" variant="body2">
-                    {"Don't have an account? Sign Up"}
-                  </Link>
-                </Grid>
-              </Grid>
-              {/* <Copyright sx={{ mt: 5 }} /> */}
+              
             </Box>
           </Box>
         </Grid>
