@@ -1,16 +1,12 @@
 import React from 'react'
-import logoImg from '../assets/logo.png'
-import{AiTwotoneShop,
-  AiOutlinePercentage,
-  AiFillGift,
-  AiTwotoneGift} from 'react-icons/ai'
+import starImg from '../assets/5star2.jpg'
 
 const 
 p = () => {
   return (
     <div>
       <br /><br /><br /><br />
-     <div className='max-w-[1200px] mx-auto grid md:grid-cols-4 gap-8'>
+     <div className='max-w-[1000px] mx-auto grid md:grid-cols-4 gap-8'>
 
         <div className='w-full shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200'>
           <h2 className='text-2xl font-bold text-center py-8'>Shops</h2>
