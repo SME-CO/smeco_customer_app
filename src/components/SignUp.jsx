@@ -43,7 +43,7 @@ export default function SignUp() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Grid container component="main" sx={{ height: '100vh' }}>
+      <Grid container component="main" sx={{ height: '70vh' }}>
         <CssBaseline />
         <Grid
           item
@@ -51,7 +51,8 @@ export default function SignUp() {
           sm={4}
           md={7}
           sx={{
-            backgroundImage: 'url(https://source.unsplash.com/random)',
+            // backgroundImage: 'url(https://img.freepik.com/free-vector/friends-celebrating-birthday-packing-gifts_74855-4793.jpg?w=826&t=st=1659652092~exp=1659652692~hmac=51f6cf54165aa3959fa38dfd0fcaf3f4243f5a700713014ceadc46d1bf2803ad)',
+            backgroundImage: 'url(https://img.freepik.com/free-vector/team-happy-employees-winning-award-celebrating-success-business-people-enjoying-victory-getting-gold-cup-trophy-vector-illustration-reward-prize-champions-s_74855-8601.jpg?w=740&t=st=1659653049~exp=1659653649~hmac=ec759371b0d5dc5e45418a5763d8cd05cc12b372a1d756d3ae93c18bdb901f22)',
             backgroundRepeat: 'no-repeat',
             backgroundColor: (t) =>
               t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
@@ -69,12 +70,9 @@ export default function SignUp() {
               alignItems: 'center',
             }}
           >
-            {/* <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-              <LockOutlinedIcon />
-            </Avatar> */}
             <img className='object-contain h-20' src={logoImg} alt="logo" />
             <Typography component="h1" variant="h5">
-              Sign in
+             Create Account
             </Typography>
             <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
             <TextField
@@ -117,10 +115,6 @@ export default function SignUp() {
                 id="password"
                 autoComplete="current-password"
               />
-              <FormControlLabel
-                control={<Checkbox value="remember" color="primary" />}
-                label="Remember me"
-              />
               <Button
                 type="submit"
                 fullWidth
@@ -129,19 +123,7 @@ export default function SignUp() {
               >
                 Sign Up
               </Button>
-              <Grid container>
-                <Grid item xs>
-                  <Link href="#" variant="body2">
-                    Forgot password?
-                  </Link>
-                </Grid>
-                <Grid item>
-                  <Link href="#" variant="body2">
-                    {"Don't have an account? Sign Up"}
-                  </Link>
-                </Grid>
-              </Grid>
-              {/* <Copyright sx={{ mt: 5 }} /> */}
+              
             </Box>
           </Box>
         </Grid>
