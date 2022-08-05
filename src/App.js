@@ -25,22 +25,26 @@ import FAQ from "./components/FAQ";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
+import Login from "./components/Login";
+import SignUp from "./components/SignUp";
+
 class App extends Component {
   render() {
     return (
       <BrowserRouter>
         <div>
           <Navbar />
-          <br />
           <Routes>
             <Route path="/" element={<Land />} exact />
             <Route path="/shops" element={<Shops />} />
             <Route path="/products" element={<Products />} />
             <Route path="/aboutus" element={<AboutUs />} />
             <Route path="/faq" element={<FAQ />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/SignUp" element={<SignUp />} />
+            <Footer />
           </Routes>
         </div>
-        <Footer />
       </BrowserRouter>
     );
   }
