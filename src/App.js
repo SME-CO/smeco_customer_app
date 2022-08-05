@@ -42,9 +42,9 @@ class App extends Component {
             <Route path="/faq" element={<FAQ />} />
             <Route path="/login" element={<Login />} />
             <Route path="/SignUp" element={<SignUp />} />
-            <Footer />
           </Routes>
         </div>
+        <Footer />
       </BrowserRouter>
     );
   }
