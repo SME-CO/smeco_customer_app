@@ -3,11 +3,11 @@ import starImg from '../assets/5star2.jpg'
 
 const Shops = () => {
   return (
-    <div>
-      <br /><br /><br /><br />
+    <div className='pt-24'>
+     
       <p className='text-3xl text-center font-bold'>Our Registered Shops</p>
 
-      <div className='max-w-[1240px] mx-auto grid md:grid-cols-4 gap-8'>
+      <div className='max-w-[1240px] mx-auto grid md:grid-cols-4 gap-8 pt-4'>
 
         <div>
           <img className='w-full shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={starImg} alt="/" />
