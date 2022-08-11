@@ -67,11 +67,11 @@ const Land = () => {
 
         <div className='w-full shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-100'>
           <img className='w-20 mx-auto mt-[-3rem]' src={logoImg} alt="" />
-          <h2 className='text-2xl font-bold text-center py-8'>Discounts & Offers</h2>
+          <h2 className='text-2xl font-bold text-center py-8'>Rewards</h2>
           <AiTwotoneGift className='mx-auto  fill-[#03045E]' size='3rem'/>
           <div className='text-center font-medium'>
-            <p className='py-2 border-b mx-8 mt-8'>Awesome offers</p>
-            <p className='py-2 border-b mx-8'>At your door step</p>
+            <p className='py-2 border-b mx-8 mt-8'>Attractive Rewards</p>
+            <p className='py-2 border-b mx-8'>In one click</p>
           </div>
           <button className='border-none my-6 mx-auto px-3 py-2'>More for you</button>
         </div>
