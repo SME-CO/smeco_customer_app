@@ -1,23 +1,18 @@
-// import React from 'react'
-
-// function FAQ() {
-//   return (
-//     <div>FAQ</div>
-//   )
-// }
-
-// export default FAQ
-
-
-
 import React from 'react'
+import Navbar from "./Navbar";
 import { Disclosure } from '@headlessui/react'
 import { ChevronUpIcon } from '@heroicons/react/solid'
+import fagImg from '../assets/faq.png'
+import Footer from "./Footer";
+
 
 
 export default function FAQ() {
   return (
-    <div className="w-full px-4 pt-16"><br /><br />
+    <div>   
+      <Navbar />
+    <div className="w-full px-4 pt-24">
+      <img src={fagImg} alt="" />
       <div className="mx-auto w-full max-w-[1000px] rounded-2xl bg-white p-2">
         <Disclosure>
           {({ open }) => (
@@ -61,7 +56,26 @@ export default function FAQ() {
           {({ open }) => (
             <>
               <Disclosure.Button className="flex w-full justify-between rounded-lg bg-[#90E0EF] px-4 py-2 text-left text-sm font-medium text-black hover:bg-[#00B4D8] focus:outline-none ">
-                <span>Do you offer technical support?</span>
+                <span>WHAT KIND OF CUSTOMER DATA DO YOU WANT TO COLLECT??</span>
+                <ChevronUpIcon
+                  className={`${
+                    open ? 'rotate-180 transform' : ''
+                  } h-5 w-5 text-[#03045E]`}
+                />
+              </Disclosure.Button>
+              <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-black">
+               We are collecting the purchase data related to registered customers and based on 
+               that we recommend them offers and discounted products.
+              </Disclosure.Panel>
+            </>
+          )}
+        </Disclosure>
+
+        <Disclosure as="div" className="mt-2">
+          {({ open }) => (
+            <>
+              <Disclosure.Button className="flex w-full justify-between rounded-lg bg-[#90E0EF] px-4 py-2 text-left text-sm font-medium text-black hover:bg-[#00B4D8] focus:outline-none ">
+                <span>DO YOU OFFER TECHNICAL SUPPORT?</span>
                 <ChevronUpIcon
                   className={`${
                     open ? 'rotate-180 transform' : ''
@@ -79,7 +93,7 @@ export default function FAQ() {
           {({ open }) => (
             <>
               <Disclosure.Button className="flex w-full justify-between rounded-lg bg-[#90E0EF] px-4 py-2 text-left text-sm font-medium text-black hover:bg-[#00B4D8] focus:outline-none ">
-                <span>Do you offer technical support?</span>
+                <span>DO YOU PROVIDE DELIVERYY SERVICES?</span>
                 <ChevronUpIcon
                   className={`${
                     open ? 'rotate-180 transform' : ''
@@ -87,7 +101,8 @@ export default function FAQ() {
                 />
               </Disclosure.Button>
               <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-black">
-                No.
+                No. Still we didn't think of providing delivery services. Since our main goal
+                is to provide the offers and discounts for the products.
               </Disclosure.Panel>
             </>
           )}
@@ -97,7 +112,7 @@ export default function FAQ() {
           {({ open }) => (
             <>
               <Disclosure.Button className="flex w-full justify-between rounded-lg bg-[#90E0EF] px-4 py-2 text-left text-sm font-medium text-black hover:bg-[#00B4D8] focus:outline-none ">
-                <span>Do you offer technical support?</span>
+                <span>HOW CAN I JOIN THIS PLATFORM?</span>
                 <ChevronUpIcon
                   className={`${
                     open ? 'rotate-180 transform' : ''
@@ -105,25 +120,8 @@ export default function FAQ() {
                 />
               </Disclosure.Button>
               <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-black">
-                No.
-              </Disclosure.Panel>
-            </>
-          )}
-        </Disclosure>
-
-        <Disclosure as="div" className="mt-2">
-          {({ open }) => (
-            <>
-              <Disclosure.Button className="flex w-full justify-between rounded-lg bg-[#90E0EF] px-4 py-2 text-left text-sm font-medium text-black hover:bg-[#00B4D8] focus:outline-none ">
-                <span>Do you offer technical support?</span>
-                <ChevronUpIcon
-                  className={`${
-                    open ? 'rotate-180 transform' : ''
-                  } h-5 w-5 text-[#03045E]`}
-                />
-              </Disclosure.Button>
-              <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-black">
-                No.
+               All you need to do is register as the customer by using 
+               phone number, user name and password.
               </Disclosure.Panel>
             </>
           )}
@@ -165,6 +163,8 @@ export default function FAQ() {
           )}
         </Disclosure>
       </div>
+    </div>
+    <Footer />
     </div>
   )
 }

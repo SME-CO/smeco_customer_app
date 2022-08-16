@@ -1,11 +1,14 @@
 import React from 'react';
+import Navbar from "./Navbar";
 import starImg from '../assets/5star2.jpg'
+import Footer from "./Footer";
 
 
 
 const Products = () => {
     return (
-
+        <div>
+              <Navbar />
         <div className='pt-24'>
           
             <p className='text-3xl text-center font-bold'>Products you might interested</p>
@@ -92,6 +95,8 @@ const Products = () => {
                 } OTPInput(); }); */}
 
             {/* -------------------------END OTP----------------------------------------- */}
+        </div>
+        <Footer />
         </div>
 
 

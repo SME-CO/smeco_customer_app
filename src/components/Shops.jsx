@@ -1,10 +1,15 @@
 import React from 'react'
+import Navbar from "./Navbar";
 import starImg from '../assets/5star2.jpg'
+import Footer from "./Footer";
+
 
 const Shops = () => {
   return (
+    <div>
+       <Navbar />
     <div className='pt-24'>
-     
+
       <p className='text-3xl text-center font-bold'>Our Registered Shops</p>
 
       <div className='max-w-[1240px] mx-auto grid md:grid-cols-4 gap-8 pt-4'>
@@ -61,6 +66,9 @@ const Shops = () => {
 
 
 
+    </div>
+    <Footer />
+    
     </div>
   )
 }
