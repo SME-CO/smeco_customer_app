@@ -13,6 +13,7 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import logoImg from '../assets/logo.png'
+// import ApiIndex from '../api/index'
 
 function Copyright(props) {
   return (
@@ -31,6 +32,7 @@ const theme = createTheme();
 
 export default function Login() {
   const handleSubmit = (event) => {
+    // ApiIndex.CustomerApi.login()
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     console.log({
