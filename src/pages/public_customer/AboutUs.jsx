@@ -1,9 +1,13 @@
 import React from 'react';
-import aboutusImg from '../assets/aboutus1.jpg'
+import Navbar from "../../components/Navbar";
+import aboutusImg from '../../assets/aboutus1.jpg'
+import Footer from "../../components/Footer";
 const AboutUs = () => {
    return (
       
-      <div className='w-full'> <br />
+      <div>
+         <Navbar />
+      <div className='w-full pt-8'>
          <div className='max-w-[1240px] mx-auto grid md:grid-cols-2 py-16 px-4'>
             <div className='flex flex-col justify-center'>
                <p className='text-5xl font-bold'>MAKE A CUSTOMER<br />NOT A SALE </p><br />
@@ -26,6 +30,8 @@ const AboutUs = () => {
                <img className='w-[550px] mx-auto my-4' src={aboutusImg} alt="/" />
             </div>
          </div>
+         <Footer />
+      </div>
       </div>
    )
 }

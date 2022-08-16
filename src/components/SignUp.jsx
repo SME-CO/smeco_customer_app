@@ -38,6 +38,7 @@ export default function SignUp() {
       phonenumber: data.get('phonenumber'),
       email: data.get('email'),
       password: data.get('password'),
+      cpassword: data.get('cpassword'),
     });
   };
 
@@ -113,6 +114,16 @@ export default function SignUp() {
                 label="Password"
                 type="password"
                 id="password"
+                autoComplete="current-password"
+              />
+               <TextField
+                margin="normal"
+                required
+                fullWidth
+                name="cpassword"
+                label="Confirm password"
+                type="cpassword"
+                id="cpassword"
                 autoComplete="current-password"
               />
               <Button
