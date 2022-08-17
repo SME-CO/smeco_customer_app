@@ -1,9 +1,9 @@
 import React from 'react'
-import Navbar from "./Navbar";
+import Navbar from "../../components/Navbar";
 import { Disclosure } from '@headlessui/react'
 import { ChevronUpIcon } from '@heroicons/react/solid'
-import fagImg from '../assets/faq.png'
-import Footer from "./Footer";
+import fagImg from '../../assets/faq.png' 
+import Footer from "../../components/Footer";
 
 
 

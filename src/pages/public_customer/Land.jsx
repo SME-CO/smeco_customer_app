@@ -1,20 +1,20 @@
 
 import React from 'react'
-import Navbar from "./Navbar";
-import saleImg from '../assets/sale.png'
-import heroImg from '../assets/hero.png'
-import loyalImg2 from '../assets/loyalty2.png'
-import dollarImg from '../assets/dollar.jpg'
-import starImg from '../assets/5star2.jpg'
-import strImg from '../assets/5star3.jpg'
-import logoImg from '../assets/logo.png'
+import Navbar from "../../components/Navbar";
+import saleImg from '../../assets/sale.png'
+import heroImg from '../../assets/hero.png'
+import loyalImg2 from '../../assets/loyalty2.png'
+import dollarImg from '../../assets/dollar.jpg'
+import starImg from '../../assets/5star2.jpg'
+import strImg from '../../assets/5star3.jpg'
+import logoImg from '../../assets/logo.png'
 import {
   AiTwotoneShop,
   AiOutlinePercentage,
   AiFillGift,
   AiTwotoneGift
 } from 'react-icons/ai'
-import Footer from "./Footer";
+import Footer from "../../components/Footer";
 
 const Land = () => {
   return (
