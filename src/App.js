@@ -6,8 +6,8 @@ import Shops from "./pages/public_customer/Shops";
 import Products from "./pages/public_customer/Products";
 import AboutUs from "./pages/public_customer/AboutUs";
 import FAQ from "./pages/public_customer/FAQ";
-import Login from "./components/Login";
-import SignUp from "./components/SignUp";
+import Login from "./pages/public_customer/Login";
+import SignUp from "./pages/public_customer/SignUp";
 
 class App extends Component {
   render() {
