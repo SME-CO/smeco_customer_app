@@ -99,8 +99,6 @@ const Products = () => {
         <Footer />
         </div>
 
-
-
     );
 }
 

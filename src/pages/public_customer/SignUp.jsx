@@ -1,6 +1,7 @@
 
 
 import * as React from 'react';
+import Navbar from "../../components/Navbar";
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
@@ -46,6 +47,7 @@ function Copyright(props) {
 
       return (
       <ThemeProvider theme={theme}>
+          <Navbar />
         <Grid container component="main" sx={{ height: '70vh' }}>
           <CssBaseline />
           <Grid
@@ -127,7 +129,7 @@ function Copyright(props) {
                   id="cpassword"
                   autoComplete="current-password"
                 />
-                <Button
+                <Button onclick="myFunction()"
                   type="submit"
                   fullWidth
                   variant="contained"
@@ -142,5 +144,9 @@ function Copyright(props) {
         </Grid>
       </ThemeProvider>
   );
+
+  // function myFunction(){
+  //   <Alert severity="error">This is an error</Alert>
+  // }
  
 }

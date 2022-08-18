@@ -17,8 +17,7 @@ import logoImg from '../../assets/logo.png'
 // import ApiIndex from '../api/index'
 
 function Copyright(props) {
-  return (
-    
+  return (   
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
       {'Copyright © '}
       <Link color="inherit" href="https://mui.com/">
@@ -30,13 +29,12 @@ function Copyright(props) {
   );
 }
 
+
 const theme = createTheme();
 
 
 
 export default function Login() {
- 
-
   const handleSubmit = (event) => {
     // ApiIndex.CustomerApi.login()
     event.preventDefault();
@@ -49,6 +47,7 @@ export default function Login() {
 
   return (
     <ThemeProvider theme={theme}>
+      <Navbar />
       <Grid container component="main" sx={{ height: '100vh' }}>
         <CssBaseline />
         <Grid
