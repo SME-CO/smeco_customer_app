@@ -1,7 +1,7 @@
 import React from 'react';
-import Navbar from "./Navbar";
-import starImg from '../assets/5star2.jpg'
-import Footer from "./Footer";
+import Navbar from "../../components/Navbar";
+import starImg from '../../assets/5star2.jpg'
+import Footer from "../../components/Footer";
 
 
 
@@ -98,8 +98,6 @@ const Products = () => {
         </div>
         <Footer />
         </div>
-
-
 
     );
 }

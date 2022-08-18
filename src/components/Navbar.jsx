@@ -20,8 +20,8 @@ const Navbar = () => {
           </ul>    
         </div>
     
-        <div className='hidden md:flex pr-4'>
-          <button className='border-none bg-transparent text-black mr-5 hover:bg-transparent hover:text-[#FF8C32]'><Link to="/login">Login</Link></button>
+        <div className='hidden md:flex pr-10'>
+          <button className='border-none bg-transparent text-black mr-8 hover:bg-transparent hover:text-[#FF8C32]'><Link to="/login">Login</Link></button>
           <button className='border-none px-4 py-1'><Link to="/SignUp">Sign Up</Link></button>
         </div>
 

@@ -1,6 +1,7 @@
 
 
 import * as React from 'react';
+import Navbar from "../../components/Navbar";
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
@@ -12,10 +13,11 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import logoImg from '../assets/logo.png'
+import logoImg from '../../assets/logo.png'
+// import ApiIndex from '../api/index'
 
 function Copyright(props) {
-  return (
+  return (   
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
       {'Copyright © '}
       <Link color="inherit" href="https://mui.com/">
@@ -27,24 +29,26 @@ function Copyright(props) {
   );
 }
 
+
 const theme = createTheme();
 
-export default function SignUp() {
+
+
+export default function Login() {
   const handleSubmit = (event) => {
+    // ApiIndex.CustomerApi.login()
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     console.log({
-      name: data.get('name'),
-      phonenumber: data.get('phonenumber'),
       email: data.get('email'),
       password: data.get('password'),
-      cpassword: data.get('cpassword'),
     });
   };
 
   return (
     <ThemeProvider theme={theme}>
-      <Grid container component="main" sx={{ height: '70vh' }}>
+      <Navbar />
+      <Grid container component="main" sx={{ height: '100vh' }}>
         <CssBaseline />
         <Grid
           item
@@ -52,8 +56,7 @@ export default function SignUp() {
           sm={4}
           md={7}
           sx={{
-            // backgroundImage: 'url(https://img.freepik.com/free-vector/friends-celebrating-birthday-packing-gifts_74855-4793.jpg?w=826&t=st=1659652092~exp=1659652692~hmac=51f6cf54165aa3959fa38dfd0fcaf3f4243f5a700713014ceadc46d1bf2803ad)',
-            backgroundImage: 'url(https://img.freepik.com/free-vector/team-happy-employees-winning-award-celebrating-success-business-people-enjoying-victory-getting-gold-cup-trophy-vector-illustration-reward-prize-champions-s_74855-8601.jpg?w=740&t=st=1659653049~exp=1659653649~hmac=ec759371b0d5dc5e45418a5763d8cd05cc12b372a1d756d3ae93c18bdb901f22)',
+            backgroundImage:'url(https://img.freepik.com/free-vector/couple-winning-prize-man-woman-holding-gift-box-flat-vector-illustration-lottery-present-birthday-party_74855-8307.jpg?w=740&t=st=1659652676~exp=1659653276~hmac=56d339e5fc38a1df1ab790caa9815f993af6d5df27d9a90793f9a562428be59c)',
             backgroundRepeat: 'no-repeat',
             backgroundColor: (t) =>
               t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
@@ -73,35 +76,15 @@ export default function SignUp() {
           >
             <img className='object-contain h-20' src={logoImg} alt="logo" />
             <Typography component="h1" variant="h5">
-             Create Account
+            Login to SMECO
             </Typography>
             <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
-            <TextField
-                margin="normal"
-                required
-                fullWidth
-                id="name"
-                label="Name"
-                name="name"
-                autoComplete="name"
-                autoFocus
-              />
-              <TextField
-                margin="normal"
-                required
-                fullWidth
-                id="phonenumber"
-                label="Phone Number"
-                name="phonenumber"
-                autoComplete="phonenumber"
-                autoFocus
-              />
               <TextField
                 margin="normal"
                 required
                 fullWidth
                 id="email"
-                label="Email Address"
+                label="Email Address/Phone Number"
                 name="email"
                 autoComplete="email"
                 autoFocus
@@ -116,15 +99,9 @@ export default function SignUp() {
                 id="password"
                 autoComplete="current-password"
               />
-               <TextField
-                margin="normal"
-                required
-                fullWidth
-                name="cpassword"
-                label="Confirm password"
-                type="cpassword"
-                id="cpassword"
-                autoComplete="current-password"
+              <FormControlLabel
+                control={<Checkbox value="remember" color="primary" />}
+                label="Remember me"
               />
               <Button
                 type="submit"
@@ -132,13 +109,30 @@ export default function SignUp() {
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
               >
-                Sign Up
+                Login
               </Button>
-              
+              <Grid container>
+                <Grid item xs>
+                  <Link href="#" variant="body2">
+                    Forgot password?
+                  </Link>
+                </Grid>
+                <Grid item>
+                  <Link href="#" variant="body2">
+                    {"Don't have an account? Sign Up"}
+                  </Link>
+                </Grid>
+              </Grid>
             </Box>
           </Box>
         </Grid>
       </Grid>
     </ThemeProvider>
+ 
   );
 }
+
+
+
+
+ 
