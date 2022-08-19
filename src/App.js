@@ -8,6 +8,7 @@ import AboutUs from "./pages/public_customer/AboutUs";
 import FAQ from "./pages/public_customer/FAQ";
 import Login from "./pages/public_customer/Login";
 import SignUp from "./pages/public_customer/SignUp";
+import Dashboard from "./pages/registered_customer/Dasboard";
 
 class App extends Component {
   render() {
@@ -22,6 +23,10 @@ class App extends Component {
             <Route path="/faq" element={<FAQ />} />
             <Route path="/login" element={<Login />} />
             <Route path="/SignUp" element={<SignUp />} />
+          </Routes>
+
+          <Routes>
+          <Route path="/dashboard" element={<Dashboard />} />
           </Routes>
         </div>
       </BrowserRouter>

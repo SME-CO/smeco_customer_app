@@ -56,6 +56,22 @@ const Shops = () => {
           </p>
         </div>
 
+        <div>
+          <img className='w-full shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={starImg} alt="/" />
+          <p className='text-2xl py-8 text-center font-bold'>
+            Top Choice
+          </p>
+        </div>
+
+        <div>
+          <img className='w-full shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={starImg} alt="/" />
+          <p className='text-2xl py-8 text-center font-bold'>
+            Top Choice
+          </p>
+        </div>
+
+
+
         
 
 
