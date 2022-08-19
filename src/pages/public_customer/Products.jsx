@@ -1,6 +1,16 @@
 import React from 'react';
 import Navbar from "../../components/Navbar";
-import starImg from '../../assets/5star2.jpg'
+import watch1 from '../../assets/watch1.jpg';
+import bottle1 from '../../assets/bottle1.jpg';
+import shoe1 from '../../assets/shoe1.jpg';
+import phncvr1 from '../../assets/phonecvr1.jpg';
+import mnypurse1 from '../../assets/moneypurse.jpg';
+import hndbag1 from '../../assets/handbag1.jpg';
+import pencilcase1 from '../../assets/pencilcase1.jpg';
+import grinder1 from '../../assets/grinder1.jpg';
+import clock1 from '../../assets/clock1.jpg';
+import watch2 from '../../assets/watch2.jpg';
+import starImg from '../../assets/5star.jpg';
 import Footer from "../../components/Footer";
 
 
@@ -16,49 +26,112 @@ const Products = () => {
             <div className='max-w-[1240px] mx-auto grid md:grid-cols-6 gap-8 pt-4'>
 
                 <div>
-                    <img className='w-full shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={starImg} alt="/" />
+                    <img className='object-contain h-48 w-96  shadow-2xl flex flex-col p-2 my-1 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={watch1} alt="/" />
                     <p className='py-8 text-center'>Rolex watch <br />silver colour</p>
                 </div>
 
                 <div>
-                    <img className='w-full shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={starImg} alt="/" />
+                    <img className='object-contain h-48 w-96 shadow-2xl flex flex-col p-2 my-1 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={bottle1} alt="/" />
+                    <p className='py-8 text-center'>Rolex watch <br />silver colour</p>
+                </div>
+                
+                <div>
+                    <img className='object-contain h-48 w-96 shadow-2xl flex flex-col p-1 my-1 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={shoe1} alt="/" />
+                    <p className='py-8 text-center'>Rolex watch <br />silver colour</p>
+                </div>
+
+                
+                <div>
+                    <img className='object-contain h-48 w-96 shadow-2xl flex flex-col p-2 my-1 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={phncvr1} alt="/" />
+                    <p className='py-8 text-center'>Rolex watch <br />silver colour</p>
+                </div>
+
+                
+                <div>
+                    <img className='object-contain h-48 w-96 shadow-2xl flex flex-col p-2 my-1 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={mnypurse1} alt="/" />
+                    <p className='py-8 text-center'>Rolex watch <br />silver colour</p>
+                </div>
+
+                
+                <div>
+                    <img className='object-contain h-48 w-96 shadow-2xl flex flex-col p-2 my-1 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={hndbag1} alt="/" />
+                    <p className='py-8 text-center'>Rolex watch <br />silver colour</p>
+                </div>
+
+                
+                <div>
+                    <img className='object-contain h-48 w-96 shadow-2xl flex flex-col p-2 my-1 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={pencilcase1} alt="/" />
                     <p className='py-8 text-center'>Rolex watch <br />silver colour</p>
                 </div>
 
                 <div>
-                    <img className='w-full shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={starImg} alt="/" />
+                    <img className='object-contain h-48 w-96 shadow-2xl flex flex-col p-2 my-1 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={grinder1} alt="/" />
                     <p className='py-8 text-center'>Rolex watch <br />silver colour</p>
                 </div>
 
                 <div>
-                    <img className='w-full shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={starImg} alt="/" />
+                    <img className='object-contain h-48 w-96 shadow-2xl flex flex-col p-2 my-1 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={clock1} alt="/" />
                     <p className='py-8 text-center'>Rolex watch <br />silver colour</p>
                 </div>
 
                 <div>
-                    <img className='w-full shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={starImg} alt="/" />
+                    <img className='object-contain h-48 w-96 shadow-2xl flex flex-col p-2 my-1 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={watch2} alt="/" />
                     <p className='py-8 text-center'>Rolex watch <br />silver colour</p>
                 </div>
 
                 <div>
-                    <img className='w-full shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={starImg} alt="/" />
+                    <img className='object-contain h-48 w-96 shadow-2xl flex flex-col p-2 my-1 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={pencilcase1} alt="/" />
                     <p className='py-8 text-center'>Rolex watch <br />silver colour</p>
                 </div>
 
                 <div>
-                    <img className='w-full shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={starImg} alt="/" />
+                    <img className='object-contain h-48 w-96 shadow-2xl flex flex-col p-2 my-1 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={watch1} alt="/" />
                     <p className='py-8 text-center'>Rolex watch <br />silver colour</p>
                 </div>
 
                 <div>
-                    <img className='w-full shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={starImg} alt="/" />
+                    <img className='object-contain h-48 w-96 shadow-2xl flex flex-col p-2 my-1 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={bottle1} alt="/" />
+                    <p className='py-8 text-center'>Rolex watch <br />silver colour</p>
+                </div>
+
+                <div>
+                    <img className='object-contain h-48 w-96 shadow-2xl flex flex-col p-2 my-1 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={shoe1} alt="/" />
+                    <p className='py-8 text-center'>Rolex watch <br />silver colour</p>
+                </div>
+
+                <div>
+                    <img className='object-contain h-48 w-96 shadow-2xl flex flex-col p-2 my-1 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={phncvr1} alt="/" />
+                    <p className='py-8 text-center'>Rolex watch <br />silver colour</p>
+                </div>
+
+                <div>
+                    <img className='object-contain h-48 w-96 shadow-2xl flex flex-col p-2 my-1 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={mnypurse1} alt="/" />
+                    <p className='py-8 text-center'>Rolex watch <br />silver colour</p>
+                </div>
+
+                <div>
+                    <img className='object-contain h-48 w-96 shadow-2xl flex flex-col p-2 my-1 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={watch2} alt="/" />
+                    <p className='py-8 text-center'>Rolex watch <br />silver colour</p>
+                </div>
+
+                <div>
+                    <img className='object-contain h-48 w-96 shadow-2xl flex flex-col p-2 my-1 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={grinder1} alt="/" />
                     <p className='py-8 text-center'>Rolex watch <br />silver colour</p>
                 </div>
 
 
 
+               
+
+               
+              
+
+                
+
+               
 
             </div>
+
             {/* ----------------------------OTP------------------------------------------ */}
             <div class="h-screen bg-blue-500 py-20 px-3">
                 <div class="container mx-auto">
