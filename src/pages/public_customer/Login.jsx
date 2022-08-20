@@ -1,6 +1,8 @@
 
 
 import * as React from 'react';
+import { Navigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/Navbar";
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -11,13 +13,16 @@ import Link from '@mui/material/Link';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
+import Alert from '@mui/material/Alert';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import logoImg from '../../assets/logo.png'
-// import ApiIndex from '../api/index'
+import { useEffect, useState } from "react";
+import ApiIndex from '../../api/index';
+
 
 function Copyright(props) {
-  return (   
+  return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
       {'Copyright © '}
       <Link color="inherit" href="https://mui.com/">
@@ -35,14 +40,79 @@ const theme = createTheme();
 
 
 export default function Login() {
-  const handleSubmit = (event) => {
-    // ApiIndex.CustomerApi.login()
+
+  const navigate = useNavigate();
+
+  const [isAlert, setIsAlert] = React.useState(false);
+  const [alertMessage, setAlertMessage] = React.useState('');
+  const [alertType, setAlertType] = React.useState('');
+
+  const hideAlert = () => {
+    if (isAlert) {
+      setTimeout(() => { setIsAlert(false) }, 3000);
+    }
+  }
+
+  useEffect(() => {
+    hideAlert();
+  }, [hideAlert]);
+
+  const validateEmail = (email) => {
+    return String(email)
+      .toLowerCase()
+      .match(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      );
+  };
+
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
+
+    if (!data.get('email') || !data.get('password')) {
+      setAlertType('error');
+      setAlertMessage('Please enter Email and Password');
+      setIsAlert(true);
+      return;
+    }
+
+    if (!validateEmail(data.get('email'))) {
+      setAlertType('error');
+      setAlertMessage('Please enter valid email');
+      setIsAlert(true);
+      return;
+    }
+
+    try {
+      let formData = {
+        email: data.get('email'),
+        password: data.get('password'),
+      }
+
+      let response = await ApiIndex.CustomerApi.login(formData);
+      setAlertType('success');
+      setAlertMessage('Login Successfull !');
+      setIsAlert(true);
+
+      setTimeout(() => {  navigate("/dashboard"); }, 6000); 
+
+    } catch (error) {
+      console.log(error);
+      setAlertType('error');
+      if (error.code == 400) {
+        setAlertMessage(error.message);
+      } else if (error.code == 500) {
+        setAlertMessage("Sorry, server not connected, Please try again later");
+      }
+
+      setIsAlert(true);
+    }
+
+    // console.log({
+    //   email: data.get('email'),
+    //   password: data.get('password'),
+    // });
   };
 
   return (
@@ -56,7 +126,7 @@ export default function Login() {
           sm={4}
           md={7}
           sx={{
-            backgroundImage:'url(https://img.freepik.com/free-vector/couple-winning-prize-man-woman-holding-gift-box-flat-vector-illustration-lottery-present-birthday-party_74855-8307.jpg?w=740&t=st=1659652676~exp=1659653276~hmac=56d339e5fc38a1df1ab790caa9815f993af6d5df27d9a90793f9a562428be59c)',
+            backgroundImage: 'url(https://img.freepik.com/free-vector/couple-winning-prize-man-woman-holding-gift-box-flat-vector-illustration-lottery-present-birthday-party_74855-8307.jpg?w=740&t=st=1659652676~exp=1659653276~hmac=56d339e5fc38a1df1ab790caa9815f993af6d5df27d9a90793f9a562428be59c)',
             backgroundRepeat: 'no-repeat',
             backgroundColor: (t) =>
               t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
@@ -76,8 +146,17 @@ export default function Login() {
           >
             <img className='object-contain h-20' src={logoImg} alt="logo" />
             <Typography component="h1" variant="h5">
-            Login to SMECO
+              Login to SMECO
             </Typography>
+
+            {isAlert &&
+              <Grid container alignItems="center" justifyContent="center" style={{ minHeight: '11vh' }}>
+                <Grid item xs={7}>
+                  <Alert severity={alertType}>{alertMessage}</Alert>
+                </Grid>
+              </Grid>
+            }
+
             <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
               <TextField
                 margin="normal"
@@ -128,11 +207,10 @@ export default function Login() {
         </Grid>
       </Grid>
     </ThemeProvider>
- 
+
   );
 }
 
 
 
 
- 
