@@ -10,7 +10,6 @@ import pencilcase1 from '../../assets/pencilcase1.jpg';
 import grinder1 from '../../assets/grinder1.jpg';
 import clock1 from '../../assets/clock1.jpg';
 import watch2 from '../../assets/watch2.jpg';
-import starImg from '../../assets/5star.jpg';
 import Footer from "../../components/Footer";
 
 
