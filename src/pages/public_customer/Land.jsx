@@ -15,6 +15,8 @@ import {
   AiTwotoneGift
 } from 'react-icons/ai'
 import Footer from "../../components/Footer";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
 
 const Land = () => {
   return (

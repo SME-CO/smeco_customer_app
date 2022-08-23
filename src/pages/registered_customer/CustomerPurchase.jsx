@@ -1,13 +1,7 @@
 import React from 'react'
 import Navbarr from '../../components/Navbarr';
 import SideNavr from "../../components/SideNavr";
-import logoImg from '../../assets/logo.png'
-import {
-  AiTwotoneShop,
-  AiOutlinePercentage,
-  AiFillGift,
-  AiTwotoneGift
-} from 'react-icons/ai'
+import { Link } from 'react-router-dom';
 
 const CustomerPurchase = () => {
   return (
@@ -21,7 +15,7 @@ const CustomerPurchase = () => {
                 <h2 className='text-2xl font-bold text-center py-8'>Top Choice</h2>
               </div>
               <div className='pl-32'>
-                <button className='border-none my-6 mx-auto px-3 py-2'>View More</button>
+                <button className='border-none my-6 mx-auto px-3 py-2'><Link to="/purchaseHistory">View More</Link></button>
               </div>
             </div>
           </div>
