@@ -1,180 +1,125 @@
 import React, { useState } from "react";
-// import {AiFillDashboard} from "react-icon/ai";
-
-import { MenuIcon, XIcon } from '@heroicons/react/outline'
-import bgImg3 from '../assets/logo.png'
-import bgImg2 from '../assets/logo.png'
-
-
-
-const SideNavr = () => {
-
-    const [open, setOpen] = useState(true);
-    const Menus = [
-
-        // { title: "Dashboard", src: AiFillDashboard},
-
-        { title: "Dashboard", src: "Dashboard" },
-
-        { title: "Shops", src: "Shops" },
-        // { title: "Shops", src: "Shops", gap: true },
-        { title: "Products", src: "Products" },
-        { title: "Purchase", src: "Purchase" },
-    ]
+import { NavLink } from "react-router-dom";
+import DashboardIcon from "@mui/icons-material/Dashboard";
+import ShopIcon from "@mui/icons-material/StoreMallDirectory";
+import ProductIcon from "@mui/icons-material/LocalMall";
+import PurchaseIcon from "@mui/icons-material/LocalOffer";
 
 
-    return <div className="flex ">
-        <div className={open ? 'w-60 h-screen duration-300 bg-blue-900 relative p-5 pt-4 ' : " w-20 h-screen bg-blue-900 relative p-5 pt-4"}>
+function SideNavr() {
+  const [profileLabel, setprofileLabel] = useState(false);
+  const [bookingLabel, setBookingLabel] = useState(false);
+  const [appointmentLabel, setAppointmentLabel] = useState(false);
+  const [chatLabel, setChatLabel] = useState(false);
 
-            {/* <div className={`${open ? "w-72" : "w-20"}`h-screen bg-blue-900 relative`}> */}
+  const handleLabel = (id) => {
+    switch (id) {
+      case 2:
+        setprofileLabel(!profileLabel);
+        break;
+      case 3:
+        setBookingLabel(!bookingLabel);
+        break;
+      case 4:
+        setAppointmentLabel(!appointmentLabel);
+        break;
+      case 5:
+        setChatLabel(!chatLabel);
+        break;
+      default:
+        break;
+    }
+  };
 
-            {/* <img className="w-6 h-6 top-9  bg-black border-2 boarder-blue-900 absolute cursor-pointer rounded-full -right-3"
-            onClick={() => setOpen(!open)}
-             src={bgImg3} alt="/" 
-             /> */}
+  return (
+    <div className="relative z-10">
+      <div className="hidden md:block fixed bg-transparent min-h-screen left-0 top-14 flex-col w-20">
+        <div className=" md:mt-0 flex flex-col items-center border-2 w-full h-screen py-12 border-none bg-[#03045E]">
+          <div className="relative inline-flex items-center mb-5 ">
+            <NavLink
+              to="/dashboard"
+              className="cursor-pointer"
+              onMouseEnter={() => handleLabel(2)}
+              onMouseLeave={() => handleLabel(2)}
+            >
+              <DashboardIcon className="!w-12 !h-12 text-[#03045E]  bg-white hover:scale-110 !rounded-full p-3" /> 
+            </NavLink>
 
-            <img
+            <span
+              className={
+                profileLabel
+                  ? "absolute ml-[55px] w-28 text-center rounded-md bg-[#03045E] text-white"
+                  : "hidden"
+              }
+            >
+              Dashboard
+            </span>
+          </div>
 
-                className={`absolute cursor-pointer rounded-full bg-white mt-5
-                -right-3 top-9 w-6 h-6 border-2 boarder-black-400
-                ${!open && "rotate-180"}`}
-                onClick={() => setOpen(!open)}
-                src={bgImg3} alt="/"
+          <div className="relative inline-flex items-center mb-4">
+            <NavLink
+              to="/customerShops"
+              className="cursor-pointer"
+              onMouseEnter={() => handleLabel(3)}
+              onMouseLeave={() => handleLabel(3)}
+            >
+              <ShopIcon className="!w-12 !h-12 text-[#03045E]  bg-white hover:scale-110 !rounded-full p-3" />
+            </NavLink>
 
-            />
-            {/* <div className="flex gap-x-4 items-center">
-                <img src="../src/assets/logo.png"
-                    className={`cursor-pointer duration-500 w-10 h-10 ${open && "rotate-[360-deg]"}`} />
-                <h1 className={`text-white origin-left font-medium text-xl duration-300 ${!open && "scale-0"}`}>SMECO</h1>
+            <span
+              className={
+                bookingLabel
+                  ? "absolute ml-[55px] w-28 text-center rounded-md bg-[#03045E] text-white"
+                  : "hidden"
+              }
+            >
+              Shops
+            </span>
+          </div>
+          <div className="relative inline-flex items-center mb-4">
+            <NavLink
+              to="/customerProducts"
+              className="cursor-pointer"
+              onMouseEnter={() => handleLabel(4)}
+              onMouseLeave={() => handleLabel(4)}
+            >
+              <ProductIcon className="!w-12 !h-12 text-[#03045E]  bg-white hover:scale-110  !rounded-full p-3" />
+            </NavLink>
 
-            </div> */}
-            <ul className="pt-6">
-                {Menus.map((menu, index) => (
-                    <li key={index}
-                        className={menu.gap ? "mt-9 text-gray-300 text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-black rounded-md" : "mt-2 text-gray-300 text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-black rounded-md "}>
+            <span
+              className={
+                appointmentLabel
+                  ? "absolute ml-[55px] w-28 text-center rounded-md bg-[#03045E] text-white"
+                  : "hidden"
+              }
+            >
+              Products
+            </span>
+          </div>
+          <div className="relative inline-flex items-center mb-4">
+            <NavLink
+              to="/customerPurchase"
+              className="cursor-pointer"
+              onMouseEnter={() => handleLabel(5)}
+              onMouseLeave={() => handleLabel(5)}
+            >
+              <PurchaseIcon className="!w-12 !h-12 text-[#03045E]  bg-white hover:scale-110 !rounded-full p-3" />
+            </NavLink>
 
-                        <img src={`../src/assets/${menu.src}.png`} />
-                        <span className={`${!open && "hidden"} origin-left duration-200`}>{menu.title}</span>
-                    </li>
-                ))}
-            </ul>
+            <span
+              className={
+                chatLabel
+                  ? "absolute ml-[55px] w-28 text-center rounded-md bg-[#03045E] text-white"
+                  : "hidden"
+              }
+            >
+              Purchase
+            </span>
+          </div>
         </div>
-
-
-        <div className="p-7 text-2xl font-semibold  flex-1 h-screen">
-            {/* <h1>Shops</h1> */}
-            <div >
-                <div className="flex flex-row justify-between mt-5">
-                    <h2 className="text-2xl "> Discounted Products</h2>
-                    <a href="#" className="text-xl flex flex-row">
-                        View all
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mt-1 " viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                        </svg>
-
-                    </a>
-                </div>
-                <div className="grid grid-flow-row grid-cols-4 gap-10">
-                    <div className="shadow-lg rounded-lg bg-red-300">
-                        {/* <img className="w-24 h-24" src="./assets/product1.jfif" ></img> */}
-                        <img className="w-24 h-24" src={bgImg2} alt="/" />
-                    </div>
-                    <div className="shadow-lg rounded-lg bg-red-300">
-                        {/* <img src="./assets/product1.jfif" ></img> */}
-                        <img className="w-10 h-10" src={bgImg2} alt="/" />
-                    </div>
-                    <div className="shadow-lg rounded-lg bg-red-300">
-                        {/* <img src="./assets/product1.jfif" ></img> */}
-                        <img className="w-10 h-10" src={bgImg2} alt="/" />
-                    </div>
-                    <div className="shadow-lg rounded-lg bg-red-300">
-                        {/* <img src="./assets/product1.jfif" ></img> */}
-                        <img className="w-10 h-10" src={bgImg2} alt="/" />
-                    </div>
-                    <div className="shadow-lg rounded-lg bg-red-300">
-                        {/* <img src="./assets/product1.jfif" ></img> */}
-                        <img className="w-10 h-10" src={bgImg2} alt="/" />
-                    </div>
-
-                </div>
-
-                <div className="flex flex-row justify-between mt-5">
-                    <h2 className="text-2xl ">Products with rewards</h2>
-                    <a href="#" className="text-xl flex flex-row">
-                        View all
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mt-1 " viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                        </svg>
-
-                    </a>
-                </div>
-
-                <div className="grid grid-flow-row grid-cols-4 gap-10">
-                    <div className="shadow-lg rounded-lg bg-red-300">
-                        {/* <img className="w-24 h-24" src="./assets/product1.jfif" ></img> */}
-                        <img className="w-24 h-24" src={bgImg2} alt="/" />
-                    </div>
-                    <div className="shadow-lg rounded-lg bg-red-300">
-                        {/* <img src="./assets/product1.jfif" ></img> */}
-                        <img className="w-10 h-10" src={bgImg2} alt="/" />
-                    </div>
-                    <div className="shadow-lg rounded-lg bg-red-300">
-                        {/* <img src="./assets/product1.jfif" ></img> */}
-                        <img className="w-10 h-10" src={bgImg2} alt="/" />
-                    </div>
-                    <div className="shadow-lg rounded-lg bg-red-300">
-                        {/* <img src="./assets/product1.jfif" ></img> */}
-                        <img className="w-10 h-10" src={bgImg2} alt="/" />
-                    </div>
-                    <div className="shadow-lg rounded-lg bg-red-300">
-                        {/* <img src="./assets/product1.jfif" ></img> */}
-                        <img className="w-10 h-10" src={bgImg2} alt="/" />
-                    </div>
-
-                </div>
-
-
-
-                <div className="flex flex-row justify-between mt-5">
-                    <h2 className="text-2xl ">Products with offers</h2>
-                    <a href="#" className="text-xl flex flex-row">
-                        View all
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mt-1 " viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-                        </svg>
-
-                    </a>
-                </div>
-
-                <div className="grid grid-flow-row grid-cols-4 gap-10">
-                    <div className="shadow-lg rounded-lg bg-red-300">
-                        {/* <img className="w-24 h-24" src="./assets/product1.jfif" ></img> */}
-                        <img className="w-24 h-24" src={bgImg2} alt="/" />
-                    </div>
-                    <div className="shadow-lg rounded-lg bg-red-300">
-                        {/* <img src="./assets/product1.jfif" ></img> */}
-                        <img className="w-10 h-10" src={bgImg2} alt="/" />
-                    </div>
-                    <div className="shadow-lg rounded-lg bg-red-300">
-                        {/* <img src="./assets/product1.jfif" ></img> */}
-                        <img className="w-10 h-10" src={bgImg2} alt="/" />
-                    </div>
-                    <div className="shadow-lg rounded-lg bg-red-300">
-                        {/* <img src="./assets/product1.jfif" ></img> */}
-                        <img className="w-10 h-10" src={bgImg2} alt="/" />
-                    </div>
-                    <div className="shadow-lg rounded-lg bg-red-300">
-                        {/* <img src="./assets/product1.jfif" ></img> */}
-                        <img className="w-10 h-10" src={bgImg2} alt="/" />
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
+      </div>
     </div>
-
-
+  );
 }
 
-export default SideNavr
+export default SideNavr;

@@ -2,6 +2,13 @@ import React from 'react'
 import Navbar from "../../components/Navbar";
 import starImg from '../../assets/5star2.jpg'
 import Footer from "../../components/Footer";
+import img1 from '../../assets/furniture mart.png'
+import img3 from '../../assets/shoe palace.png'
+import img4 from '../../assets/your choice.png'
+import img5 from '../../assets/Glitters.png'
+import img6 from '../../assets/Fashion Wings.png'
+import img7 from '../../assets/Stylish mart.png'
+
 
 
 const Shops = () => {
@@ -15,58 +22,58 @@ const Shops = () => {
       <div className='max-w-[1240px] mx-auto grid md:grid-cols-4 gap-8 pt-4'>
 
         <div>
-          <img className='w-full shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={starImg} alt="/" />
+          <img className='w-full shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={img1} alt="/" />
           <p className='text-2xl py-8 text-center font-bold'>
-            Top Choice
+            Furniture Mart
           </p>
         </div>
 
         <div>
-          <img className='w-full shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={starImg} alt="/" />
+          <img className='w-full shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={img3} alt="/" />
           <p className='text-2xl py-8 text-center font-bold'>
-            Fashion Bug
+           Shoe Palace
           </p>
         </div>
 
         <div>
-          <img className='w-full shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={starImg} alt="/" />
+          <img className='w-full shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={img5} alt="/" />
           <p className='text-2xl py-8 text-center font-bold'>
-            Nolimit
+           Glitters
           </p>
         </div>
 
         <div>
-          <img className='w-full shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={starImg} alt="/" />
+          <img className='w-full shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={img6} alt="/" />
           <p className='text-2xl py-8 text-center font-bold'>
-            Thilakawardhana
+            Fashion Wings
           </p>
         </div>
 
         <div>
-          <img className='w-full shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={starImg} alt="/" />
+          <img className='w-full shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={img7} alt="/" />
           <p className='text-2xl py-8 text-center font-bold'>
-            Top Choice
+           Stylish
           </p>
         </div>
 
         <div>
-          <img className='w-full shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={starImg} alt="/" />
+          <img className='w-full shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={img4} alt="/" />
           <p className='text-2xl py-8 text-center font-bold'>
-            Top Choice
+            Your Choice
           </p>
         </div>
 
         <div>
-          <img className='w-full shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={starImg} alt="/" />
+          <img className='w-full shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={img1} alt="/" />
           <p className='text-2xl py-8 text-center font-bold'>
-            Top Choice
+           Choice of Furniture
           </p>
         </div>
 
         <div>
-          <img className='w-full shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={starImg} alt="/" />
+          <img className='w-full shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={img5} alt="/" />
           <p className='text-2xl py-8 text-center font-bold'>
-            Top Choice
+            Glitter world
           </p>
         </div>
 
