@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import bgImg5 from '../assets/logo.png'
 import { AiOutlineBell } from 'react-icons/ai'
-import img from '../assets/5star2.jpg'
+import img from '../assets/mushipic1.jpeg'
 
 
 const Navbarr = () => {
@@ -31,7 +31,7 @@ const Navbarr = () => {
                     </div>
 
                     <div>
-                    <img className='w-[60px] h-[60px]mx-auto rounded-full' src={ img} alt="" />
+                        <img className='w-[50px] h-[50px]mx-auto rounded-full' src={img} alt="" />
                     </div>
 
 
@@ -63,14 +63,6 @@ const Navbarr = () => {
                     </div>
 
                 </ul>
-
-
-
-
-
-
-
-
             </div>
         </div>
     )

@@ -20,11 +20,11 @@ const CustomerShops = () => {
     return (
         <div>
             <Navbarr />
-            <div className='pt-24'>
+            <div className='pt-24 '>
 
-                <p className='text-3xl text-left pl-32 font-bold'>Discounted Products</p>
+                <p className='text-3xl text-left pl-32 font-bold '>Discounted Products</p>
 
-                <div className='max-w-[1240px] mx-auto grid md:grid-cols-4 gap-8 pt-4'>
+                <div className='max-w-[1240px] mx-auto grid md:grid-cols-4 gap-8 pt-4 '>
 
                     <div>
                         <img className='h-50 w-50 shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={watch2} alt="/" />
