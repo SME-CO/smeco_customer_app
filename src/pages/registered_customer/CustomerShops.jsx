@@ -24,7 +24,7 @@ const CustomerShops = () => {
 
                 <p className='text-3xl text-left pl-32 font-bold '>Discounted Products</p>
 
-                <div className='max-w-[1240px] mx-auto grid md:grid-cols-4 gap-8 pt-4 '>
+                <div className='max-w-[1240px] mx-auto grid md:grid-cols-4 gap-8 pt-4 pl-12 '>
 
                     <div>
                         <img className='h-50 w-50 shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={watch2} alt="/" />
@@ -59,7 +59,7 @@ const CustomerShops = () => {
 
                 <p className='text-3xl text-left pl-32 font-bold'>Products with Rewards</p>
 
-                <div className='max-w-[1240px] mx-auto grid md:grid-cols-4 gap-8 pt-4'>
+                <div className='max-w-[1240px] mx-auto grid md:grid-cols-4 gap-8 pt-4 pl-12'>
 
                     <div>
                         <img className='h-50 w-50 shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={mnypurse1} alt="/" />
@@ -92,7 +92,7 @@ const CustomerShops = () => {
 
                 <p className='text-3xl text-left pl-32 font-bold'>Products with Offers</p>
 
-                <div className='max-w-[1240px] mx-auto grid md:grid-cols-4 gap-8 pt-4'>
+                <div className='max-w-[1240px] mx-auto grid md:grid-cols-4 gap-8 pt-4 pl-12'>
 
                     <div>
                         <img className='h-50 w-50 shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={clock1} alt="/" />

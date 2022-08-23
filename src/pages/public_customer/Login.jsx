@@ -15,7 +15,6 @@ import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import logoImg from '../../assets/logo.png'
 // import ApiIndex from '../api/index'
-import loginImg from '../../assets/login.jpeg'
 
 function Copyright(props) {
   return (   
@@ -55,11 +54,16 @@ export default function Login() {
           item
           xs={false}
           sm={4}
-          md={6}
-          
-        >
-          <img className='pt-24' src={loginImg} alt="" />
-        </Grid>
+          md={7}
+          sx={{
+            backgroundImage:'url(https://img.freepik.com/free-vector/couple-winning-prize-man-woman-holding-gift-box-flat-vector-illustration-lottery-present-birthday-party_74855-8307.jpg?w=740&t=st=1659652676~exp=1659653276~hmac=56d339e5fc38a1df1ab790caa9815f993af6d5df27d9a90793f9a562428be59c)',
+            backgroundRepeat: 'no-repeat',
+            backgroundColor: (t) =>
+              t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        />
         <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
           <Box
             sx={{

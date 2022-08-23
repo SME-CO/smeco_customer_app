@@ -19,7 +19,7 @@ const Dashboard = () => {
 
             <p className='text-4xl text-left pl-32 font-bold'>Your Shops</p>
 
-            <div className='max-w-[1240px] mx-auto grid md:grid-cols-3 gap-8 pt-4'>
+            <div className='max-w-[1240px] mx-auto grid md:grid-cols-3 gap-8 pt-4 pl-12'>
 
                <div>
                   <img className='w-full shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={img4} alt="/" />

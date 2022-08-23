@@ -17,13 +17,35 @@ import {
 import Footer from "../../components/Footer";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
+import cover4 from "../../assets/cover4.gif";
+import cover1 from "../../assets/cover1.gif";
+
+
+
+
+<link
+  rel="stylesheet"
+  href="<NODE_MODULES_FOLDER>/react-responsive-carousel/lib/styles/carousel.min.css"
+/>;
+
 
 const Land = () => {
   return (
+    
 
     <div className='w-full'>
       <Navbar />
-      <img className='w-full' src={saleImg} alt="sale" />
+      <Carousel>
+        <div>
+          <img src={saleImg} />
+        </div>
+        <div>
+          <img src={cover4} />
+        </div>
+        <div>
+          <img src={cover1} />
+        </div>
+      </Carousel>
       <div className='max-w-[1240px] mx-auto grid md:grid-cols-2 py-16 px-4'>
         <div className='flex flex-col justify-center'>
           <p className='text-5xl font-bold'>MAKE A CUSTOMER<br />NOT A SALE </p>

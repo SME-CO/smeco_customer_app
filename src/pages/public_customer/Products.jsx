@@ -132,7 +132,7 @@ const Products = () => {
                 </div>
 
                 {/* ----------------------------OTP------------------------------------------ */}
-                <div class="h-screen bg-blue-500 py-20 px-3">
+                {/* <div class="h-screen bg-blue-500 py-20 px-3">
                     <div class="container mx-auto">
                         <div class="max-w-sm mx-auto md:max-w-lg">
                             <div class="w-full">
@@ -155,7 +155,7 @@ const Products = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
 
 
                 {/* --------------------------JS PART------------------------- */}

@@ -65,6 +65,42 @@ const PurchaseHistory = () => {
                                     13,000
                                     </td>
                                 </tr>
+                                <tr class="border-b hover:bg-gray-50">
+                                    <td class="p-4">
+                                    09/09/2022
+                                    </td>
+                                    <td class="p-4">
+                                    Shawl <br/>
+                                    Shirt <br/>
+                                    Skirt <br/>
+                                    </td>
+                                    <td class="p-4">
+                                    3000 <br/>
+                                    16000 <br/>
+                                    2000 <br/>
+                                    </td>
+                                    <td class="p-4 pt-3">
+                                    21,000
+                                    </td>
+                                </tr>
+                                <tr class="border-b hover:bg-gray-50">
+                                    <td class="p-4">
+                                    12/12/2022
+                                    </td>
+                                    <td class="p-4">
+                                    Bottom <br/>
+                                    Shirt <br/>
+                                    Skirt <br/>
+                                    </td>
+                                    <td class="p-4">
+                                    4000 <br/>
+                                    16000 <br/>
+                                    2000 <br/>
+                                    </td>
+                                    <td class="p-4 pt-3">
+                                    22,000
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
                         </div>
