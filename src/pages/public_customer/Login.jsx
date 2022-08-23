@@ -91,11 +91,13 @@ export default function Login() {
       }
 
       let response = await ApiIndex.CustomerApi.login(formData);
+      localStorage.setItem('token', response.token);
+
       setAlertType('success');
-      setAlertMessage('Login Successfull !');
+      setAlertMessage('Logged In Successfull !');
       setIsAlert(true);
 
-      setTimeout(() => {  navigate("/dashboard"); }, 6000); 
+      setTimeout(() => { navigate("/dashboard"); }, 2500);
 
     } catch (error) {
       console.log(error);
@@ -103,6 +105,8 @@ export default function Login() {
       if (error.code == 400) {
         setAlertMessage(error.message);
       } else if (error.code == 500) {
+        setAlertMessage("Sorry, something went wrong, Please try again later");
+      } else {
         setAlertMessage("Sorry, server not connected, Please try again later");
       }
 
@@ -151,7 +155,7 @@ export default function Login() {
 
             {isAlert &&
               <Grid container alignItems="center" justifyContent="center" style={{ minHeight: '11vh' }}>
-                <Grid item xs={7}>
+                <Grid item xs={10}>
                   <Alert severity={alertType}>{alertMessage}</Alert>
                 </Grid>
               </Grid>

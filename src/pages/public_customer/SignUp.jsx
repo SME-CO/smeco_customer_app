@@ -114,6 +114,8 @@ export default function SignUp() {
       if (error.code == 400) {
         setAlertMessage(error.message);
       } else if (error.code == 500) {
+        setAlertMessage("Sorry, something went wrong, Please try again later");
+      }else{
         setAlertMessage("Sorry, server not connected, Please try again later");
       }
 
@@ -164,7 +166,7 @@ export default function SignUp() {
             </Typography>
             {isAlert &&
               <Grid container alignItems="center" justifyContent="center" style={{ minHeight: '11vh' }}>
-                <Grid item xs={6}>
+                <Grid item xs={10}>
                   <Alert severity={alertType}>{alertMessage}</Alert>
                 </Grid>
               </Grid>
