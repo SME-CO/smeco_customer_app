@@ -28,9 +28,9 @@ const CustomerShops = () => {
 
                     <div>
                         <img className='h-50 w-50 shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={watch2} alt="/" />
-                        <p className='text-xl py-8 text-center'>
-                            Smart Watch
-                        </p>
+                        <div className='text-xl py-8 text-center'>
+                            <button className='border-none bg-transparent text-black hover:bg-transparent hover:text-[#FF8C32]'>Smart Watch</button>
+                        </div>
                     </div>
 
                     <div>
@@ -43,7 +43,7 @@ const CustomerShops = () => {
                     <div>
                         <img className='h-50 w-50 shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={shoe1} alt="/" />
                         <p className='text-xl py-8 text-center'>
-                           Shoe
+                            Shoe
                         </p>
                     </div>
 
@@ -85,7 +85,7 @@ const CustomerShops = () => {
                     <div>
                         <img className='h-50 w-50 shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={grinder1} alt="/" />
                         <p className='text-xl py-8 text-center'>
-                           Grinder
+                            Grinder
                         </p>
                     </div>
                 </div>
@@ -125,7 +125,7 @@ const CustomerShops = () => {
 
 
 
-               
+
 
 
 

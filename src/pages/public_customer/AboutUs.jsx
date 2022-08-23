@@ -37,3 +37,69 @@ const AboutUs = () => {
 }
 
 export default AboutUs
+
+// import * as React from 'react';
+// import Box from '@mui/material/Box';
+// import Button from '@mui/material/Button';
+// import Typography from '@mui/material/Typography';
+// import Modal from '@mui/material/Modal';
+// import watch2 from '../../assets/watch2.jpg';
+
+// const style = {
+//   position: 'absolute',
+//   top: '50%',
+//   left: '50%',
+//   transform: 'translate(-50%, -50%)',
+//   width: 400,
+//   bgcolor: 'background.paper',
+//   border: '2px solid #000',
+//   boxShadow: 24,
+//   p: 4,
+// };
+
+// export default function BasicModal() {
+//   const [open, setOpen] = React.useState(false);
+//   const handleOpen = () => setOpen(true);
+//   const handleClose = () => setOpen(false);
+
+//   return (
+//     <div>
+//       <Button onClick={handleOpen}>Open modal</Button>
+//       <Modal
+//         open={open}
+//         onClose={handleClose}
+//         aria-labelledby="modal-modal-title"
+//         aria-describedby="modal-modal-description"
+//       >
+//         <Box sx={style}>
+          
+//           {/* <div className="Content bg-white w-80 h-90 mb-20 ml-48 rounded mt-10   " > */}
+//             <h1 className="ml-30  mt-4 text-2xl text-center "><b>Watch</b></h1>
+//             <div className="bg-gray-400 w-40 h-40 ml-24 mt-5 ">
+//                 <img className="w-40 h-40" src={ watch2} alt="/"/>
+//             </div>
+//              {/* <img className="w-10 h-10" src={bgImg21} alt="/"/> */}
+//             <div className="flex ml-10 mt-5 gap-4">
+//                 <p className=""><b>Name:</b></p>
+//                 <p className="text-gray-600">Rolex</p>
+//             </div>
+//             <div className="flex ml-10 mt-5 gap-4">
+//                 <p className=""><b>Quantity Available:</b></p>
+//                 <p className="text-gray-600">5</p>
+//             </div>
+//             <div className="flex ml-10 mt-5 gap-4">
+//                 <p className=""><b>Discount Rate:</b></p>
+//                 <p className="text-gray-600">10%</p>
+//             </div>
+//             <div className="flex ml-10 mt-5 gap-4">
+//                 <p className=""><b>Discription:</b></p>
+//                 <p className="text-gray-600">Silver coated belt</p>
+//             </div>
+//         {/* </div> */}
+//         </Box>
+//       </Modal>
+//     </div>
+//   );
+// }
+
+

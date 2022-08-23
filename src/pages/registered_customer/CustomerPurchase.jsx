@@ -11,7 +11,7 @@ import {
 
 const CustomerPurchase = () => {
   return (
-    <div>
+    <div className='w-full'>
       <Navbarr />
       <div>
         <div className='max-w-[700px] mx-auto grid md:grid-cols-1 gap-8 pb-12'>
