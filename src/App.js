@@ -8,7 +8,11 @@ import AboutUs from "./pages/public_customer/AboutUs";
 import FAQ from "./pages/public_customer/FAQ";
 import Login from "./pages/public_customer/Login";
 import SignUp from "./pages/public_customer/SignUp";
-import Dashboard from "./pages/registered_customer/Dasboard";
+import Dashboard from "./pages/registered_customer/Dashboard";
+import CustomerShops from "./pages/registered_customer/CustomerShops";
+import CustomerProducts from "./pages/registered_customer/CustomerProducts";
+import CustomerPurchase from "./pages/registered_customer/CustomerPurchase";
+import PurchaseHistory from "./pages/registered_customer/PurchaseHistory";
 
 class App extends Component {
   render() {
@@ -27,6 +31,10 @@ class App extends Component {
 
           <Routes>
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/customerShops" element={<CustomerShops />} />
+          <Route path="/customerProducts" element={<CustomerProducts />} />
+          <Route path="/customerPurchase" element={<CustomerPurchase />} />
+          <Route path="/purchaseHistory" element={<PurchaseHistory />} />
           </Routes>
         </div>
       </BrowserRouter>
