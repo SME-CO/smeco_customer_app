@@ -17,7 +17,7 @@ const Navbarr = () => {
                             <img className="w-20 h-20" src={bgImg5} alt="/" />
                         </div>
                         <h1 className=" ml-3 text-3xl font-bold w-[300px] mr-4 sm:text-4xl text-white">SMECO</h1>
-                        <input className=" hidden md:flex w-[400px] h-[35px] bg-zinc-200 rounded-l-full shadow-lg outline-none font-thin  px-4 py-1" placeholder="Search here " ></input>
+                        <input className=" hidden md:flex w-[400px] h-[35px] bg-zinc-200 rounded-l-full shadow-lg outline-none font-thin  px-4 py-1" placeholder="Search here..." ></input>
                         <button className=" hidden md:flex w-[100px] h-[37px] bg-zinc-400  rounded-r-full outline-none  text-white hover:bg-[#FF8C32] hover:text-white px-4 py-1" >Search</button>
                     </div>
 

@@ -11,7 +11,7 @@ export default function FAQ() {
   return (
     <div>
       <Navbar />
-      <div className="w-full px-4 pt-24">
+      <div className="w-full px-4 pt-12">
         <img src={fagImg} alt="" />
         <div className="mx-auto w-full max-w-[1000px] rounded-2xl bg-white p-2">
           <Disclosure>
@@ -125,7 +125,7 @@ export default function FAQ() {
             {({ open }) => (
               <>
                 <Disclosure.Button className="flex w-full justify-between rounded-lg bg-[#90E0EF] px-4 py-2 text-left text-sm font-medium text-black hover:bg-[#00B4D8] focus:outline-none ">
-                  <span>Do you offer technical support?</span>
+                  <span>DO YOU PROVIDE DELIVERYY SERVICES?</span>
                   <ChevronUpIcon
                     className={`${open ? 'rotate-180 transform' : ''
                       } h-5 w-5 text-[#03045E]`}
@@ -142,14 +142,15 @@ export default function FAQ() {
             {({ open }) => (
               <>
                 <Disclosure.Button className="flex w-full justify-between rounded-lg bg-[#90E0EF] px-4 py-2 text-left text-sm font-medium text-black hover:bg-[#00B4D8] focus:outline-none ">
-                  <span>Do you offer technical support?</span>
+                  <span>WHAT KIND OF CUSTOMER DATA DO YOU WANT TO COLLECT??</span>
                   <ChevronUpIcon
                     className={`${open ? 'rotate-180 transform' : ''
                       } h-5 w-5 text-[#03045E]`}
                   />
                 </Disclosure.Button>
                 <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-black">
-                  No.
+                  We are collecting the purchase data related to registered customers and based on
+                  that we recommend them offers and discounted products.
                 </Disclosure.Panel>
               </>
             )}
