@@ -1,57 +1,58 @@
-
-
-import * as React from 'react';
-import { Navigate } from 'react-router-dom';
+import * as React from "react";
+import { Navigate } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/Navbar";
-import Button from '@mui/material/Button';
-import CssBaseline from '@mui/material/CssBaseline';
-import TextField from '@mui/material/TextField';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
-import Link from '@mui/material/Link';
-import Paper from '@mui/material/Paper';
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
-import Alert from '@mui/material/Alert';
-import Typography from '@mui/material/Typography';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import logoImg from '../../assets/logo.png'
+import Button from "@mui/material/Button";
+import CssBaseline from "@mui/material/CssBaseline";
+import TextField from "@mui/material/TextField";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Checkbox from "@mui/material/Checkbox";
+import Link from "@mui/material/Link";
+import Paper from "@mui/material/Paper";
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
+import Alert from "@mui/material/Alert";
+import Typography from "@mui/material/Typography";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import logoImg from "../../assets/logo.png";
 import { useEffect, useState } from "react";
-import ApiIndex from '../../api/index';
-
+import ApiIndex from "../../api/index";
+import gift from "../../assets/cart1.png";
 
 function Copyright(props) {
   return (
-    <Typography variant="body2" color="text.secondary" align="center" {...props}>
-      {'Copyright © '}
+    <Typography
+      variant="body2"
+      color="text.secondary"
+      align="center"
+      {...props}
+    >
+      {"Copyright © "}
       <Link color="inherit" href="https://mui.com/">
         Your Website
-      </Link>{' '}
+      </Link>{" "}
       {new Date().getFullYear()}
-      {'.'}
+      {"."}
     </Typography>
   );
 }
 
-
 const theme = createTheme();
 
-
-
 export default function Login() {
-
   const navigate = useNavigate();
 
   const [isAlert, setIsAlert] = React.useState(false);
-  const [alertMessage, setAlertMessage] = React.useState('');
-  const [alertType, setAlertType] = React.useState('');
+  const [alertMessage, setAlertMessage] = React.useState("");
+  const [alertType, setAlertType] = React.useState("");
 
   const hideAlert = () => {
     if (isAlert) {
-      setTimeout(() => { setIsAlert(false) }, 3000);
+      setTimeout(() => {
+        setIsAlert(false);
+      }, 3000);
     }
-  }
+  };
 
   useEffect(() => {
     hideAlert();
@@ -65,41 +66,41 @@ export default function Login() {
       );
   };
 
-
   const handleSubmit = async (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
 
-    if (!data.get('email') || !data.get('password')) {
-      setAlertType('error');
-      setAlertMessage('Please enter Email and Password');
+    if (!data.get("email") || !data.get("password")) {
+      setAlertType("error");
+      setAlertMessage("Please enter Email and Password");
       setIsAlert(true);
       return;
     }
 
-    if (!validateEmail(data.get('email'))) {
-      setAlertType('error');
-      setAlertMessage('Please enter valid email');
+    if (!validateEmail(data.get("email"))) {
+      setAlertType("error");
+      setAlertMessage("Please enter valid email");
       setIsAlert(true);
       return;
     }
 
     try {
       let formData = {
-        email: data.get('email'),
-        password: data.get('password'),
-      }
+        email: data.get("email"),
+        password: data.get("password"),
+      };
 
       let response = await ApiIndex.CustomerApi.login(formData);
-      setAlertType('success');
-      setAlertMessage('Login Successfull !');
+      setAlertType("success");
+      setAlertMessage("Login Successfull !");
       setIsAlert(true);
 
-      setTimeout(() => {  navigate("/dashboard"); }, 6000); 
-
+      setTimeout(() => {
+        navigate("/dashboard");
+      }, 6000);
     } catch (error) {
       console.log(error);
-      setAlertType('error');
+      setAlertType("error");
       if (error.code == 400) {
         setAlertMessage(error.message);
       } else if (error.code == 500) {
@@ -118,46 +119,50 @@ export default function Login() {
   return (
     <ThemeProvider theme={theme}>
       <Navbar />
-      <Grid container component="main" sx={{ height: '100vh' }}>
+      <br></br>
+      <br></br>
+      <Grid container component="main" sx={{ height: "100vh" }}>
         <CssBaseline />
-        <Grid
-          item
-          xs={false}
-          sm={4}
-          md={7}
-          sx={{
-            backgroundImage: 'url(https://img.freepik.com/free-vector/couple-winning-prize-man-woman-holding-gift-box-flat-vector-illustration-lottery-present-birthday-party_74855-8307.jpg?w=740&t=st=1659652676~exp=1659653276~hmac=56d339e5fc38a1df1ab790caa9815f993af6d5df27d9a90793f9a562428be59c)',
-            backgroundRepeat: 'no-repeat',
-            backgroundColor: (t) =>
-              t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}
-        />
+        <Grid item xs={false} sm={4} md={7}>
+          <br></br>
+          <br></br>
+          <br></br>
+          <img src={gift} alt="" height={100} />
+        </Grid>
         <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
           <Box
             sx={{
               my: 8,
               mx: 4,
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
             }}
           >
-            <img className='object-contain h-20' src={logoImg} alt="logo" />
-            <Typography component="h1" variant="h5">
-              Login to SMECO
-            </Typography>
+            <img className="object-contain h-20" src={logoImg} alt="logo" />
+            <h1>
+              <b className="text-[#03045E]">Login to Smeco</b>
+            </h1>
 
-            {isAlert &&
-              <Grid container alignItems="center" justifyContent="center" style={{ minHeight: '11vh' }}>
+            {isAlert && (
+              <Grid
+                container
+                alignItems="center"
+                justifyContent="center"
+                style={{ minHeight: "11vh" }}
+              >
                 <Grid item xs={7}>
                   <Alert severity={alertType}>{alertMessage}</Alert>
                 </Grid>
               </Grid>
-            }
+            )}
 
-            <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
+            <Box
+              component="form"
+              noValidate
+              onSubmit={handleSubmit}
+              sx={{ mt: 1 }}
+            >
               <TextField
                 margin="normal"
                 required
@@ -197,9 +202,12 @@ export default function Login() {
                   </Link>
                 </Grid>
                 <Grid item>
-                  <Link href="#" variant="body2">
-                    {"Don't have an account? Sign Up"}
-                  </Link>
+                  <p>
+                    Don't have an account?
+                    <Link href="/signup" variant="body2">
+                      Sign Up
+                    </Link>
+                  </p>
                 </Grid>
               </Grid>
             </Box>
@@ -207,10 +215,5 @@ export default function Login() {
         </Grid>
       </Grid>
     </ThemeProvider>
-
   );
 }
-
-
-
-
