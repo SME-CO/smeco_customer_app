@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import bgImg5 from '../assets/logo.png'
 import { AiOutlineBell } from 'react-icons/ai'
 import img from '../assets/mushipic1.jpeg'
+import { NavLink } from 'react-router-dom';
 
 
 const Navbarr = () => {
@@ -27,7 +28,7 @@ const Navbarr = () => {
                     </div>
 
                     <div className='flex flex-col my-4'>
-                        <button className='border-white px-6 py-2'>Log out</button>
+                        <button className='border-white px-6 py-2'><NavLink to='/'>Log out</NavLink></button>
                     </div>
 
                     <div>

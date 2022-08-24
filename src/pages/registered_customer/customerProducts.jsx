@@ -30,7 +30,7 @@ const CustomerProducts = () => {
                     </div>
                 </div>
 
-                <div className='max-w-[1240px] mx-auto grid md:grid-cols-4 pb-10 pt-12 pl-12 pl-24'>
+                <div className='max-w-[1240px] mx-auto grid md:grid-cols-4 pb-10 pt-12 pl-24'>
 
                     <img className='h-30 w-30 shadow-2xl flex flex-col' src={handbag} alt="/" />
                     <div className='flex flex-col justify-center pl-12'>
@@ -47,7 +47,7 @@ const CustomerProducts = () => {
                     </div>
                 </div>
 
-                <div className='max-w-[1240px] mx-auto grid md:grid-cols-4 pb-10 pt-12 pl-12 pl-24'>
+                <div className='max-w-[1240px] mx-auto grid md:grid-cols-4 pb-10 pt-12  pl-24'>
 
                     <img className='h-30 w-30 shadow-2xl flex flex-col' src={shoe} alt="/" />
                     <div className='flex flex-col justify-center pl-12'>
@@ -64,7 +64,7 @@ const CustomerProducts = () => {
                     </div>
                 </div>
 
-                <div className='max-w-[1240px] mx-auto grid md:grid-cols-4 pb-10 pt-12 pl-12 pl-24'>
+                <div className='max-w-[1240px] mx-auto grid md:grid-cols-4 pb-10 pt-12  pl-24'>
 
                     <img className='h-30 w-30 shadow-2xl flex flex-col' src={bottle} alt="/" />
                     <div className='flex flex-col justify-center pl-12'>
