@@ -17,7 +17,7 @@ import logoImg from '../../assets/logo.png'
 // import ApiIndex from '../api/index'
 
 function Copyright(props) {
-  return (   
+  return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
       {'Copyright © '}
       <Link color="inherit" href="https://mui.com/">
@@ -56,7 +56,7 @@ export default function Login() {
           sm={4}
           md={7}
           sx={{
-            backgroundImage:'url(https://img.freepik.com/free-vector/couple-winning-prize-man-woman-holding-gift-box-flat-vector-illustration-lottery-present-birthday-party_74855-8307.jpg?w=740&t=st=1659652676~exp=1659653276~hmac=56d339e5fc38a1df1ab790caa9815f993af6d5df27d9a90793f9a562428be59c)',
+            backgroundImage: 'url(https://img.freepik.com/free-vector/couple-winning-prize-man-woman-holding-gift-box-flat-vector-illustration-lottery-present-birthday-party_74855-8307.jpg?w=740&t=st=1659652676~exp=1659653276~hmac=56d339e5fc38a1df1ab790caa9815f993af6d5df27d9a90793f9a562428be59c)',
             backgroundRepeat: 'no-repeat',
             backgroundColor: (t) =>
               t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
@@ -76,7 +76,7 @@ export default function Login() {
           >
             <img className='object-contain h-20' src={logoImg} alt="logo" />
             <Typography component="h1" variant="h5">
-            Login to SMECO
+              Login to SMECO
             </Typography>
             <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
               <TextField
@@ -102,15 +102,18 @@ export default function Login() {
               <FormControlLabel
                 control={<Checkbox value="remember" color="primary" />}
                 label="Remember me"
-              />
-              <Button
+              /> <br /><br />
+              {/* <Button 
                 type="submit"
                 fullWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
               >
                 Login
-              </Button>
+              </Button> */}
+              <div className='pl-4 pr-4'>
+                <button className='border-none w-[515px] px-7 py-2'>Login</button>
+              </div><br />
               <Grid container>
                 <Grid item xs>
                   <Link href="#" variant="body2">
@@ -128,11 +131,10 @@ export default function Login() {
         </Grid>
       </Grid>
     </ThemeProvider>
- 
+
   );
 }
 
 
 
 
- 
