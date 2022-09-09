@@ -17,8 +17,7 @@ const Navbarr = () => {
                 <div className="px-2 flex justify-between items-center w-full h-full">
                     <div className="flex items-center text-white">
                         <ul className='hidden md:flex'>
-                            <li className="pr-40"><BackIcon className="" /><Link to="/">Back to home</Link></li>
-                            <li><Link to="/">Home</Link></li>
+                            <li className="pr-30"><BackIcon className="" /><Link to="/">Back to home</Link></li>
                             <li><Link to="/shops">Shops</Link></li>
                             <li><Link to="/products">Products</Link></li>
                             <li><Link to="/aboutus">About Us</Link></li>
@@ -26,8 +25,8 @@ const Navbarr = () => {
                         </ul>
                     </div>
                     <div className='hidden md:flex pr-10'>
-                        <NotificationIcon className="!w-12 !h-12 text-white p-3" />
-                        <p className="pt-3 pr-3 text-white">Mushrifa</p>
+                        <NotificationIcon className="!w-12 !h-12 text-white pr-6" />
+                        <p className="pt-3 pr-3 text-white pr-6">Mushrifa</p>
                         <div className="pr-5">
                             <img className='w-[50px] h-[50px]mx-auto rounded-full' src={img} alt="" />
                         </div>
