@@ -26,7 +26,7 @@ const Navbarr = () => {
                     </div>
                     <div className='hidden md:flex pr-10'>
                         <NotificationIcon className="!w-12 !h-12 text-white pr-6" />
-                        <p className="pt-3 pr-3 text-white pr-6">Mushrifa</p>
+                        <p className="pt-3 text-white pr-6">Mushrifa</p>
                         <div className="pr-5">
                             <img className='w-[50px] h-[50px]mx-auto rounded-full' src={img} alt="" />
                         </div>
