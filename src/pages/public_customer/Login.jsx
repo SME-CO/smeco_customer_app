@@ -186,7 +186,7 @@ export default function Login() {
               <FormControlLabel
                 control={<Checkbox value="remember" color="primary" />}
                 label="Remember me"
-              /> <br /><br />
+              /> 
               {/* <Button 
                 type="submit"
                 fullWidth
@@ -195,8 +195,8 @@ export default function Login() {
               >
                 Login
               </Button> */}
-              <div className='pl-4 pr-4'>
-                <button className='border-none w-[515px] px-7 py-2'>Login</button>
+              <div className='pl-4 pr-4 pt-3'>
+                <button className='border-none w-[500px] px-7 py-2'>Login</button>
               </div><br />
               <Grid container>
                 <Grid item xs>
@@ -205,9 +205,9 @@ export default function Login() {
                   </Link>
                 </Grid>
                 <Grid item>
-                  <p>
-                    Don't have an account?
-                    <Link href="/signup" variant="body2">
+                  <p className="pr-3">
+                    Don't have an account? 
+                    <Link className="pl-2" href="/signup" variant="body2">
                       Sign Up
                     </Link>
                   </p>

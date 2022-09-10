@@ -74,7 +74,7 @@ export default function SignUp() {
         !data.get("phonenumber") ||
         !data.get("email") ||
         !data.get("password"),
-      !data.get("cpassword"))
+        !data.get("cpassword"))
     ) {
       setAlertType("error");
       setAlertMessage("All fields are required!");
@@ -234,7 +234,7 @@ export default function SignUp() {
                 id="cpassword"
                 autoComplete="current-password"
               />
-              <Button
+              {/* <Button
                 onclick="myFunction()"
                 type="submit"
                 fullWidth
@@ -242,7 +242,10 @@ export default function SignUp() {
                 sx={{ mt: 3, mb: 2 }}
               >
                 Sign Up
-              </Button>
+              </Button> */}
+              <div className='pl-4 pr-4 pt-3'>
+                <button className='border-none w-[500px] px-7 py-2'>Sign Up</button>
+              </div>
             </Box>
           </Box>
         </Grid>
