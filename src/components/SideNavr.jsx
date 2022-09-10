@@ -98,7 +98,7 @@ function SideNavr() {
           </div>
           <div className="relative inline-flex items-center mb-4">
             <NavLink
-              to="/customerPurchase"
+              to="/customerPurchases"
               className="cursor-pointer"
               onMouseEnter={() => handleLabel(5)}
               onMouseLeave={() => handleLabel(5)}

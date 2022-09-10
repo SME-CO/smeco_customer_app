@@ -11,7 +11,7 @@ import SignUp from "./pages/public_customer/SignUp";
 import Dashboard from "./pages/registered_customer/Dashboard";
 import CustomerShops from "./pages/registered_customer/CustomerShops";
 import CustomerProducts from "./pages/registered_customer/CustomerProducts";
-import CustomerPurchase from "./pages/registered_customer/CustomerPurchase";
+import CustomerPurchases from "./pages/registered_customer/CustomerPurchases";
 import PurchaseHistory from "./pages/registered_customer/PurchaseHistory";
 
 class App extends Component {
@@ -33,7 +33,7 @@ class App extends Component {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/customerShops" element={<CustomerShops />} />
           <Route path="/customerProducts" element={<CustomerProducts />} />
-          <Route path="/customerPurchase" element={<CustomerPurchase />} />
+          <Route path="/customerPurchases" element={<CustomerPurchases />} />
           <Route path="/purchaseHistory" element={<PurchaseHistory />} />
           </Routes>
         </div>

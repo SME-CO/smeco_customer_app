@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbarr from '../../components/Navbarr';
 import SideNavr from "../../components/SideNavr";
-import watch1 from '../../assets/watch1.jpg';
+// import watch1 from '../../assets/watch1.jpg';
 import bottle1 from '../../assets/bottle1.jpg';
 import shoe1 from '../../assets/shoe1.jpg';
 import phncvr1 from '../../assets/phonecvr1.jpg';
