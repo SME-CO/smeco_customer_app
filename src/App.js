@@ -12,7 +12,7 @@ import Dashboard from "./pages/registered_customer/Dashboard";
 import CustomerShops from "./pages/registered_customer/CustomerShops";
 import CustomerProducts from "./pages/registered_customer/CustomerProducts";
 import CustomerPurchase from "./pages/registered_customer/CustomerPurchase";
-import PurchaseHistory from "./pages/registered_customer/PurchaseHistory";
+import CustomerRecords from "./pages/registered_customer/CustomerRecords";
 
 class App extends Component {
   render() {
@@ -34,7 +34,7 @@ class App extends Component {
           <Route path="/customerShops" element={<CustomerShops />} />
           <Route path="/customerProducts" element={<CustomerProducts />} />
           <Route path="/customerPurchase" element={<CustomerPurchase />} />
-          <Route path="/purchaseHistory" element={<PurchaseHistory />} />
+          <Route path="/customerRecords" element={<CustomerRecords />} />
           </Routes>
         </div>
       </BrowserRouter>

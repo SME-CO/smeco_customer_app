@@ -2,7 +2,7 @@ import React from 'react'
 import Navbarr from '../../components/Navbarr';
 import SideNavr from "../../components/SideNavr";
 
-const PurchaseHistory = () => {
+const CustomerRecords = () => {
     return (
         <div>
             <Navbarr />
@@ -111,4 +111,4 @@ const PurchaseHistory = () => {
     )
 }
 
-export default PurchaseHistory
+export default CustomerRecords
