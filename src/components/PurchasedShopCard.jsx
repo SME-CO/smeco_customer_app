@@ -54,14 +54,14 @@ const CustomerPurchases = () => {
 
                  {/* <div  className='flex flex-col justify-center pl-12'> */}
                 
-                {/* {purchasesList && purchasesList
+                 {purchasesList && purchasesList
                     .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                    .map((purchase, index) => ( */}
+                    .map((purchase, index) => ( 
                         <>
                         {
                     // {purchasesList && purchasesList
                     // .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                    // .map((purchase, index) => ( 
+                    // .map((purchase, index) => (  
                             <div className='max-w-[700px] mx-auto grid md:grid-cols-1 gap-8 pb-12'>
                                 <div className='w-full shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300'>
                                     <div className='max-w-[1240px] mx-auto grid md:grid-cols-2 pb-10 pt-12'>
@@ -76,8 +76,8 @@ const CustomerPurchases = () => {
                             </div>
                         }
                         </>
-{/*                         
-                     ))}   */}
+                        
+                     ))}   
 
 
 
