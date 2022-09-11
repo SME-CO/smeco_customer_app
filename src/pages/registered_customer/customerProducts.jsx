@@ -23,10 +23,14 @@ const CustomerProducts = () => {
                         <p className='text-xl  pt-3'><b>Discription :</b> Silver coated belt<br /></p>
                     </div>
                     <div className='pt-44 pl-32'>
+                        <form action='../CustomerReviews'>
                         <button className='border-none w-[150px] px-2 py-2 rounded-full'>Review</button>
+                        </form>
                     </div>
                     <div className='pt-44 pl-8'>
+                        <form action='../Dashboard'>
                         <button className='border-none w-[150px] px-2 py-2 rounded-full'>Delete</button>
+                        </form>
                     </div>
                 </div>
 

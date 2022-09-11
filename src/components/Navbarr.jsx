@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import bgImg5 from '../assets/logo.png'
 import { AiOutlineBell } from 'react-icons/ai'
-import img from '../assets/mushipic1.jpeg'
+import img2 from '../assets/dula.jpg'
+import { Link } from 'react-router-dom';
 
 
 const Navbarr = () => {
@@ -29,9 +30,12 @@ const Navbarr = () => {
                     <div className='flex flex-col my-4'>
                         <button className='border-white px-6 py-2'>Log out</button>
                     </div>
+                    <div className='flex flex-col my-4'>
+                        <button><Link to="/CustomerProfile">Dulanjana</Link></button>
+                    </div>
 
                     <div>
-                        <img className='w-[50px] h-[50px]mx-auto rounded-full' src={img} alt="" />
+                        <img className='w-[50px] h-[50px]mx-auto rounded-full' src={img2} alt="" />
                     </div>
 
 
