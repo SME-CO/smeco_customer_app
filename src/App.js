@@ -13,6 +13,8 @@ import CustomerShops from "./pages/registered_customer/CustomerShops";
 import CustomerProducts from "./pages/registered_customer/CustomerProducts";
 import CustomerPurchase from "./pages/registered_customer/CustomerPurchase";
 import CustomerRecords from "./pages/registered_customer/CustomerRecords";
+import PurchaseHistory from "./pages/registered_customer/PurchaseHistory";
+
 
 class App extends Component {
   render() {
@@ -35,6 +37,7 @@ class App extends Component {
           <Route path="/customerProducts" element={<CustomerProducts />} />
           <Route path="/customerPurchase" element={<CustomerPurchase />} />
           <Route path="/customerRecords" element={<CustomerRecords />} />
+          <Route path="/purchaseHistory" element={<PurchaseHistory />} />
           </Routes>
         </div>
       </BrowserRouter>

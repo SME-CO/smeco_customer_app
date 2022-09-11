@@ -1,114 +1,107 @@
+
 import React from 'react'
 import Navbarr from '../../components/Navbarr';
 import SideNavr from "../../components/SideNavr";
+import { Link } from 'react-router-dom';
 
-const CustomerRecords = () => {
-    return (
-        <div>
-            <Navbarr />
-            
-                        <div class="pb-24">
-                            <p className='pl-24 text-3xl font-bold py-8'>Your Purchase History</p>
-
-                        <div class="overflow-x-auto border-x border-t pl-24 pr-12">
-                        <table class="table-auto w-full">
-                            <thead class="border-b">
-                                <tr class="bg-gray-100">
-                                    <th class="text-left p-4 font-bold">
-                                    DATE
-                                    </th>
-                                    <th class="text-left p-4 font-bold">
-                                    PRODUCT
-                                    </th>
-                                    <th class="text-left p-4 font-bold">
-                                    AMOUNT(RS)
-                                    </th>
-                                    <th class="text-left p-4 font-bold">
-                                    TOTAL(RS)
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="border-b hover:bg-gray-50">
-                                    <td class="p-4">
-                                    07/07/2022
-                                    </td>
-                                    <td class="p-4">
-                                    T-shirt <br/>
-                                    Shirt <br/>
-                                    Shirt <br/>
-                                    </td>
-                                    <td class="p-4">
-                                    3000 <br/>
-                                    5000 <br/>
-                                    2000 <br/>
-                                    </td>
-                                    <td class="p-4 pt-3">
-                                    10,000
-                                    </td>
-                                </tr>
-                                <tr class="border-b hover:bg-gray-50">
-                                    <td class="p-4">
-                                    10/10/2022
-                                    </td>
-                                    <td class="p-4">
-                                    T-shirt <br/>
-                                    Frock <br/>
-                                    Shirt <br/>
-                                    </td>
-                                    <td class="p-4">
-                                    6000 <br/>
-                                    5000 <br/>
-                                    2000 <br/>
-                                    </td>
-                                    <td class="p-4 pt-3">
-                                    13,000
-                                    </td>
-                                </tr>
-                                <tr class="border-b hover:bg-gray-50">
-                                    <td class="p-4">
-                                    09/09/2022
-                                    </td>
-                                    <td class="p-4">
-                                    Shawl <br/>
-                                    Shirt <br/>
-                                    Skirt <br/>
-                                    </td>
-                                    <td class="p-4">
-                                    3000 <br/>
-                                    16000 <br/>
-                                    2000 <br/>
-                                    </td>
-                                    <td class="p-4 pt-3">
-                                    21,000
-                                    </td>
-                                </tr>
-                                <tr class="border-b hover:bg-gray-50">
-                                    <td class="p-4">
-                                    12/12/2022
-                                    </td>
-                                    <td class="p-4">
-                                    Bottom <br/>
-                                    Shirt <br/>
-                                    Skirt <br/>
-                                    </td>
-                                    <td class="p-4">
-                                    4000 <br/>
-                                    16000 <br/>
-                                    2000 <br/>
-                                    </td>
-                                    <td class="p-4 pt-3">
-                                    22,000
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        </div>
-                        </div>
-
-            <SideNavr />
+const CustomerPurchase = () => {
+  return (
+    <div className='w-full'>
+      <Navbarr />
+      <div className='pt-24 md:ml-40 w-screen'>
+      <div>
+        <div className='max-w-[700px] mx-auto grid md:grid-cols-1 gap-8 pb-12'>
+          <div className='w-full shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300'>
+            <div className='max-w-[1240px] mx-auto grid md:grid-cols-2 pb-10 pt-12'>
+              <div>
+                <h2 className='text-2xl font-bold text-center py-8'>Top Choice</h2>
+              </div>
+              <div className='pl-32'>
+                <button className='border-none my-6 mx-auto px-3 py-2'><Link to="/purchaseHistory">View More</Link></button>
+              </div>
+            </div>
+          </div>
         </div>
-    )
+      </div>
+
+      <div>
+        <div className='max-w-[700px] mx-auto grid md:grid-cols-1 gap-8 pb-12'>
+          <div className='w-full shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300'>
+            <div className='max-w-[1240px] mx-auto grid md:grid-cols-2 pb-10 pt-12'>
+              <div>
+                <h2 className='text-2xl font-bold text-center py-8'>Furniture Mart</h2>
+              </div>
+              <div className='pl-32'>
+                <button className='border-none my-6 mx-auto px-3 py-2'>View More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div className='max-w-[700px] mx-auto grid md:grid-cols-1 gap-8 pb-12'>
+          <div className='w-full shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300'>
+            <div className='max-w-[1240px] mx-auto grid md:grid-cols-2 pb-10 pt-12'>
+              <div>
+                <h2 className='text-2xl font-bold text-center py-8'>Glitters</h2>
+              </div>
+              <div className='pl-32'>
+                <button className='border-none my-6 mx-auto px-3 py-2'>View More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div className='max-w-[700px] mx-auto grid md:grid-cols-1 gap-8 pb-12'>
+          <div className='w-full shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300'>
+            <div className='max-w-[1240px] mx-auto grid md:grid-cols-2 pb-10 pt-12'>
+              <div>
+                <h2 className='text-2xl font-bold text-center py-8'>Fashion Wings</h2>
+              </div>
+              <div className='pl-32'>
+                <button className='border-none my-6 mx-auto px-3 py-2'>View More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div className='max-w-[700px] mx-auto grid md:grid-cols-1 gap-8 pb-12'>
+          <div className='w-full shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300'>
+            <div className='max-w-[1240px] mx-auto grid md:grid-cols-2 pb-10 pt-12'>
+              <div>
+                <h2 className='text-2xl font-bold text-center py-8'>Shoe Palace</h2>
+              </div>
+              <div className='pl-32'>
+                <button className='border-none my-6 mx-auto px-3 py-2'>View More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div className='max-w-[700px] mx-auto grid md:grid-cols-1 gap-8 pb-12'>
+          <div className='w-full shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300'>
+            <div className='max-w-[1240px] mx-auto grid md:grid-cols-2 pb-10 pt-12'>
+              <div>
+                <h2 className='text-2xl font-bold text-center py-8'>Stylish Mart</h2>
+              </div>
+              <div className='pl-32'>
+                <button className='border-none my-6 mx-auto px-3 py-2'>View More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <SideNavr />
+    </div>
+  )
 }
 
-export default CustomerRecords
+export default CustomerPurchase
