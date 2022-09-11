@@ -186,15 +186,18 @@ export default function Login() {
               <FormControlLabel
                 control={<Checkbox value="remember" color="primary" />}
                 label="Remember me"
-              />
-              <Button
+              /> 
+              {/* <Button 
                 type="submit"
                 fullWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2 }}
               >
                 Login
-              </Button>
+              </Button> */}
+              <div className='pl-4 pr-4 pt-3'>
+                <button className='border-none w-[500px] px-7 py-2'>Login</button>
+              </div><br />
               <Grid container>
                 <Grid item xs>
                   <Link href="#" variant="body2">
@@ -202,9 +205,9 @@ export default function Login() {
                   </Link>
                 </Grid>
                 <Grid item>
-                  <p>
-                    Don't have an account?
-                    <Link href="/signup" variant="body2">
+                  <p className="pr-3">
+                    Don't have an account? 
+                    <Link className="pl-2" href="/signup" variant="body2">
                       Sign Up
                     </Link>
                   </p>
