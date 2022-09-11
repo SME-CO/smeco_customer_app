@@ -1,87 +1,159 @@
+
+
 import React from 'react'
 import Navbarr from '../../components/Navbarr';
 import SideNavr from "../../components/SideNavr";
 import watch1 from '../../assets/watch1.jpg';
-import handbag from '../../assets/handbag1.jpg';
-import shoe from '../../assets/shoe1.jpg';
-import bottle from '../../assets/bottle1.jpg';
+import bottle1 from '../../assets/bottle1.jpg';
+import shoe1 from '../../assets/shoe1.jpg';
+import phncvr1 from '../../assets/phonecvr1.jpg';
+import mnypurse1 from '../../assets/moneypurse.jpg';
+import hndbag1 from '../../assets/handbag1.jpg';
+import pencilcase1 from '../../assets/pencilcase1.jpg';
+import grinder1 from '../../assets/grinder1.jpg';
+import clock1 from '../../assets/clock1.jpg';
+import watch2 from '../../assets/watch2.jpg';
 
 
 const CustomerProducts = () => {
     return (
         <div>
             <Navbarr />
-            <div className='pt-8'>
-                <p className='text-3xl text-left pl-32 font-bold '>Your Purchased Products</p>
-                <div className='max-w-[1240px] mx-auto grid md:grid-cols-4 pb-10 pt-12 pl-24'>
+            <div className='pt-24 md:ml-40 w-screen'>
 
-                    <img className='h-30 w-30 shadow-2xl flex flex-col' src={watch1} alt="/" />
-                    <div className='flex flex-col justify-center pl-12'>
-                        <p className='text-xl'><b>Name :</b> Rolex watch<br /></p>
-                        <p className='text-xl  pt-3'><b>Quantity :</b> : 5<br /></p>
-                        <p className='text-xl  pt-3'><b>Type :</b> Discount<br /></p>
-                        <p className='text-xl  pt-3'><b>Discription :</b> Silver coated belt<br /></p>
+                <p className='text-3xl text-left pl-32 font-bold '>Discounted Products</p>
+
+                <div className='max-w-[1240px] mx-auto grid md:grid-cols-8 gap-8 pt-4 pl-12 '>
+
+                    <div>
+                        <img className='h-15 w-15 shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={watch2} alt="/" />
+                        <div className='text-l py-8 text-center'>
+                            <button className='border-none bg-transparent text-black hover:bg-transparent hover:text-[#FF8C32]'>Smart Watch</button>
+                        </div>
                     </div>
-                    <div className='pt-44 pl-32'>
-                        <button className='border-none w-[150px] px-2 py-2 rounded-full'>Review</button>
+
+                    <div>
+                        <img className='h-50 w-50 shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={bottle1} alt="/" />
+                        <p className='text-l py-8 text-center'>
+                            Water Bottle
+                        </p>
                     </div>
-                    <div className='pt-44 pl-8'>
-                        <button className='border-none w-[150px] px-2 py-2 rounded-full'>Delete</button>
+
+                    <div>
+                        <img className='h-50 w-50 shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={shoe1} alt="/" />
+                        <p className='text-l py-8 text-center'>
+                            Shoe
+                        </p>
+                    </div>
+
+                    <div>
+                        <img className='h-50 w-50 shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={hndbag1} alt="/" />
+                        <p className='text-l py-8 text-center'>
+                            Hand Bag
+                        </p>
+                    </div>
+                    <div>
+                        <img className='h-50 w-50 shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={shoe1} alt="/" />
+                        <p className='text-l py-8 text-center'>
+                            Shoe
+                        </p>
+                    </div>
+
+                    <div>
+                        <img className='h-50 w-50 shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={hndbag1} alt="/" />
+                        <p className='text-l py-8 text-center'>
+                            Hand Bag
+                        </p>
+                    </div>
+                    <div>
+                        <img className='h-50 w-50 shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={shoe1} alt="/" />
+                        <p className='text-l py-8 text-center'>
+                            Shoe
+                        </p>
+                    </div>
+                    <br />
+                    <div>
+                        <img className='h-15 w-15 shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={watch2} alt="/" />
+                        <div className='text-l py-8 text-center'>
+                            <button className='border-none bg-transparent text-black hover:bg-transparent hover:text-[#FF8C32]'>Smart Watch</button>
+                        </div>
+                    </div>
+
+                    <div>
+                        <img className='h-50 w-50 shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={bottle1} alt="/" />
+                        <p className='text-l py-8 text-center'>
+                            Water Bottle
+                        </p>
                     </div>
                 </div>
 
-                <div className='max-w-[1240px] mx-auto grid md:grid-cols-4 pb-10 pt-12 pl-12 pl-24'>
+                <p className='text-3xl text-left pl-32 font-bold'>Products with Rewards</p>
 
-                    <img className='h-30 w-30 shadow-2xl flex flex-col' src={handbag} alt="/" />
-                    <div className='flex flex-col justify-center pl-12'>
-                        <p className='text-xl '><b>Name :</b> Hand bag<br /></p>
-                        <p className='text-xl  pt-3'><b>Quantity :</b> 10<br /></p>
-                        <p className='text-xl  pt-3'><b>Type :</b> Offer<br /></p>
-                        <p className='text-xl  pt-3'><b>Discription :</b> Different colours available<br /></p>
+                <div className='max-w-[1240px] mx-auto grid md:grid-cols-8 gap-8 pt-4 pl-12'>
+
+                    <div>
+                        <img className='h-15 w-15 shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={mnypurse1} alt="/" />
+                        <p className='text-xl py-8 text-center'>
+                            Money Purse
+                        </p>
                     </div>
-                    <div className='pt-44 pl-32'>
-                        <button className='border-none w-[150px] px-2 py-2 rounded-full'>Review</button>
+
+                    <div>
+                        <img className='h-50 w-50 shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={phncvr1} alt="/" />
+                        <p className='text-xl py-8 text-center'>
+                            Phone Cover
+                        </p>
                     </div>
-                    <div className='pt-44 pl-8'>
-                        <button className='border-none w-[150px] px-2 py-2 rounded-full'>Delete</button>
+
+                    <div>
+                        <img className='h-50 w-50 shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={pencilcase1} alt="/" />
+                        <p className='text-xl py-8 text-center'>
+                            Pencil set
+                        </p>
+                    </div>
+
+                    <div>
+                        <img className='h-50 w-50 shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={grinder1} alt="/" />
+                        <p className='text-xl py-8 text-center'>
+                            Grinder
+                        </p>
                     </div>
                 </div>
 
-                <div className='max-w-[1240px] mx-auto grid md:grid-cols-4 pb-10 pt-12 pl-12 pl-24'>
+                <p className='text-3xl text-left pl-32 font-bold'>Products with Offers</p>
 
-                    <img className='h-30 w-30 shadow-2xl flex flex-col' src={shoe} alt="/" />
-                    <div className='flex flex-col justify-center pl-12'>
-                        <p className='text-xl '><b>Name :</b> Nike Shoe<br /></p>
-                        <p className='text-xl  pt-3'><b>Quantity :</b> 2<br /></p>
-                        <p className='text-xl  pt-3'><b>Type :</b> Reward<br /></p>
-                        <p className='text-xl  pt-3'><b>Discription :</b> Branded last 2 pieces available (Black)<br /></p>
+                <div className='max-w-[1240px] mx-auto grid md:grid-cols-4 gap-8 pt-4 pl-12'>
+
+                    <div>
+                        <img className='h-50 w-50 shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={clock1} alt="/" />
+                        <p className='text-xl py-8 text-center'>
+                            Wall Clock
+                        </p>
                     </div>
-                    <div className='pt-44 pl-32'>
-                        <button className='border-none w-[150px] px-2 py-2 rounded-full'>Review</button>
+
+                    <div>
+                        <img className='h-50 w-50 shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={hndbag1} alt="/" />
+                        <p className='text-xl py-8 text-center'>
+                            Hand Bag
+                        </p>
                     </div>
-                    <div className='pt-44 pl-8'>
-                        <button className='border-none w-[150px] px-2 py-2 rounded-full'>Delete</button>
+
+                    <div>
+                        <img className='h-50 w-50 shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={bottle1} alt="/" />
+                        <p className='text-xl py-8 text-center'>
+                            Water Bottle
+                        </p>
+                    </div>
+
+                    <div>
+                        <img className='h-50 w-50 shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={shoe1} alt="/" />
+                        <p className='text-xl py-8 text-center'>
+                            Nike Shoe
+                        </p>
                     </div>
                 </div>
-
-                <div className='max-w-[1240px] mx-auto grid md:grid-cols-4 pb-10 pt-12 pl-12 pl-24'>
-
-                    <img className='h-30 w-30 shadow-2xl flex flex-col' src={bottle} alt="/" />
-                    <div className='flex flex-col justify-center pl-12'>
-                        <p className='text-xl'><b>Name :</b> Nike Shoe<br /></p>
-                        <p className='text-xl pt-3'><b>Quantity :</b> 2<br /></p>
-                        <p className='text-xl pt-3'><b>Type :</b> Reward<br /></p>
-                        <p className='text-xl pt-3'><b>Discription :</b> Branded last 2 pieces available (Black)<br /></p>
-                    </div>
-                    <div className='pt-44 pl-32'>
-                        <button className='border-none w-[150px] px-2 py-2 rounded-full'>Review</button>
-                    </div>
-                    <div className='pt-44 pl-8'>
-                        <button className='border-none w-[150px] px-2 py-2 rounded-full'>Delete</button>
-                    </div>
-                </div>
-                <SideNavr />
             </div>
+            <SideNavr />
         </div>
     )
 }
