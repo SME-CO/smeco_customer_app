@@ -103,9 +103,9 @@ import {
    Title,
    Tooltip,
    SubTitle
- } from 'chart.js';
- 
- Chart.register(
+} from 'chart.js';
+
+Chart.register(
    ArcElement,
    LineElement,
    BarElement,
@@ -130,21 +130,30 @@ import {
    Title,
    Tooltip,
    SubTitle
- );
+);
 
 const data = {
    labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
    datasets: [
       {
          data: [12, 19, 3, 5, 2, 3],
-         backgroundColor:[
-            "red",
-            "blue",
-            "yellow",
-            "green",
-            "purple",
-            "orange"
-         ]
+         backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(255, 159, 64, 0.2)'
+         ],
+         borderColor: [
+            'rgba(255, 99, 132)',
+            'rgba(54, 162, 235)',
+            'rgba(255, 206, 86)',
+            'rgba(75, 192, 192)',
+            'rgba(153, 102, 255)',
+            'rgba(255, 159, 64)'
+         ],
+         borderWidth: 1
       },
    ],
 };
@@ -154,11 +163,11 @@ const Dashboard = () => {
    return (
       <div>
          <Navbarr />
-            <div className='pt-24 md:ml-40 w-screen'>
-         <h1>Chart</h1>
-         <div style={{width:"500px", margin:"0 auto"}}>
-         <Doughnut data={data}/>
-         </div>
+         <div className='pt-24 md:ml-40 w-screen'>
+            <h1>Chart</h1>
+            <div style={{ width: "500px", margin: "0 auto" }}>
+               <Doughnut data={data} />
+            </div>
          </div>
          <SideNavr />
       </div>
