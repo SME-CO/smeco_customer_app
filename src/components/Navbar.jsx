@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
 import logoImg from '../assets/logo.png'
-import { Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [nav, setNav] = useState (false)
@@ -12,11 +12,15 @@ const Navbar = () => {
         <div className='flex items-center'>
           <img className='object-contain h-20' src={logoImg} alt="logo" />
           <ul className='hidden md:flex'>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/shops">Shops</Link></li>
-            <li><Link to="/products">Products</Link></li>
-            <li><Link to="/aboutus">About Us</Link></li>
-            <li><Link to="/faq">FAQ</Link></li>
+            <li><NavLink to="/">Home</NavLink></li>
+            <li><NavLink to="/shops"
+            activeStyle={{
+              fontWeight:"bold",
+              color:"red"
+            }}>Shops</NavLink></li>
+            <li><NavLink to="/products">Products</NavLink></li>
+            <li><NavLink to="/aboutus">About Us</NavLink></li>
+            <li><NavLink to="/faq">FAQ</NavLink></li>
           </ul>    
         </div>
     

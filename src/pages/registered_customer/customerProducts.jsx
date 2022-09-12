@@ -19,7 +19,7 @@ const CustomerProducts = () => {
     return (
         <div>
             <Navbarr />
-            <div className='pt-24 md:ml-40 w-screen'>
+            <div className='pt-24 md:ml-40'>
 
                 <p className='text-3xl text-left pl-32 font-bold '>Discounted Products</p>
 

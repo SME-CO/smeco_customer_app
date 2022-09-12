@@ -8,7 +8,7 @@ const CustomerPurchase = () => {
   return (
     <div className='w-full'>
       <Navbarr />
-      <div className='pt-24 md:ml-40 w-screen'>
+      <div className='pt-24 md:ml-40'>
       <div>
         <div className='max-w-[700px] mx-auto grid md:grid-cols-1 gap-8 pb-12'>
           <div className='w-full shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300'>

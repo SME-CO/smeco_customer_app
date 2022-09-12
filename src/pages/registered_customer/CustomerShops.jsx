@@ -13,7 +13,7 @@ const CustomerShops = () => {
    return (
       <div>
          <Navbarr />
-         <div className='pt-24 md:ml-40 w-screen'>
+         <div className='pt-24 md:ml-40'>
 
             <p className='text-4xl text-left pl-32 font-bold'>Your Shops</p>
 
