@@ -11,7 +11,7 @@ const CustomerPurchase = () => {
     return (
         <div>
             <Navbarr />
-            <div className='pt-8 md:ml-40'>
+            <div className='pt-8 md:ml-60'>
                 <p className='text-3xl text-left pl-32 font-bold '>Your Purchased Products</p>
                 <div className='max-w-[1240px] mx-auto grid md:grid-cols-4 pb-10 pt-12 pl-24'>
 

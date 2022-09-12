@@ -7,7 +7,7 @@ const PurchaseHistory = () => {
         <div>
             <Navbarr />
             
-                        <div class="pb-24 md:ml-40 w-screen'>">
+                        <div class="pb-24 md:ml-60 w-screen'>">
                             <p className='pl-24 text-3xl font-bold py-8'>Your Purchase History</p>
 
                         <div class="overflow-x-auto border-x border-t pl-24 pr-12">
