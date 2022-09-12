@@ -62,14 +62,18 @@ const CustomerPurchases = () => {
                     // {purchasesList && purchasesList
                     // .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                     // .map((purchase, index) => (  
-                            <div className='max-w-[700px] mx-auto grid md:grid-cols-1 gap-8 pb-12'>
+                            <div className='max-w-[1000px] mx-auto grid md:grid-cols-1 gap-8 pb-12'>
                                 <div className='w-full shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300'>
-                                    <div className='max-w-[1240px] mx-auto grid md:grid-cols-2 pb-10 pt-12'>
+                                    <div className='max-w-[1240px] mx-auto grid md:grid-cols-3  pb-4 pt-4'>
                                         <div>
-                                            <h2 className='text-2xl font-bold text-center py-8'>{purchase.shopName}</h2>
+                                        <img className='h-30 w-30 shadow-2xl flex flex-col' src={purchase.shopImage} alt="/" />
                                         </div>
-                                        <div className='pl-32'>
-                                            <button className='border-none my-6 mx-auto px-3 py-2'><Link to="/purchaseHistory">View More</Link></button>
+                                   
+                                        <div>
+                                            <h2 className='text-2xl font-bold text-center pt-20 py-8'>{purchase.shopName}</h2>
+                                        </div>
+                                        <div className='pl-22 pt-11'>
+                                            <button className='border-none my-6 mx-auto   px-6 py-3'><Link to="/purchaseHistory">View More</Link></button>
                                         </div>
                                     </div>
                                 </div>

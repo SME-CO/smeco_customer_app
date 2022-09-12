@@ -10,7 +10,7 @@ const CustomerPurchases = () => {
         <div>
             <Navbarr />
             <div>
-                hello
+                
                 <PurchasedShopCard/>
             </div>
             

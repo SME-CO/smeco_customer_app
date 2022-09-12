@@ -59,20 +59,20 @@ const CustomerProducts = () => {
                   .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                   .map((product, index) => (
                     <>
-                    <div className='max-w-[1240px] mx-auto grid md:grid-cols-4 gap-8 pt-12 pl-24'>
+                    <div className='max-w-[1240px] mx-auto gap-4 grid md:grid-cols-5 gap-8 pt-12 pl-24'>
                     <img className='h-30 w-30 shadow-2xl flex flex-col' src={product.image} alt="/" />
-                    <div className='flex flex-col justify-center pl-12'>
+                    <div className='flex flex-col justify-center col-span-2 pl-12'>
                         <p className='text-xl'><b>Name :</b> {product.productName}<br /></p>
-                        <p className='text-xl  pt-3'><b>Shop :</b> <br /></p>
+                        <p className='text-xl  pt-3'><b>Shop :</b>{product.shopName} <br /></p>
                         <p className='text-xl  pt-3'><b>Price :</b>{product.price} <br /></p>
-                        <p className='text-xl  pt-3'><b>Type :</b> Discount<br /></p>
-                        <p className='text-xl  pt-3'><b>Discription :</b> Silver coated belt<br /></p>
+                        <p className='text-xl  pt-3'><b>Type :</b> {product.catagory}<br /></p>
+                        <p className='text-xl  pt-3'><b>Description :</b> {product.description}<br /></p>
                     </div>
-                    <div className='pt-44 pl-32'>
+                    <div className='pt-44 pl-12 col-span-1'>
                         <button className='border-none w-[150px] px-2 py-2 rounded-full'>Review</button>
                     </div>
-                    <div className='pt-44 pl-8'>
-                        <button className='border-none w-[150px] px-2 py-2 rounded-full'>Delete</button>
+                    <div className='pt-44 pl-8 col-span-1'>
+                        <button onclick= "" className='border-none w-[150px] px-2 py-2 rounded-full'>Delete</button>
                     </div>
                     </div>
                     </>
