@@ -97,7 +97,7 @@ export default function Login() {
 
       setTimeout(() => {
         navigate("/dashboard");
-      }, 6000);
+      }, 4000);
     } catch (error) {
       console.log(error);
       setAlertType("error");
