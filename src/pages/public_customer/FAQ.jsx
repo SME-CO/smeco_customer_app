@@ -165,7 +165,7 @@ export default function FAQ() {
       <div className='pl-24 pr-12'>
         <h1>Ask your questions here....</h1>
       <textarea className='bg-[#F0F8FF] font-white align-items-center' name="" id="" cols="150" rows="3"></textarea>
-      <div>
+      <div className='pt-3'> 
       <button className='border-none px-4 py-1'>SUBMIT</button>
       </div>
       </div>
