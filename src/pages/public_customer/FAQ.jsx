@@ -18,7 +18,7 @@ export default function FAQ() {
             <Disclosure>
               {({ open }) => (
                 <>
-                  <Disclosure.Button className="flex w-full justify-between rounded-lg bg-[#90E0EF] px-4 py-2 text-left text-sm font-medium text-black hover:bg-[#00B4D8] focus:outline-none focus-visible:ring-opacity-75">
+                  <Disclosure.Button className="flex w-full justify-between rounded-lg bg-[#03045E] px-4 py-2 text-left text-sm font-medium text-white hover:bg-[#FF8C32] focus:outline-none focus-visible:ring-opacity-75">
                     <span>WHAT ARE YOUR BUSINESS GOALS??</span>
                     <ChevronUpIcon
                       className={`${open ? 'rotate-180 transform' : ''
@@ -36,7 +36,7 @@ export default function FAQ() {
             <Disclosure as="div" className="mt-2">
               {({ open }) => (
                 <>
-                  <Disclosure.Button className="flex w-full justify-between rounded-lg bg-[#90E0EF] px-4 py-2 text-left text-sm font-medium text-black hover:bg-[#00B4D8] focus:outline-none ">
+                  <Disclosure.Button className="flex w-full justify-between rounded-lg bg-[#03045E] px-4 py-2 text-left text-sm font-medium text-white hover:bg-[#FF8C32] focus:outline-none ">
                     <span>WHAT MAKES YOUR CUSTOMERS FEEL VALUED??</span>
                     <ChevronUpIcon
                       className={`${open ? 'rotate-180 transform' : ''
@@ -54,7 +54,7 @@ export default function FAQ() {
             <Disclosure as="div" className="mt-2">
               {({ open }) => (
                 <>
-                  <Disclosure.Button className="flex w-full justify-between rounded-lg bg-[#90E0EF] px-4 py-2 text-left text-sm font-medium text-black hover:bg-[#00B4D8] focus:outline-none ">
+                  <Disclosure.Button className="flex w-full justify-between rounded-lg bg-[#03045E] px-4 py-2 text-left text-sm font-medium text-white hover:bg-[#FF8C32] focus:outline-none ">
                     <span>WHAT KIND OF CUSTOMER DATA DO YOU WANT TO COLLECT??</span>
                     <ChevronUpIcon
                       className={`${open ? 'rotate-180 transform' : ''
@@ -72,7 +72,7 @@ export default function FAQ() {
             <Disclosure as="div" className="mt-2">
               {({ open }) => (
                 <>
-                  <Disclosure.Button className="flex w-full justify-between rounded-lg bg-[#90E0EF] px-4 py-2 text-left text-sm font-medium text-black hover:bg-[#00B4D8] focus:outline-none ">
+                  <Disclosure.Button className="flex w-full justify-between rounded-lg bg-[#03045E] px-4 py-2 text-left text-sm font-medium text-white hover:bg-[#FF8C32] focus:outline-none ">
                     <span>DO YOU OFFER TECHNICAL SUPPORT?</span>
                     <ChevronUpIcon
                       className={`${open ? 'rotate-180 transform' : ''
@@ -89,7 +89,7 @@ export default function FAQ() {
             <Disclosure as="div" className="mt-2">
               {({ open }) => (
                 <>
-                  <Disclosure.Button className="flex w-full justify-between rounded-lg bg-[#90E0EF] px-4 py-2 text-left text-sm font-medium text-black hover:bg-[#00B4D8] focus:outline-none ">
+                  <Disclosure.Button className="flex w-full justify-between rounded-lg bg-[#03045E] px-4 py-2 text-left text-sm font-medium text-white hover:bg-[#FF8C32] focus:outline-none ">
                     <span>DO YOU PROVIDE DELIVERYY SERVICES?</span>
                     <ChevronUpIcon
                       className={`${open ? 'rotate-180 transform' : ''
@@ -107,7 +107,7 @@ export default function FAQ() {
             <Disclosure as="div" className="mt-2">
               {({ open }) => (
                 <>
-                  <Disclosure.Button className="flex w-full justify-between rounded-lg bg-[#90E0EF] px-4 py-2 text-left text-sm font-medium text-black hover:bg-[#00B4D8] focus:outline-none ">
+                  <Disclosure.Button className="flex w-full justify-between rounded-lg bg-[#03045E] px-4 py-2 text-left text-sm font-medium text-white hover:bg-[#FF8C32] focus:outline-none ">
                     <span>HOW CAN I JOIN THIS PLATFORM?</span>
                     <ChevronUpIcon
                       className={`${open ? 'rotate-180 transform' : ''
@@ -125,7 +125,7 @@ export default function FAQ() {
             <Disclosure as="div" className="mt-2">
               {({ open }) => (
                 <>
-                  <Disclosure.Button className="flex w-full justify-between rounded-lg bg-[#90E0EF] px-4 py-2 text-left text-sm font-medium text-black hover:bg-[#00B4D8] focus:outline-none ">
+                  <Disclosure.Button className="flex w-full justify-between rounded-lg bg-[#03045E] px-4 py-2 text-left text-sm font-medium text-white hover:bg-[#FF8C32] focus:outline-none ">
                     <span>DO YOU PROVIDE DELIVERYY SERVICES?</span>
                     <ChevronUpIcon
                       className={`${open ? 'rotate-180 transform' : ''
@@ -142,7 +142,7 @@ export default function FAQ() {
             <Disclosure as="div" className="mt-2">
               {({ open }) => (
                 <>
-                  <Disclosure.Button className="flex w-full justify-between rounded-lg bg-[#90E0EF] px-4 py-2 text-left text-sm font-medium text-black hover:bg-[#00B4D8] focus:outline-none ">
+                  <Disclosure.Button className="flex w-full justify-between rounded-lg bg-[#03045E] px-4 py-2 text-left text-sm font-medium text-white hover:bg-[#FF8C32] focus:outline-none ">
                     <span>WHAT KIND OF CUSTOMER DATA DO YOU WANT TO COLLECT??</span>
                     <ChevronUpIcon
                       className={`${open ? 'rotate-180 transform' : ''

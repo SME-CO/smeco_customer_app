@@ -17,7 +17,7 @@ import { Link } from 'react-router-dom';
 import purchase from '../api/purchase';
 
 
-const CustomerPurchases = () => {
+const PurchasedShopCard = () => {
     const [page, setPage] = useState(0);
     const [rowsPerPage, setRowsPerPage] = useState(5);
 
@@ -47,8 +47,8 @@ const CustomerPurchases = () => {
     }, [getPurchases]);
     return (
         <div>
-            <div className='pt-2'>
-                <p className='text-3xl text-left pl-32 font-bold '>Your Purchases</p>
+            <div className='pt-20 pl-32'>
+                {/* <p className='text-3xl text-left pl-32 font-bold '>Your Purchases</p> */}
 
                 {/* <img className='h-30 w-30 shadow-2xl flex flex-col' src={watch1} alt="/" />  */}
 
@@ -100,4 +100,4 @@ const CustomerPurchases = () => {
     )
 }
 
-export default CustomerPurchases
+export default PurchasedShopCard
