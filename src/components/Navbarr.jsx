@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import bgImg5 from '../assets/logo.png'
 import { AiOutlineBell } from 'react-icons/ai'
-import img from '../assets/mushipic1.jpeg'
+import img2 from '../assets/dula.jpg'
 import { Link } from 'react-router-dom';
+import img from '../assets/mushipic1.jpeg'
 import BackIcon from "@mui/icons-material/ArrowBack";
 import NotificationIcon from "@mui/icons-material/Notifications";
 
@@ -26,7 +27,7 @@ const Navbarr = () => {
                 </div>
                 <div className='hidden md:flex pr-10'>
                     <NotificationIcon className="!w-12 !h-12 text-white pr-6" />
-                    <p className="pt-3 text-white pr-6">Mushrifa</p>
+                    <Link to= "/CustomerProfile"><p className="pt-3 text-white pr-6" >Mushrifa</p></Link>
                     <div className="pr-5">
                         <img className='w-[50px] h-[50px]mx-auto rounded-full' src={img} alt="" />
                     </div>

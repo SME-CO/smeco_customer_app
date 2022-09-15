@@ -16,6 +16,11 @@ import CustomerRecords from "./pages/registered_customer/CustomerRecords";
 import PurchaseHistory from "./pages/registered_customer/PurchaseHistory";
 import CustomerChat from "./pages/registered_customer/CustomerChat";
 import PurchasedShopCard from "./components/PurchasedShopCard";
+import CustomerReview from "./pages/registered_customer/CustomerReviews";
+import CustomerAddReview from "./pages/registered_customer/CustomerAddReviews";
+import CustomerProfile from "./pages/registered_customer/CustomerProfile";
+import CustomerUpdateProfile from "./pages/registered_customer/CustomerUpdateProfile";
+
 
 
 class App extends Component {
@@ -42,6 +47,12 @@ class App extends Component {
           <Route path="/purchaseHistory" element={<PurchaseHistory />} />
           <Route path="/customerChat" element={<CustomerChat />} />
           <Route path="/purchasedShopCard" element={<PurchasedShopCard />} />
+          <Route path="/customerReviews" element={<CustomerReview />} />
+          <Route path="/customerAddReviews" element={<CustomerAddReview/>}/>
+          <Route path="/customerProfile" element={<CustomerProfile/>}/>
+          <Route path="/customerUpdateProfile" element={<CustomerUpdateProfile/>}/>
+          
+          
           </Routes>
         </div>
       </BrowserRouter>
