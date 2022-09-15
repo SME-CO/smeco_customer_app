@@ -162,6 +162,13 @@ export default function FAQ() {
           <img className='pt-12' src={faqImg} alt="" />
         </div>
       </div>
+      <div className='pl-24 pr-12'>
+        <h1>Ask your questions here....</h1>
+      <textarea className='bg-[#F0F8FF] font-white align-items-center' name="" id="" cols="150" rows="3"></textarea>
+      <div className='pt-3'> 
+      <button className='border-none px-4 py-1'>SUBMIT</button>
+      </div>
+      </div>
       <Footer />
     </div>
   )
