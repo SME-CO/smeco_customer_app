@@ -16,6 +16,7 @@ import {
 
 
 import watch1 from '../assets/watch1.jpg';
+import { Link } from 'react-router-dom';
 
 
 const ProductCard = () => {
@@ -49,7 +50,7 @@ const ProductCard = () => {
     return (
         <div>
             <div className='pt-20'>
-            <p className='text-3xl text-left text-center pl-32 font-bold '>Your Purchased Products</p>
+            <p className='text-3xl text-center pl-32 font-bold '>Your Purchased Products</p>
                 
                 {/* <img className='h-30 w-30 shadow-2xl flex flex-col' src={watch1} alt="/" /> */}
                
@@ -69,7 +70,7 @@ const ProductCard = () => {
                         <p className='text-xl  pt-3'><b>Description :</b> {product.description}<br /></p>
                     </div>
                     <div className='pt-44 pl-12 col-span-1'>
-                        <button className='border-none w-[150px] px-2 py-2 rounded-full'>Review</button>
+                       <Link to={`/CustomerReviews`}><button className='border-none w-[150px] px-2 py-2 rounded-full'>Review</button></Link> 
                     </div>
                     <div className='pt-44 pl-8 col-span-1'>
                         <button onclick= "" className='border-none w-[150px] px-2 py-2 rounded-full'>Delete</button>
