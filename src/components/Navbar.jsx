@@ -31,7 +31,7 @@ const Navbar = () => {
                   : "text-black"}>Products</NavLink></li>
 
             <li><NavLink to="/aboutus"
-              className={({ isActive }) =>
+              className= {({ isActive }) =>
                 isActive
                   ? "text-[#FF8C32]"
                   : "text-black"}>About Us</NavLink></li>
