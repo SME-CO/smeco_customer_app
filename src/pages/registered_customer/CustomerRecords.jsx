@@ -4,7 +4,7 @@ import Navbarr from '../../components/Navbarr';
 import SideNavr from "../../components/SideNavr";
 import { Link } from 'react-router-dom';
 
-const CustomerPurchase = () => {
+const CustomerRecords = () => {
   return (
     <div className='w-full'>
       <Navbarr />
@@ -104,4 +104,4 @@ const CustomerPurchase = () => {
   )
 }
 
-export default CustomerPurchase
+export default CustomerRecords 
