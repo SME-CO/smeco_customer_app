@@ -18,31 +18,10 @@ const Navbarr = () => {
                 <div className="flex items-center text-white">
                     <ul className='hidden md:flex'>
                         <li className="pr-30"><BackIcon className="" /><Link to="/">Back to home</Link></li>
-
-                        <li><NavLink to="/shops"
-                            className={({ isActive }) =>
-                                isActive
-                                    ? "text-[#FF8C32]"
-                                    : "text-white"}>Shops</NavLink></li>
-
-                        <li><NavLink to="/products"
-                            className={({ isActive }) =>
-                                isActive
-                                    ? "text-[#FF8C32]"
-                                    : "text-white"}>Products</NavLink></li>
-
-
-                        <li><NavLink to="/aboutus"
-                            className={({ isActive }) =>
-                                isActive
-                                    ? "text-[#FF8C32]"
-                                    : "text-white"}>About Us</NavLink></li>
-
-                        <li><NavLink to="/shops"
-                            className={({ isActive }) =>
-                                isActive
-                                    ? "text-[#FF8C32]"
-                                    : "text-white"}>Shops</NavLink></li>
+                        <li><NavLink to="/shops">Shops</NavLink></li>
+                        <li><NavLink to="/products">Products</NavLink></li>
+                        <li><NavLink to="/aboutus">About Us</NavLink></li>
+                        <li><NavLink to="/faq">FAQ</NavLink></li>
                     </ul>
                 </div>
                 <div className='hidden md:flex pr-10'>

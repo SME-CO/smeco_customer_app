@@ -4,7 +4,10 @@ import { Bar } from "react-chartjs-2";
 import { Line } from "react-chartjs-2";
 import Navbarr from '../../components/Navbarr';
 import SideNavr from "../../components/SideNavr";
-import NotificationIcon from "@mui/icons-material/Notifications";
+import {
+   AiFillGift,
+   AiFillHeart
+ } from 'react-icons/ai'
 import {
    Chart,
    ArcElement,
@@ -63,11 +66,11 @@ Chart.register(
 
 //doughnut chart
 const data = {
-   labels: ["Appliances", "Toys & Games", "Electronics", "Sports & outdoors","Home & kitchen", "Cell Phone & Accessories"],
+   labels: ["Top Choice", "Glitters", "Shoe Palace", "Fashion Wings","Stylish", "Your Choice"],
    datasets: [
       {
-         label:'Product Categories',
-         data: [20, 35, 50, 25, 20, 75],
+         label:'Offer Count',
+         data: [12, 40, 20, 25, 5, 18],
          backgroundColor: [
             'rgba(255, 99, 132, 0.2)',
             'rgba(54, 162, 235, 0.2)',
@@ -92,10 +95,10 @@ const data = {
 
 //bar chart
 const data2 = {
-   labels: ["Appliances", "Toys & Games", "Electronics", "Sports & outdoors","Home & kitchen", "Cell Phone & Accessories"],
+   labels: ["Top Choice", "Glitters", "Shoe Palace", "Fashion Wings","Stylish", "Your Choice"],
    datasets: [
       {
-         label:'Product Categories Count ',
+         label:'Purchased Products count ',
          data: [80, 85, 50, 25, 20, 75],
          backgroundColor: [
             'rgba(255, 99, 132, 0.2)',
@@ -120,11 +123,11 @@ const data2 = {
 
 //line
 const data3 = {
-   labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+   labels: ["Top Choice", "Glitters", "Shoe Palace", "Stylish", "Your Choice", "Fashion Wings",],
    datasets: [
       {
-         label:'Purchases ',
-         data: [20, 10, 80, 50, 60, 15],
+         label:'Offer Count',
+         data: [20, 6, 80, 30, 60, 15],
          backgroundColor: [
             'rgba(255, 99, 132, 0.2)',
             'rgba(54, 162, 235, 0.2)',
@@ -157,20 +160,27 @@ const Dashboard = () => {
 
             {/* -------------------------------Bar Chart---------------------- */}
             <div>
-               <div style={{ width: "500px", margin: "0 auto" }}>
+               <div style={{ width: "600px", margin: "0 auto" }}>
                   <Bar data={data2} />
                </div>
             </div>
 
             <div className='pl-32'>
 
-               <div>
-               <p className=' shadow-2xl text-3xl p-10 my-4 rounded-lg  bg-zinc-200 '>Star Points : 100</p>
+               <div className='pl-6 w-full shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-100'>
+                  <AiFillHeart className='mx-auto  fill-red-500' size='3rem' />
+                  <div className='text-center font-medium'>
+                  <h2 className='text-2xl font-bold text-center py-8 text-green-500'>Star Points : 100</h2>  
+                  </div>
                </div>
-               <div className='pt-4'>
-               <p className='shadow-2xl text-3xl p-10 my-4 rounded-lg  bg-zinc-200 '>Rewards : 02</p>
+
+               <div className='w-full shadow-2xl flex flex-col p-3 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-100'>
+                  <AiFillGift className='mx-auto  fill-blue-500' size='3rem' />
+                  <div className='text-center font-medium'>
+                  <h2 className='text-2xl font-bold text-center py-8 text-orange-500'>Rewards : 02</h2>  
+                  </div>
                </div>
-            </div>
+             </div>
 
               {/* --------------------Doughnut chart----------------------- */}
               <div className='pr-24'>
