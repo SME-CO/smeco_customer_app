@@ -4,10 +4,29 @@ import { Disclosure } from '@headlessui/react'
 import { ChevronUpIcon } from '@heroicons/react/solid'
 import faqImg from '../../assets/faq.png'
 import Footer from "../../components/Footer";
-
+import TextField from "@mui/material/TextField";
+import Box from "@mui/material/Box";
+import ApiIndex from "../../api/index";
 
 
 export default function FAQ() {
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const data = new FormData(event.currentTarget);
+
+
+    try {
+      let formData = {
+       message: data.get("message")
+      };
+
+      let response = await ApiIndex.FaqApi.createFaq(formData)
+
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   return (
     <div>
       <Navbar />
@@ -164,10 +183,17 @@ export default function FAQ() {
       </div>
       <div className='pl-24 pr-12'>
         <h1>Ask your questions here....</h1>
-      <textarea className='bg-[#F0F8FF] font-white align-items-center' name="" id="" cols="150" rows="3"></textarea>
-      <div className='pt-3'> 
-      <button className='border-none px-4 py-1'>SUBMIT</button>
-      </div>
+        <Box
+          component="form"
+          noValidate
+          onSubmit={handleSubmit}
+          sx={{ mt: 1 }}
+        >
+          <TextField className='bg-[#F0F8FF] font-white align-items-center' name="message" fullWidth></TextField>
+          <div className='pt-3'>
+            <button className='border-none px-4 py-1'>SUBMIT</button>
+          </div>
+        </Box>
       </div>
       <Footer />
     </div>

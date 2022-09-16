@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import bgImg5 from '../assets/logo.png'
 import { AiOutlineBell } from 'react-icons/ai'
 import img from '../assets/mushipic1.jpeg'
-import { Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import BackIcon from "@mui/icons-material/ArrowBack";
 import NotificationIcon from "@mui/icons-material/Notifications";
 
@@ -18,10 +18,10 @@ const Navbarr = () => {
                 <div className="flex items-center text-white">
                     <ul className='hidden md:flex'>
                         <li className="pr-30"><BackIcon className="" /><Link to="/">Back to home</Link></li>
-                        <li><Link to="/shops">Shops</Link></li>
-                        <li><Link to="/products">Products</Link></li>
-                        <li><Link to="/aboutus">About Us</Link></li>
-                        <li><Link to="/faq">FAQ</Link></li>
+                        <li><NavLink to="/shops">Shops</NavLink></li>
+                        <li><NavLink to="/products">Products</NavLink></li>
+                        <li><NavLink to="/aboutus">About Us</NavLink></li>
+                        <li><NavLink to="/faq">FAQ</NavLink></li>
                     </ul>
                 </div>
                 <div className='hidden md:flex pr-10'>
