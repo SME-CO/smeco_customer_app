@@ -47,7 +47,7 @@ const PurchasedShopCard = () => {
     }, [getPurchases]);
     return (
         <div>
-            <div className='pt-20 pl-32'>
+            <div className='pt-12 pl-32'>
                 {/* <p className='text-3xl text-left pl-32 font-bold '>Your Purchases</p> */}
 
                 {/* <img className='h-30 w-30 shadow-2xl flex flex-col' src={watch1} alt="/" />  */}
