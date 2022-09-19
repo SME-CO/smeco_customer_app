@@ -16,7 +16,6 @@ import CustomerRecords from "./pages/registered_customer/CustomerRecords";
 import PurchaseHistory from "./pages/registered_customer/PurchaseHistory";
 import CustomerChat from "./pages/registered_customer/CustomerChat";
 
-
 class App extends Component {
   render() {
     return (
@@ -33,13 +32,13 @@ class App extends Component {
           </Routes>
 
           <Routes>
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/customerShops" element={<CustomerShops />} />
-          <Route path="/customerProducts" element={<CustomerProducts />} />
-          <Route path="/customerPurchase" element={<CustomerPurchase />} />
-          <Route path="/customerRecords" element={<CustomerRecords />} />
-          <Route path="/purchaseHistory" element={<PurchaseHistory />} />
-          <Route path="/customerChat" element={<CustomerChat />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/customerShops" element={<CustomerShops />} />
+            <Route path="/customerProducts" element={<CustomerProducts />} />
+            <Route path="/customerPurchase" element={<CustomerPurchase />} />
+            <Route path="/customerRecords" element={<CustomerRecords />} />
+            <Route path="/purchaseHistory" element={<PurchaseHistory />} />
+            <Route path="/customerChat" element={<CustomerChat />} />
           </Routes>
         </div>
       </BrowserRouter>
