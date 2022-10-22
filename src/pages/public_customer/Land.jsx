@@ -37,21 +37,11 @@ const Land = ({ productItems, addToCart, CartItem, shopItems }) => {
       <Navbar />
       <br></br>
 
-      {/* <Carousel>
-        <div>
-          <img src={saleImg} />
-        </div>
-        <div>
-          <img src={cover4} />
-        </div>
-        <div>
-          <img src={cover1} />
-        </div>
-      </Carousel> */}
       <section className="home">
         <div className="container d_flex">
           <SliderHome />
         </div>
+        <Wrapper />
       </section>
       <div>
         <div className="max-w-[1240px] mx-auto flex md:flex-cols-2 py-16 px-4">
@@ -90,8 +80,6 @@ const Land = ({ productItems, addToCart, CartItem, shopItems }) => {
             <img className="w-[500px] mx-auto my-4" src={heroImg} alt="/" />
           </div>
         </div>
-
-        <Wrapper />
 
         {/* -----------------------------------------The 04 boxes---------------------------------------------- */}
         <div className="max-w-[1240px] mx-auto flex md:flex-cols-4 gap-8 pt-8">
@@ -256,7 +244,9 @@ const Land = ({ productItems, addToCart, CartItem, shopItems }) => {
       <NewArrivals />
       <Shop />
 
-      <Footer />
+      <div>
+        <Footer />
+      </div>
     </div>
   );
 };

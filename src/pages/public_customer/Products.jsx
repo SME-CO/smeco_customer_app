@@ -15,6 +15,7 @@ import Search from "../../components/Search";
 import Categories from "./Categories";
 import NewArrivalAll from "../../components/new arrivals/NewArrivalAll";
 import "./Home.css";
+import SearchIcon from "@mui/icons-material/Search";
 
 const Products = () => {
   return (
@@ -23,10 +24,29 @@ const Products = () => {
       <br></br>
       <br></br>
       <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <Search />
+
+      <div className="mt-6 ml-3 mr-1">
+        <center>
+          <label className="relative block">
+            <span className="sr-only">Search</span>
+            <center>
+              <span className="absolute inset-y-0 left-0 flex items-center pl-2">
+                <SearchIcon
+                  className="!h-5 !w-5 fill-slate-300"
+                  viewBox="0 0 20 20"
+                />
+              </span>
+            </center>
+            <input
+              className="placeholder:italic placeholder:text-slate-400 block bg-white w-full pl-40 pr-40 border border-slate-300 rounded-md py-2 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
+              placeholder="Search Your shops..."
+              type="text"
+              name="search"
+            />
+          </label>
+        </center>
+      </div>
+
       <Categories />
       <p className="text-xl text-center font-bold">
         Products you might Interested

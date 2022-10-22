@@ -13,7 +13,7 @@ const Footer = () => {
   return (
     <div className="w-full mt-24 bg-[#03045E] text-gray-300  px-0">
       <br></br>
-      <div className="grid grid-cols-4 gap-3 bg-[03045E]">
+      <div className="flex flex-col-4 md:flex-row gap-40  bg-[03045E] pb-4 pl-6">
         <div className="text-center">
           <img src={logoimg} className="h-20 content-center px-28"></img>
           <b>SMECO</b>
@@ -29,7 +29,7 @@ const Footer = () => {
           </p>
           <br></br>
 
-          <div className="grid grid-cols-2 gap-1">
+          <div className="flex flex-cols-2 gap-4 ">
             <div classname="hover:text-yellow-600">
               <p className="hover:text-yellow-600">0776198765</p>
               <div>
@@ -50,7 +50,7 @@ const Footer = () => {
         <div className="text-left">
           <p className="text-xl">
             <b> Contact Us </b>
-          </p>{" "}
+          </p>
           <br></br>
           <a href="" className="hover:text-yellow-600">
             About Us
