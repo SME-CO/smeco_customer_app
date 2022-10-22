@@ -4,7 +4,6 @@ import purchase from "./purchase";
 import review from "./review";
 import faq from "./faq";
 
-
 export default {
     CustomerApi: customer,
     ProductApi: product,

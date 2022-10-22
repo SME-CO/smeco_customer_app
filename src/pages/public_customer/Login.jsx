@@ -199,9 +199,12 @@ export default function Login() {
               >
                 Login
               </Button> */}
-              <div className='pl-4 pr-4 pt-3'>
-                <button className='border-none w-[500px] px-7 py-2'>Login</button>
-              </div><br />
+              <div className="pl-4 pr-4 pt-3">
+                <button className="border-none w-[500px] px-7 py-2">
+                  Login
+                </button>
+              </div>
+              <br />
               <Grid container>
                 <Grid item xs>
                   <Link href="#" variant="body2">
