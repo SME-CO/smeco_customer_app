@@ -14,11 +14,16 @@ import grinder1 from '../../assets/grinder1.jpg';
 import clock1 from '../../assets/clock1.jpg';
 import watch2 from '../../assets/watch2.jpg';
 
+import ProductCard from '../../components/ProductCard';
+
+
+
 
 const CustomerProducts = () => {
     return (
         <div>
             <Navbarr />
+            <ProductCard />
             <div className='pt-24 md:ml-60'>
 
                 <p className='text-3xl text-left pl-12 font-bold '>Discounted Products</p>

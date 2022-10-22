@@ -36,7 +36,7 @@ function SideNavr() {
               </p>
               <p class="flex items-center p-4  pb-5 text-base font-normal text-[#FF8C32] rounded-lg h-12  dark:text-white hover:bg-gray-100 hover:opacity-75 ">
                 <PurchaseIcon className="!w-12 !h-12 text-[#FF8C32] p-3" />
-                <Link className="ml-0.5 font-bold pl-3 text-[#FF8C32]" to="/customerPurchase">Purchase</Link>
+                <Link className="ml-0.5 font-bold pl-3 text-[#FF8C32]" to="/CustomerPurchases">Purchase</Link>
               </p>
               <p class="flex items-center p-4  pb-5 text-base font-normal text-[#FF8C32] rounded-lg h-12  dark:text-white hover:bg-gray-100 hover:opacity-75 ">
                 <RecordIcon className="!w-12 !h-12 text-[#FF8C32] p-3" />
