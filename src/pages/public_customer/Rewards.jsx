@@ -7,6 +7,9 @@ const Rewards = () => {
     <div>
       <Navbar />
       <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
       <DiscountAll />
     </div>
   );

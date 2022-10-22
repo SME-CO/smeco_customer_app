@@ -1,9 +1,6 @@
 import React from "react";
-import Slider from "react-slick";
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
+
 import Sdata from "./Sdata";
-// import "../newarrivals/style.css"
 
 const ShopCart2 = () => {
   return (
@@ -17,7 +14,9 @@ const ShopCart2 = () => {
                   <img src={value.cover} alt="" width="100%" />
                 </div>
                 <h4>{value.name}</h4>
-                <span>{value.price}</span>
+                <span>{value.city}</span> <br></br>
+                Offer:
+                <span>{value.offer}</span>
               </div>
             </>
           );
