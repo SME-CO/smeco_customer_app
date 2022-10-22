@@ -1,12 +1,13 @@
 import React from "react";
-import Discount from "../../components/discount/Discount";
-import Navbarr from "../../components/Navbarr";
+import DiscountAll from "../../components/discount/DiscountAll";
+import Navbar from "../../components/Navbar";
 
 const Rewards = () => {
   return (
     <div>
-      <Navbarr />
-      <Discount />
+      <Navbar />
+      <br></br>
+      <DiscountAll />
     </div>
   );
 };

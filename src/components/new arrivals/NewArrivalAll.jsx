@@ -1,6 +1,7 @@
 import React from "react";
 import Cart2 from "./Cart2";
 import "./style.css";
+import "../top/style.css";
 
 const NewArrivalAll = () => {
   return (
@@ -17,8 +18,6 @@ const NewArrivalAll = () => {
             </div>
           </div>
 
-          <Cart2 />
-          <Cart2 />
           <Cart2 />
         </div>
       </section>

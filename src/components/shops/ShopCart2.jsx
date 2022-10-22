@@ -6,16 +6,9 @@ import Sdata from "./Sdata";
 // import "../newarrivals/style.css"
 
 const ShopCart2 = () => {
-  const settings = {
-    dots: false,
-    infinite: true,
-    slidesToShow: 6,
-    slidesToScroll: 1,
-    autoplay: true,
-  };
   return (
     <>
-      <Slider {...settings}>
+      <div className="content grid product">
         {Sdata.map((value, index) => {
           return (
             <>
@@ -29,7 +22,7 @@ const ShopCart2 = () => {
             </>
           );
         })}
-      </Slider>
+      </div>
     </>
   );
 };

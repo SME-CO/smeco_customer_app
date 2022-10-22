@@ -1,5 +1,6 @@
 import React from "react";
 import Ndata from "./Ndata";
+import "../top/style.css";
 
 const Cart2 = () => {
   return (

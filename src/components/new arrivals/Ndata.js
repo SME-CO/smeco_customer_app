@@ -35,6 +35,42 @@ const Ndata = [
     price: "400",
     offer: "Buy one get one",
   },
+  {
+    cover: "./arrivals/arrivals6.png",
+    name: "Bonsai tree",
+    price: "400",
+    offer: "Buy one get one",
+  },
+  {
+    cover: "./arrivals/arrivals6.png",
+    name: "Bonsai tree",
+    price: "400",
+    offer: "Buy one get one",
+  },
+  {
+    cover: "./arrivals/arrivals6.png",
+    name: "Bonsai tree",
+    price: "400",
+    offer: "Buy one get one",
+  },
+  {
+    cover: "./arrivals/arrivals6.png",
+    name: "Bonsai tree",
+    price: "400",
+    offer: "Buy one get one",
+  },
+  {
+    cover: "./arrivals/arrivals6.png",
+    name: "Bonsai tree",
+    price: "400",
+    offer: "Buy one get one",
+  },
+  {
+    cover: "./arrivals/arrivals6.png",
+    name: "Bonsai tree",
+    price: "400",
+    offer: "Buy one get one",
+  },
 ];
 
 export default Ndata;

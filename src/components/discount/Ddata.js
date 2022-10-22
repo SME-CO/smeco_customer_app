@@ -8,7 +8,7 @@ const Ddata = [
   },
   {
     cover: "./discount/discount-2.png",
-    name: "Sony TV 1080p",
+    name: "Sony TV",
     price: "Rs 450",
     offer: "50%",
     Shop: "Shop: ACS",
@@ -22,7 +22,7 @@ const Ddata = [
   },
   {
     cover: "./discount/discount-4.png",
-    name: "Setgearr 2022",
+    name: "Setgearr",
     price: "Rs 100",
     offer: "10%",
     Shop: "Shop: ACS",
@@ -43,7 +43,7 @@ const Ddata = [
   },
   {
     cover: "./discount/discount-7.png",
-    name: "Ranasonic 2022",
+    name: "Ranasonic",
     price: "Rs 300",
     offer: "30%",
     Shop: "Shop: ACS",

@@ -1,23 +1,15 @@
 import React from "react";
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Ddata from "./Ddata";
 import "./style.css";
 import Modal from "../../pages/public_customer/modal";
-// import "../newarrivals/style.css";
-
+import "../new arrivals/style.css";
+import "../top/style.css";
 const Dcard = () => {
-  const settings = {
-    // dots: false,
-    // infinite: true,
-    slidesToShow: 6,
-    slidesToScroll: 1,
-    // autoplay: false,
-  };
   return (
     <>
-      <Slider {...settings}>
+      <div className="content grid product">
         {Ddata.map((value, index) => {
           return (
             <>
@@ -36,7 +28,7 @@ const Dcard = () => {
             </>
           );
         })}
-      </Slider>
+      </div>
     </>
   );
 };

@@ -17,8 +17,6 @@ const DiscountAll = () => {
             </div>
           </div>
           <Dcard2 />
-          <Dcard2 />
-          <Dcard2 />
         </div>
       </section>
     </>

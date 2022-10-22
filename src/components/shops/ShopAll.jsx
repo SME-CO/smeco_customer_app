@@ -16,10 +16,6 @@ const ShopAll = () => {
             </div>
           </div>
           <ShopCart2 />
-          <ShopCart2 />
-          <ShopCart2 />
-          <ShopCart2 />
-          <ShopCart2 />
         </div>
       </section>
     </>
