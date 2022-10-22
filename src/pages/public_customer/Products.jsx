@@ -1,21 +1,11 @@
 import React from "react";
 import Navbar from "../../components/Navbar";
-import watch1 from "../../assets/watch1.jpg";
-import bottle1 from "../../assets/bottle1.jpg";
-import shoe1 from "../../assets/shoe1.jpg";
-import phncvr1 from "../../assets/phonecvr1.jpg";
-import mnypurse1 from "../../assets/moneypurse.jpg";
-import hndbag1 from "../../assets/handbag1.jpg";
-import pencilcase1 from "../../assets/pencilcase1.jpg";
-import grinder1 from "../../assets/grinder1.jpg";
-import clock1 from "../../assets/clock1.jpg";
-import watch2 from "../../assets/watch2.jpg";
 import Footer from "../../components/Footer";
-import Search from "../../components/Search";
 import Categories from "./Categories";
 import NewArrivalAll from "../../components/new arrivals/NewArrivalAll";
-import "./Home.css";
+import "./Product.css";
 import SearchIcon from "@mui/icons-material/Search";
+import SliderHome from "./Slider";
 
 const Products = () => {
   return (
@@ -46,8 +36,11 @@ const Products = () => {
           </label>
         </center>
       </div>
+      <div className="container d_flex">
+        <Categories />
+        <NewArrivalAll />
+      </div>
 
-      <Categories />
       <p className="text-xl text-center font-bold">
         Products you might Interested
       </p>

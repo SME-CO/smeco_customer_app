@@ -44,5 +44,15 @@ const Sdata = [
     name: "Sony CCTV",
     price: "Gampaha",
   },
+  {
+    cover: "./shop/shop2.png",
+    name: "Sony CCTV",
+    price: "Gampaha",
+  },
+  {
+    cover: "./shop/shop2.png",
+    name: "Sony CCTV",
+    price: "Gampaha",
+  },
 ];
 export default Sdata;

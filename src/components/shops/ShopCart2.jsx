@@ -64,7 +64,7 @@ const ShopCart2 = () => {
             </>
           );
         })}
-      </Slider>
+      </div>
     </>
   );
 };
