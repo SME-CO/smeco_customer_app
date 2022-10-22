@@ -4,10 +4,29 @@ import { Disclosure } from '@headlessui/react'
 import { ChevronUpIcon } from '@heroicons/react/solid'
 import faqImg from '../../assets/faq.png'
 import Footer from "../../components/Footer";
-
+import TextField from "@mui/material/TextField";
+import Box from "@mui/material/Box";
+import ApiIndex from "../../api/index";
 
 
 export default function FAQ() {
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const data = new FormData(event.currentTarget);
+
+
+    try {
+      let formData = {
+       message: data.get("message")
+      };
+
+      let response = await ApiIndex.FaqApi.createFaq(formData)
+
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   return (
     <div>
       <Navbar />
@@ -18,7 +37,7 @@ export default function FAQ() {
             <Disclosure>
               {({ open }) => (
                 <>
-                  <Disclosure.Button className="flex w-full justify-between rounded-lg bg-[#90E0EF] px-4 py-2 text-left text-sm font-medium text-black hover:bg-[#00B4D8] focus:outline-none focus-visible:ring-opacity-75">
+                  <Disclosure.Button className="flex w-full justify-between rounded-lg bg-[#03045E] px-4 py-2 text-left text-sm font-medium text-white hover:bg-[#FF8C32] focus:outline-none focus-visible:ring-opacity-75">
                     <span>WHAT ARE YOUR BUSINESS GOALS??</span>
                     <ChevronUpIcon
                       className={`${open ? 'rotate-180 transform' : ''
@@ -36,7 +55,7 @@ export default function FAQ() {
             <Disclosure as="div" className="mt-2">
               {({ open }) => (
                 <>
-                  <Disclosure.Button className="flex w-full justify-between rounded-lg bg-[#90E0EF] px-4 py-2 text-left text-sm font-medium text-black hover:bg-[#00B4D8] focus:outline-none ">
+                  <Disclosure.Button className="flex w-full justify-between rounded-lg bg-[#03045E] px-4 py-2 text-left text-sm font-medium text-white hover:bg-[#FF8C32] focus:outline-none ">
                     <span>WHAT MAKES YOUR CUSTOMERS FEEL VALUED??</span>
                     <ChevronUpIcon
                       className={`${open ? 'rotate-180 transform' : ''
@@ -54,7 +73,7 @@ export default function FAQ() {
             <Disclosure as="div" className="mt-2">
               {({ open }) => (
                 <>
-                  <Disclosure.Button className="flex w-full justify-between rounded-lg bg-[#90E0EF] px-4 py-2 text-left text-sm font-medium text-black hover:bg-[#00B4D8] focus:outline-none ">
+                  <Disclosure.Button className="flex w-full justify-between rounded-lg bg-[#03045E] px-4 py-2 text-left text-sm font-medium text-white hover:bg-[#FF8C32] focus:outline-none ">
                     <span>WHAT KIND OF CUSTOMER DATA DO YOU WANT TO COLLECT??</span>
                     <ChevronUpIcon
                       className={`${open ? 'rotate-180 transform' : ''
@@ -72,7 +91,7 @@ export default function FAQ() {
             <Disclosure as="div" className="mt-2">
               {({ open }) => (
                 <>
-                  <Disclosure.Button className="flex w-full justify-between rounded-lg bg-[#90E0EF] px-4 py-2 text-left text-sm font-medium text-black hover:bg-[#00B4D8] focus:outline-none ">
+                  <Disclosure.Button className="flex w-full justify-between rounded-lg bg-[#03045E] px-4 py-2 text-left text-sm font-medium text-white hover:bg-[#FF8C32] focus:outline-none ">
                     <span>DO YOU OFFER TECHNICAL SUPPORT?</span>
                     <ChevronUpIcon
                       className={`${open ? 'rotate-180 transform' : ''
@@ -89,7 +108,7 @@ export default function FAQ() {
             <Disclosure as="div" className="mt-2">
               {({ open }) => (
                 <>
-                  <Disclosure.Button className="flex w-full justify-between rounded-lg bg-[#90E0EF] px-4 py-2 text-left text-sm font-medium text-black hover:bg-[#00B4D8] focus:outline-none ">
+                  <Disclosure.Button className="flex w-full justify-between rounded-lg bg-[#03045E] px-4 py-2 text-left text-sm font-medium text-white hover:bg-[#FF8C32] focus:outline-none ">
                     <span>DO YOU PROVIDE DELIVERYY SERVICES?</span>
                     <ChevronUpIcon
                       className={`${open ? 'rotate-180 transform' : ''
@@ -107,7 +126,7 @@ export default function FAQ() {
             <Disclosure as="div" className="mt-2">
               {({ open }) => (
                 <>
-                  <Disclosure.Button className="flex w-full justify-between rounded-lg bg-[#90E0EF] px-4 py-2 text-left text-sm font-medium text-black hover:bg-[#00B4D8] focus:outline-none ">
+                  <Disclosure.Button className="flex w-full justify-between rounded-lg bg-[#03045E] px-4 py-2 text-left text-sm font-medium text-white hover:bg-[#FF8C32] focus:outline-none ">
                     <span>HOW CAN I JOIN THIS PLATFORM?</span>
                     <ChevronUpIcon
                       className={`${open ? 'rotate-180 transform' : ''
@@ -125,7 +144,7 @@ export default function FAQ() {
             <Disclosure as="div" className="mt-2">
               {({ open }) => (
                 <>
-                  <Disclosure.Button className="flex w-full justify-between rounded-lg bg-[#90E0EF] px-4 py-2 text-left text-sm font-medium text-black hover:bg-[#00B4D8] focus:outline-none ">
+                  <Disclosure.Button className="flex w-full justify-between rounded-lg bg-[#03045E] px-4 py-2 text-left text-sm font-medium text-white hover:bg-[#FF8C32] focus:outline-none ">
                     <span>DO YOU PROVIDE DELIVERYY SERVICES?</span>
                     <ChevronUpIcon
                       className={`${open ? 'rotate-180 transform' : ''
@@ -142,7 +161,7 @@ export default function FAQ() {
             <Disclosure as="div" className="mt-2">
               {({ open }) => (
                 <>
-                  <Disclosure.Button className="flex w-full justify-between rounded-lg bg-[#90E0EF] px-4 py-2 text-left text-sm font-medium text-black hover:bg-[#00B4D8] focus:outline-none ">
+                  <Disclosure.Button className="flex w-full justify-between rounded-lg bg-[#03045E] px-4 py-2 text-left text-sm font-medium text-white hover:bg-[#FF8C32] focus:outline-none ">
                     <span>WHAT KIND OF CUSTOMER DATA DO YOU WANT TO COLLECT??</span>
                     <ChevronUpIcon
                       className={`${open ? 'rotate-180 transform' : ''
@@ -161,6 +180,20 @@ export default function FAQ() {
         <div>
           <img className='pt-12' src={faqImg} alt="" />
         </div>
+      </div>
+      <div className='pl-24 pr-12'>
+        <h1>Ask your questions here....</h1>
+        <Box
+          component="form"
+          noValidate
+          onSubmit={handleSubmit}
+          sx={{ mt: 1 }}
+        >
+          <TextField className='bg-[#F0F8FF] font-white align-items-center' name="message" fullWidth></TextField>
+          <div className='pt-3'>
+            <button className='border-none px-4 py-1'>SUBMIT</button>
+          </div>
+        </Box>
       </div>
       <Footer />
     </div>
