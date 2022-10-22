@@ -45,7 +45,7 @@ class App extends Component {
           <Routes>
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/customerShops" element={<CustomerShops />} />
-          <Route path="/customerProducts" element={<CustomerProducts />} />
+          <Route path="/customerProducts/:merchantId" element={<CustomerProducts />} />
           <Route path="/customerPurchases" element={<CustomerPurchases />} />
           <Route path="/customerRecords" element={<CustomerRecords />} />
           <Route path="/purchaseHistory" element={<PurchaseHistory />} />

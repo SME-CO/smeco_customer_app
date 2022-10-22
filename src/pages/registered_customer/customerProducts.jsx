@@ -19,7 +19,6 @@ const CustomerProducts = () => {
       <Navbarr />
       <div className="pt-24 md:ml-60">
         <DiscountAll />
-        <DiscountAll />
       </div>
       <SideNavr />
     </div>
