@@ -7,7 +7,7 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import logo from "../assets/logo.png";
+import logoimg from "../../src/assets/logo.png";
 
 const Footer = () => {
   return (
@@ -15,7 +15,7 @@ const Footer = () => {
       <br></br>
       <div className="grid grid-cols-4 gap-3 bg-[03045E]">
         <div className="text-center">
-          <img src={logo} className="h-20 content-center px-28"></img>
+          <img src={logoimg} className="h-20 content-center px-28"></img>
           <b>SMECO</b>
 
           <p class="text-sm hover:text-base text-center hover:text-yellow-600">

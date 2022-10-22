@@ -3,7 +3,9 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Ddata from "./Ddata";
-// import "../newarrivals/style.css"
+import "./style.css";
+import Modal from "../../pages/public_customer/modal";
+// import "../newarrivals/style.css";
 
 const Dcard = () => {
   const settings = {
@@ -21,10 +23,14 @@ const Dcard = () => {
             <>
               <div className="box product" key={index}>
                 <div className="img">
+                  <div className="nametop d_flex">
+                    <span className="tleft">{value.offer}</span>
+                  </div>
                   <img src={value.cover} alt="" width="100%" />
                 </div>
                 <h4>{value.name}</h4>
                 <span>{value.price}</span>
+                <Modal />
               </div>
             </>
           );

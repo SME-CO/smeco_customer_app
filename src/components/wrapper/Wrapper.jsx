@@ -1,27 +1,50 @@
 import React from "react";
 import "./style.css";
+import {
+  MdSchedule,
+  MdSupervisorAccount,
+  MdHail,
+  MdVolunteerActivism,
+} from "react-icons/md";
 
 const Wrapper = () => {
   const data = [
     {
-      cover: <i class="fa-solid fa-truck-fast"></i>,
-      title: "Worldwide Delivery",
-      decs: "We offer competitive prices on our 100 million plus product any range.",
+      cover: (
+        <center>
+          <MdVolunteerActivism size="55px" color="White" />
+        </center>
+      ),
+      title: "All island Customers",
+      decs: "We offer a service for  all island customers .",
     },
     {
-      cover: <i class="fa-solid fa-id-card"></i>,
-      title: "Safe Payment",
-      decs: "We offer competitive prices on our 100 million plus product any range.",
+      cover: (
+        <center>
+          <MdHail size="60px" color="White" />
+        </center>
+      ),
+      title: "Connect All the merchants",
+      decs: "Smeco Connects All the Small medium Enterprise merchants ",
     },
     {
-      cover: <i class="fa-solid fa-shield"></i>,
-      title: "Shop With Confidence ",
-      decs: "We offer competitive prices on our 100 million plus product any range.",
+      cover: (
+        <center>
+          <MdSupervisorAccount size="60px" color="White" />
+        </center>
+      ),
+      title: "Keep more loyal customers ",
+      decs: "Smeco Keeps and connect more loyal customers",
     },
     {
-      cover: <i class="fa-solid fa-headset"></i>,
+      cover: (
+        <center>
+          <MdSchedule size="70px" color="White" />
+        </center>
+      ),
+
       title: "24/7 Support ",
-      decs: "We offer competitive prices on our 100 million plus product any range.",
+      decs: "Smeco has a full time service and update offerd frequently",
     },
   ];
   return (

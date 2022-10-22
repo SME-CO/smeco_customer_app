@@ -1,34 +1,40 @@
 const Ndata = [
   {
-    cover: "./images/arrivals/arrivals1.png",
+    cover: "./arrivals/arrivals1.png",
     name: "Sunglass",
     price: "150",
+    offer: "Buy one get one",
   },
   {
-    cover: "./images/arrivals/arrivals2.png",
+    cover: "./arrivals/arrivals2.png",
     name: "Makeup",
     price: "250",
+    offer: "Get rewards buy 5",
   },
   {
-    cover: "./images/arrivals/arrivals3.png",
+    cover: "./arrivals/arrivals3.png",
     name: "Smart Watch",
     price: "50",
+    offer: "Buy one get one",
   },
   {
-    cover: "./images/arrivals/arrivals4.png",
+    cover: "./arrivals/arrivals4.png",
     name: "Lipstick",
     price: "15",
+    offer: "20% discount",
   },
   {
-    cover: "./images/arrivals/arrivals5.png",
+    cover: "./arrivals/arrivals5.png",
     name: "Green Plant",
     price: "10",
+    offer: "20% first shopping",
   },
   {
-    cover: "./images/arrivals/arrivals6.png",
+    cover: "./arrivals/arrivals6.png",
     name: "Bonsai tree",
     price: "400",
+    offer: "Buy one get one",
   },
-]
+];
 
-export default Ndata
+export default Ndata;

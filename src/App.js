@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-
+import "./Apps.css";
 import Land from "./pages/public_customer/Land";
 import Shops from "./pages/public_customer/Shops";
 import Products from "./pages/public_customer/Products";
@@ -15,6 +15,8 @@ import CustomerPurchase from "./pages/registered_customer/CustomerPurchase";
 import CustomerRecords from "./pages/registered_customer/CustomerRecords";
 import PurchaseHistory from "./pages/registered_customer/PurchaseHistory";
 import CustomerChat from "./pages/registered_customer/CustomerChat";
+import Rewards from "../../smeco_customer_app/src/pages/public_customer/Rewards";
+import Discounts from "../../smeco_customer_app/src/pages/public_customer/Discounts";
 
 class App extends Component {
   render() {
@@ -29,6 +31,8 @@ class App extends Component {
             <Route path="/faq" element={<FAQ />} />
             <Route path="/login" element={<Login />} />
             <Route path="/SignUp" element={<SignUp />} />
+            <Route path="/Discounts" element={<Discounts />} />
+            <Route path="/Rewards" element={<Rewards />} />
           </Routes>
 
           <Routes>
