@@ -11,11 +11,14 @@ const ShopAll = () => {
               <img src="https://img.icons8.com/ios-filled/452/shop.png" />
               <h2>Our Shops</h2>
             </div>
+
             <div className="heading-right row ">
               {/* <i className="fa-solid fa-caret-right"></i> */}
             </div>
           </div>
-          <ShopCart2 />
+          <a href="/products">
+            <ShopCart2 />
+          </a>
         </div>
       </section>
     </>
