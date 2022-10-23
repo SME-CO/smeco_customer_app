@@ -48,7 +48,7 @@ const ShopCart2 = () => {
   
   return (
     <>
-      <Slider {...settings}>
+     <div className="content grid product">
         {merchants.map((merchant, index) => {
           return (
             <>
