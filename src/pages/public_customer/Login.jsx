@@ -91,7 +91,10 @@ export default function Login() {
       };
 
       let response = await ApiIndex.CustomerApi.login(formData);
-      localStorage.setItem('token', response.token);
+      console.log(response);
+      localStorage.setItem('token', response.data.token);
+      localStorage.setItem('customerId', response.data.user.id);
+      localStorage.setItem('customerName', response.data.user.firstName);
 
       setAlertType('success');
       setAlertMessage('Logged In Successfull !');
