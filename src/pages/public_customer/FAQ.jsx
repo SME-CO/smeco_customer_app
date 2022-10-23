@@ -9,6 +9,7 @@ import Box from "@mui/material/Box";
 import ApiIndex from "../../api/index";
 import faq from "../../api/faq";
 
+
 export default function FAQ() {
   const handleSubmit = async (event) => {
     event.preventDefault();

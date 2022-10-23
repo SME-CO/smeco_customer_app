@@ -1,99 +1,57 @@
-import React from 'react'
+import React from "react";
 import Navbar from "../../components/Navbar";
-import starImg from '../../assets/5star2.jpg'
+// import starImg from "../../assets/5star2.jpg";
 import Footer from "../../components/Footer";
-import img1 from '../../assets/furniture mart.png'
-import img3 from '../../assets/shoe palace.png'
-import img4 from '../../assets/your choice.png'
-import img5 from '../../assets/Glitters.png'
-import img6 from '../../assets/Fashion Wings.png'
-import img7 from '../../assets/Stylish mart.png'
-
-
-
+import img1 from "../../assets/furniture mart.png";
+import img3 from "../../assets/shoe palace.png";
+import img4 from "../../assets/your choice.png";
+import img5 from "../../assets/Glitters.png";
+import img6 from "../../assets/Unlimited.png";
+import img7 from "../../assets/Stylish mart.png";
+import Discount from "../../components/discount/Discount";
+import ShopAll from "../../components/shops/ShopAll";
+import Search from "../../components/Search";
+import SearchIcon from "@mui/icons-material/Search";
 const Shops = () => {
   return (
     <div>
-       <Navbar />
-    <div className='pt-24'>
+      <Navbar />
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
 
-      <p className='text-3xl text-center font-bold'>Our Registered Shops</p>
-
-      <div className='max-w-[1240px] mx-auto grid md:grid-cols-4 gap-8 pt-4'>
-
-        <div>
-          <img className='w-full shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={img1} alt="/" />
-          <p className='text-2xl py-8 text-center font-bold'>
-            Furniture Mart
-          </p>
-        </div>
-
-        <div>
-          <img className='w-full shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={img3} alt="/" />
-          <p className='text-2xl py-8 text-center font-bold'>
-           Shoe Palace
-          </p>
-        </div>
-
-        <div>
-          <img className='w-full shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={img5} alt="/" />
-          <p className='text-2xl py-8 text-center font-bold'>
-           Glitters
-          </p>
-        </div>
-
-        <div>
-          <img className='w-full shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={img6} alt="/" />
-          <p className='text-2xl py-8 text-center font-bold'>
-            Fashion Wings
-          </p>
-        </div>
-
-        <div>
-          <img className='w-full shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={img7} alt="/" />
-          <p className='text-2xl py-8 text-center font-bold'>
-           Stylish
-          </p>
-        </div>
-
-        <div>
-          <img className='w-full shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={img4} alt="/" />
-          <p className='text-2xl py-8 text-center font-bold'>
-            Your Choice
-          </p>
-        </div>
-
-        <div>
-          <img className='w-full shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={img1} alt="/" />
-          <p className='text-2xl py-8 text-center font-bold'>
-           Choice of Furniture
-          </p>
-        </div>
-
-        <div>
-          <img className='w-full shadow-2xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={img5} alt="/" />
-          <p className='text-2xl py-8 text-center font-bold'>
-            Glitter world
-          </p>
-        </div>
-
-
-
-        
-
-
-
+      <div className="mt-6 ml-3 mr-1">
+        <center>
+          <label className="relative block">
+            <span className="sr-only">Search</span>
+            <center>
+              <span className="absolute inset-y-0 left-0 flex items-center pl-2">
+                <SearchIcon
+                  className="!h-5 !w-5 fill-slate-300"
+                  viewBox="0 0 20 20"
+                />
+              </span>
+            </center>
+            <input
+              className="placeholder:italic placeholder:text-slate-400 block bg-white w-full pl-40 pr-40 border border-slate-300 rounded-md py-2 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
+              placeholder="Search Your shops..."
+              type="text"
+              name="search"
+            />
+          </label>
+        </center>
       </div>
 
+      <br></br>
 
+      <ShopAll />
+      {/* <Shop />
+      <Shop /> */}
 
-
-
+      <Footer />
     </div>
-    <Footer />
-    
-    </div>
-  )
-}
+  );
+};
 
-export default Shops
+export default Shops;
