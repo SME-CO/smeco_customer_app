@@ -1,7 +1,4 @@
 import React from "react";
-
-import Sdata from "./Sdata";
-// import "../newarrivals/style.css"
 import ApiIndex from "../../api/index";
 import { useState, useEffect } from "react";
 import {useNavigate} from "react-router-dom"
@@ -38,7 +35,6 @@ const ShopCart2 = () => {
   }
 
   const handleClick = (id) => {
-    console.log("clicked")
     navigate(`/customerProducts/${id}`)
     return false;
   }
