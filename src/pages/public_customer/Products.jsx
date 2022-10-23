@@ -1,138 +1,53 @@
-import React from 'react';
+import React from "react";
 import Navbar from "../../components/Navbar";
-import watch1 from '../../assets/watch1.jpg';
-import bottle1 from '../../assets/bottle1.jpg';
-import shoe1 from '../../assets/shoe1.jpg';
-import phncvr1 from '../../assets/phonecvr1.jpg';
-import mnypurse1 from '../../assets/moneypurse.jpg';
-import hndbag1 from '../../assets/handbag1.jpg';
-import pencilcase1 from '../../assets/pencilcase1.jpg';
-import grinder1 from '../../assets/grinder1.jpg';
-import clock1 from '../../assets/clock1.jpg';
-import watch2 from '../../assets/watch2.jpg';
 import Footer from "../../components/Footer";
-
-
+import Categories from "./Categories";
+import NewArrivalAll from "../../components/new arrivals/NewArrivalAll";
+import "./Product.css";
+import SearchIcon from "@mui/icons-material/Search";
+import SliderHome from "./Slider";
 
 const Products = () => {
-    return (
-        <div>
-            <Navbar />
-            <div className='pt-24'>
+  return (
+    <div>
+      <Navbar />
+      <br></br>
+      <br></br>
+      <br></br>
 
-                <p className='text-3xl text-center font-bold'>Products you might interested</p>
+      <div className="mt-6 ml-3 mr-1">
+        <center>
+          <label className="relative block">
+            <span className="sr-only">Search</span>
+            <center>
+              <span className="absolute inset-y-0 left-0 flex items-center pl-2">
+                <SearchIcon
+                  className="!h-5 !w-5 fill-slate-300"
+                  viewBox="0 0 20 20"
+                />
+              </span>
+            </center>
+            <input
+              className="placeholder:italic placeholder:text-slate-400 block bg-white w-full pl-40 pr-40 border border-slate-300 rounded-md py-2 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
+              placeholder="Search Your shops..."
+              type="text"
+              name="search"
+            />
+          </label>
+        </center>
+      </div>
+      <div className="container d_flex">
+        <Categories />
+        <NewArrivalAll />
+      </div>
 
-                <div className='max-w-[1240px] mx-auto grid md:grid-cols-6 gap-8 pt-4'>
+      <p className="text-xl text-center font-bold">
+        Products you might Interested
+      </p>
+      <NewArrivalAll />
 
-                    <div>
-                        <img className='object-contain h-48 w-96  shadow-2xl flex flex-col p-2 my-1 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={watch1} alt="/" />
-                        <p className='py-8 text-center'>Rolex watch <br />silver colour</p>
-                    </div>
-
-                    <div>
-                        <img className='object-contain h-48 w-96 shadow-2xl flex flex-col p-2 my-1 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={bottle1} alt="/" />
-                        <p className='py-8 text-center'>Rolex watch <br />silver colour</p>
-                    </div>
-
-                    <div>
-                        <img className='object-contain h-48 w-96 shadow-2xl flex flex-col p-1 my-1 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={shoe1} alt="/" />
-                        <p className='py-8 text-center'>Rolex watch <br />silver colour</p>
-                    </div>
-
-
-                    <div>
-                        <img className='object-contain h-48 w-96 shadow-2xl flex flex-col p-2 my-1 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={phncvr1} alt="/" />
-                        <p className='py-8 text-center'>Rolex watch <br />silver colour</p>
-                    </div>
-
-
-                    <div>
-                        <img className='object-contain h-48 w-96 shadow-2xl flex flex-col p-2 my-1 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={mnypurse1} alt="/" />
-                        <p className='py-8 text-center'>Rolex watch <br />silver colour</p>
-                    </div>
-
-
-                    <div>
-                        <img className='object-contain h-48 w-96 shadow-2xl flex flex-col p-2 my-1 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={hndbag1} alt="/" />
-                        <p className='py-8 text-center'>Rolex watch <br />silver colour</p>
-                    </div>
-
-
-                    <div>
-                        <img className='object-contain h-48 w-96 shadow-2xl flex flex-col p-2 my-1 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={pencilcase1} alt="/" />
-                        <p className='py-8 text-center'>Rolex watch <br />silver colour</p>
-                    </div>
-
-                    <div>
-                        <img className='object-contain h-48 w-96 shadow-2xl flex flex-col p-2 my-1 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={grinder1} alt="/" />
-                        <p className='py-8 text-center'>Rolex watch <br />silver colour</p>
-                    </div>
-
-                    <div>
-                        <img className='object-contain h-48 w-96 shadow-2xl flex flex-col p-2 my-1 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={clock1} alt="/" />
-                        <p className='py-8 text-center'>Rolex watch <br />silver colour</p>
-                    </div>
-
-                    <div>
-                        <img className='object-contain h-48 w-96 shadow-2xl flex flex-col p-2 my-1 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={watch2} alt="/" />
-                        <p className='py-8 text-center'>Rolex watch <br />silver colour</p>
-                    </div>
-
-                    <div>
-                        <img className='object-contain h-48 w-96 shadow-2xl flex flex-col p-2 my-1 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={pencilcase1} alt="/" />
-                        <p className='py-8 text-center'>Rolex watch <br />silver colour</p>
-                    </div>
-
-                    <div>
-                        <img className='object-contain h-48 w-96 shadow-2xl flex flex-col p-2 my-1 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={watch1} alt="/" />
-                        <p className='py-8 text-center'>Rolex watch <br />silver colour</p>
-                    </div>
-
-                    <div>
-                        <img className='object-contain h-48 w-96 shadow-2xl flex flex-col p-2 my-1 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={bottle1} alt="/" />
-                        <p className='py-8 text-center'>Rolex watch <br />silver colour</p>
-                    </div>
-
-                    <div>
-                        <img className='object-contain h-48 w-96 shadow-2xl flex flex-col p-2 my-1 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={shoe1} alt="/" />
-                        <p className='py-8 text-center'>Rolex watch <br />silver colour</p>
-                    </div>
-
-                    <div>
-                        <img className='object-contain h-48 w-96 shadow-2xl flex flex-col p-2 my-1 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={phncvr1} alt="/" />
-                        <p className='py-8 text-center'>Rolex watch <br />silver colour</p>
-                    </div>
-
-                    <div>
-                        <img className='object-contain h-48 w-96 shadow-2xl flex flex-col p-2 my-1 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={mnypurse1} alt="/" />
-                        <p className='py-8 text-center'>Rolex watch <br />silver colour</p>
-                    </div>
-
-                    <div>
-                        <img className='object-contain h-48 w-96 shadow-2xl flex flex-col p-2 my-1 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={watch2} alt="/" />
-                        <p className='py-8 text-center'>Rolex watch <br />silver colour</p>
-                    </div>
-
-                    <div>
-                        <img className='object-contain h-48 w-96 shadow-2xl flex flex-col p-2 my-1 rounded-lg hover:scale-105 duration-300 bg-zinc-200 hover:bg-[#FF8C32]' src={grinder1} alt="/" />
-                        <p className='py-8 text-center'>Rolex watch <br />silver colour</p>
-                    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-                </div>
-
-                {/* ----------------------------OTP------------------------------------------ */}
-                {/* <div class="h-screen bg-blue-500 py-20 px-3">
+      {/* ----------------------------OTP------------------------------------------ */}
+      {/* <div class="h-screen bg-blue-500 py-20 px-3">
                     <div class="container mx-auto">
                         <div class="max-w-sm mx-auto md:max-w-lg">
                             <div class="w-full">
@@ -157,21 +72,19 @@ const Products = () => {
                     </div>
                 </div> */}
 
-
-                {/* --------------------------JS PART------------------------- */}
-                {/* document.addEventListener("DOMContentLoaded", function(event) {
+      {/* --------------------------JS PART------------------------- */}
+      {/* document.addEventListener("DOMContentLoaded", function(event) {
 
                 function OTPInput() {
                     const inputs = document.querySelectorAll('#otp > *[id]');
                     for (let i = 0; i < inputs.length; i++) { inputs[i].addEventListener('keydown', function (event) { if (event.key === "Backspace") { inputs[i].value = ''; if (i !== 0) inputs[i - 1].focus(); } else { if (i === inputs.length - 1 && inputs[i].value !== '') { return true; } else if (event.keyCode > 47 && event.keyCode < 58) { inputs[i].value = event.key; if (i !== inputs.length - 1) inputs[i + 1].focus(); event.preventDefault(); } else if (event.keyCode > 64 && event.keyCode < 91) { inputs[i].value = String.fromCharCode(event.keyCode); if (i !== inputs.length - 1) inputs[i + 1].focus(); event.preventDefault(); } } }); }
                 } OTPInput(); }); */}
 
-                {/* -------------------------END OTP----------------------------------------- */}
-            </div>
-            <Footer />
-        </div>
+      {/* -------------------------END OTP----------------------------------------- */}
 
-    );
-}
+      <Footer />
+    </div>
+  );
+};
 
 export default Products;
