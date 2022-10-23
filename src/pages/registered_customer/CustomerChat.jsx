@@ -44,7 +44,7 @@ const CustomerChat  = () => {
             </div>
             <div className="col-span-5 flex flex-col pl-2">
               <p className="text-lg font-medium capitalize truncate">
-                Jhon
+                Glitters
               </p>
               <p className="text-sm italic truncate overflow-hidden">
                 Thank you Mushrifa Lorem ipsum dolor sit amet consectetur
@@ -66,7 +66,7 @@ const CustomerChat  = () => {
             </div>
             <div className="col-span-5 flex flex-col pl-2">
               <p className="text-lg font-medium capitalize truncate">
-                Shivakumar Athauda Rallage Priskila Athauda
+                Top choice
               </p>
               <p className="text-sm italic truncate overflow-hidden">
                 Thank you 
@@ -84,7 +84,7 @@ const CustomerChat  = () => {
             </div>
             <div className="col-span-5 flex flex-col pl-2">
               <p className="text-lg font-medium capitalize truncate">
-                Shakir Saheel
+                Power Electricals
               </p>
               <p className="text-sm italic truncate overflow-hidden">
                 Thank you 
@@ -102,7 +102,7 @@ const CustomerChat  = () => {
             </div>
             <div className="col-span-5 flex flex-col pl-2">
               <p className="text-lg font-medium capitalize truncate">
-                Senal Punsara
+                Premium Users
               </p>
               <p className="text-sm italic truncate overflow-hidden">
                 Thank you 
@@ -120,7 +120,7 @@ const CustomerChat  = () => {
             </div>
             <div className="col-span-5 flex flex-col pl-2">
               <p className="text-lg font-medium capitalize truncate">
-                Yonali Fernando
+                Furniture Mart
               </p>
               <p className="text-sm italic truncate overflow-hidden">
                 Thank you 
@@ -138,7 +138,7 @@ const CustomerChat  = () => {
             </div>
             <div className="col-span-5 flex flex-col pl-2">
               <p className="text-lg font-medium capitalize truncate">
-                Yonali Fernando
+                Best Choices
               </p>
               <p className="text-sm italic truncate overflow-hidden">
                 Thank you 
@@ -156,7 +156,7 @@ const CustomerChat  = () => {
             </div>
             <div className="col-span-5 flex flex-col pl-2">
               <p className="text-lg font-medium capitalize truncate">
-                Yonali Fernando
+                Best Choices
               </p>
               <p className="text-sm italic truncate overflow-hidden">
                 Thank you 
@@ -174,7 +174,7 @@ const CustomerChat  = () => {
             </div>
             <div className="col-span-5 flex flex-col pl-2">
               <p className="text-lg font-medium capitalize truncate">
-                Yonali Fernando
+                Best Choices
               </p>
               <p className="text-sm italic truncate overflow-hidden">
                 Thank you 
@@ -192,7 +192,7 @@ const CustomerChat  = () => {
             </div>
             <div className="col-span-5 flex flex-col pl-2">
               <p className="text-lg font-medium capitalize truncate">
-                Yonali Fernando
+               On your way
               </p>
               <p className="text-sm italic truncate overflow-hidden">
                 Thank you 
@@ -205,7 +205,7 @@ const CustomerChat  = () => {
       <div className=" flex flex-col lg:basis-2/3 basis-full mt-6 ml-3">
         <div className="flex flex-row justify-start items-center border-b-2">
           <ArrowBackIosIcon className="!w-5 !h-10 mr-5 lg:!hidden" />
-          <p className="font-serif text-2xl capitalize">Yonali Fernando</p>
+          <p className="font-serif text-2xl capitalize">Glitters</p>
         </div>
         <div className="mt-3 overflow-auto max-h-screen">
           {/* ------------------------------------------------------------------------------- */}

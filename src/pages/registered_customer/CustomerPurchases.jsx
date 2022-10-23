@@ -21,9 +21,11 @@ import ProductCard from '../../components/ProductCard';
 
 const CustomerPurchases = () => {
     return (
-        <div>
+        <div >
             <Navbarr />
+            <div className='pt-24 md:ml-60'>
             <ProductCard />
+            </div>
             <SideNavr />
 
             </div>)}

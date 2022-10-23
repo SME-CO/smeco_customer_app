@@ -46,7 +46,7 @@ const CustomerRecords = () => {
         <div>
             <SideNavr />
             <Navbarr />
-            <div className='pt-20 pl-32'>
+            <div className='pt-24 md:ml-40'>
                 <p className='text-3xl  text-center font-bold '>Your Purchased shops</p>
 
                 <PurchasedShopCard />

@@ -49,8 +49,9 @@ const ProductCard = () => {
     },[getProducts]);
     return (
         <div>
-            <div className='pt-20'>
-            <p className='text-3xl text-center pl-32 font-bold '>Your Purchased Products</p>
+           <div>
+
+            <p className='text-3xl text-center font-bold '>Your Purchased Products</p>
                 
                 {/* <img className='h-30 w-30 shadow-2xl flex flex-col' src={watch1} alt="/" /> */}
                
@@ -60,8 +61,8 @@ const ProductCard = () => {
                   .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
                   .map((product, index) => (
                     <>
-                    <div className='max-w-[1240px] mx-auto gap-4 grid md:grid-cols-5  pt-12 pl-44 p-4 '>
-                    <img className='h-30 w-30 shadow-2xl flex flex-col pl-10' src={product.image} alt="/" />
+                    <div className='max-w-[1240px] mx-auto gap-4 grid md:grid-cols-5 pl-8 pt-12 pl-44 p-4 '>
+                    <img className='h-50 w-50 shadow-2xl flex flex-col pl-10' src={product.image} alt="/" />
                     <div className='flex flex-col justify-center col-span-2 pl-12'>
                         <p className='text-xl'><b>Name :</b> {product.productName}<br /></p>
                         <p className='text-xl  pt-3'><b>Shop :</b>{product.shopName} <br /></p>

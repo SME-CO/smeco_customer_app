@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../../components/Navbar";
 import { Disclosure } from "@headlessui/react";
 import { ChevronUpIcon } from "@heroicons/react/solid";
@@ -7,6 +7,8 @@ import Footer from "../../components/Footer";
 import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
 import ApiIndex from "../../api/index";
+import faq from "../../api/faq";
+
 
 export default function FAQ() {
   const handleSubmit = async (event) => {
@@ -19,10 +21,31 @@ export default function FAQ() {
       };
 
       let response = await ApiIndex.FaqApi.createFaq(formData);
+      console.log(response.data);
+
     } catch (error) {
       console.log(error);
     }
+
   };
+
+  
+
+  const [faqList, setFaqList] = useState([]);
+
+  const getFaq = async () => {
+    try {
+      const response = await ApiIndex.FaqApi.getFaq();
+      setFaqList(response.data);
+    }
+    catch (error) {
+      console.error(error);
+    }
+  }
+
+  useEffect(() => {
+    getFaq();
+  }, []);
 
   return (
     <div>
@@ -30,164 +53,36 @@ export default function FAQ() {
       <div className="max-w-[1240px] mx-auto flex md:flex-cols-2 py-16 px-4 pt-24">
         <div>
           <div className="mx-auto w-full max-w-[1000px] rounded-2xl bg-white p-2 pt-12">
-            <Disclosure>
-              {({ open }) => (
-                <>
-                  <Disclosure.Button className="flex w-full justify-between rounded-lg bg-[#03045E] px-4 py-2 text-left text-sm font-medium text-white hover:bg-[#FF8C32] focus:outline-none focus-visible:ring-opacity-75">
-                    <span>WHAT ARE YOUR BUSINESS GOALS??</span>
-                    <ChevronUpIcon
-                      className={`${
-                        open ? "rotate-180 transform" : ""
-                      } h-5 w-5 text-[#03045E]`}
-                    />
-                  </Disclosure.Button>
-                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-black">
-                    Our main goal is to enhance the sales of Small and medium
-                    enterprises. And provide customers a great exposure to the
-                    offers, rewards and the discounts provided by the Small and
-                    Medium enterprises.
-                  </Disclosure.Panel>
-                </>
-              )}
-            </Disclosure>
-            <Disclosure as="div" className="mt-2">
-              {({ open }) => (
-                <>
-                  <Disclosure.Button className="flex w-full justify-between rounded-lg bg-[#03045E] px-4 py-2 text-left text-sm font-medium text-white hover:bg-[#FF8C32] focus:outline-none ">
-                    <span>WHAT MAKES YOUR CUSTOMERS FEEL VALUED??</span>
-                    <ChevronUpIcon
-                      className={`${
-                        open ? "rotate-180 transform" : ""
-                      } h-5 w-5 text-[#03045E]`}
-                    />
-                  </Disclosure.Button>
-                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-black">
-                    We need our customers to choose the best decision out of
-                    many available products with offers and discounts. Making
-                    their decision capacity easy.
-                  </Disclosure.Panel>
-                </>
-              )}
-            </Disclosure>
 
-            <Disclosure as="div" className="mt-2">
-              {({ open }) => (
-                <>
-                  <Disclosure.Button className="flex w-full justify-between rounded-lg bg-[#03045E] px-4 py-2 text-left text-sm font-medium text-white hover:bg-[#FF8C32] focus:outline-none ">
-                    <span>
-                      WHAT KIND OF CUSTOMER DATA DO YOU WANT TO COLLECT??
-                    </span>
-                    <ChevronUpIcon
-                      className={`${
-                        open ? "rotate-180 transform" : ""
-                      } h-5 w-5 text-[#03045E]`}
-                    />
-                  </Disclosure.Button>
-                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-black">
-                    We are collecting the purchase data related to registered
-                    customers and based on that we recommend them offers and
-                    discounted products.
-                  </Disclosure.Panel>
-                </>
-              )}
-            </Disclosure>
 
-            <Disclosure as="div" className="mt-2">
-              {({ open }) => (
-                <>
-                  <Disclosure.Button className="flex w-full justify-between rounded-lg bg-[#03045E] px-4 py-2 text-left text-sm font-medium text-white hover:bg-[#FF8C32] focus:outline-none ">
-                    <span>DO YOU OFFER TECHNICAL SUPPORT?</span>
-                    <ChevronUpIcon
-                      className={`${
-                        open ? "rotate-180 transform" : ""
-                      } h-5 w-5 text-[#03045E]`}
-                    />
-                  </Disclosure.Button>
-                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-black">
-                    No.
-                  </Disclosure.Panel>
-                </>
-              )}
-            </Disclosure>
 
-            <Disclosure as="div" className="mt-2">
-              {({ open }) => (
-                <>
-                  <Disclosure.Button className="flex w-full justify-between rounded-lg bg-[#03045E] px-4 py-2 text-left text-sm font-medium text-white hover:bg-[#FF8C32] focus:outline-none ">
-                    <span>DO YOU PROVIDE DELIVERYY SERVICES?</span>
-                    <ChevronUpIcon
-                      className={`${
-                        open ? "rotate-180 transform" : ""
-                      } h-5 w-5 text-[#03045E]`}
-                    />
-                  </Disclosure.Button>
-                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-black">
-                    No. Still we didn't think of providing delivery services.
-                    Since our main goal is to provide the offers and discounts
-                    for the products.
-                  </Disclosure.Panel>
-                </>
-              )}
-            </Disclosure>
+            {
+              faqList && faqList
+                .map((faq, index) => (
+                  <Disclosure>
+                    {({ open }) => (
+                      <>
+                        <div className="pb-2">
+                          <Disclosure.Button className="flex w-full justify-between rounded-lg bg-[#03045E] px-4 py-2 text-left text-sm font-medium text-white hover:bg-[#FF8C32] focus:outline-none focus-visible:ring-opacity-75">
+                            <span>{faq.message}</span>
+                            <ChevronUpIcon
+                              className={`${open ? "rotate-180 transform" : ""
+                                } h-5 w-5 text-[#03045E]`}
+                            />
+                          </Disclosure.Button>
+                        </div>
 
-            <Disclosure as="div" className="mt-2">
-              {({ open }) => (
-                <>
-                  <Disclosure.Button className="flex w-full justify-between rounded-lg bg-[#03045E] px-4 py-2 text-left text-sm font-medium text-white hover:bg-[#FF8C32] focus:outline-none ">
-                    <span>HOW CAN I JOIN THIS PLATFORM?</span>
-                    <ChevronUpIcon
-                      className={`${
-                        open ? "rotate-180 transform" : ""
-                      } h-5 w-5 text-[#03045E]`}
-                    />
-                  </Disclosure.Button>
-                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-black">
-                    All you need to do is register as the customer by using
-                    phone number, user name and password.
-                  </Disclosure.Panel>
-                </>
-              )}
-            </Disclosure>
+                        <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-black">
+                        <span>{faq.message}</span>
+                        </Disclosure.Panel>
+                      </>
+                    )}
+                  </Disclosure>
+                ))
+            }
 
-            <Disclosure as="div" className="mt-2">
-              {({ open }) => (
-                <>
-                  <Disclosure.Button className="flex w-full justify-between rounded-lg bg-[#03045E] px-4 py-2 text-left text-sm font-medium text-white hover:bg-[#FF8C32] focus:outline-none ">
-                    <span>DO YOU PROVIDE DELIVERYY SERVICES?</span>
-                    <ChevronUpIcon
-                      className={`${
-                        open ? "rotate-180 transform" : ""
-                      } h-5 w-5 text-[#03045E]`}
-                    />
-                  </Disclosure.Button>
-                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-black">
-                    No.
-                  </Disclosure.Panel>
-                </>
-              )}
-            </Disclosure>
 
-            <Disclosure as="div" className="mt-2">
-              {({ open }) => (
-                <>
-                  <Disclosure.Button className="flex w-full justify-between rounded-lg bg-[#03045E] px-4 py-2 text-left text-sm font-medium text-white hover:bg-[#FF8C32] focus:outline-none ">
-                    <span>
-                      WHAT KIND OF CUSTOMER DATA DO YOU WANT TO COLLECT??
-                    </span>
-                    <ChevronUpIcon
-                      className={`${
-                        open ? "rotate-180 transform" : ""
-                      } h-5 w-5 text-[#03045E]`}
-                    />
-                  </Disclosure.Button>
-                  <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-black">
-                    We are collecting the purchase data related to registered
-                    customers and based on that we recommend them offers and
-                    discounted products.
-                  </Disclosure.Panel>
-                </>
-              )}
-            </Disclosure>
+
           </div>
         </div>
         <div>
