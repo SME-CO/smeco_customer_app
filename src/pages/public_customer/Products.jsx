@@ -1,13 +1,101 @@
 import React from "react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
-import Categories from "./Categories";
+// import Categories from "./Categories";
 import NewArrivalAll from "../../components/new arrivals/NewArrivalAll";
 import "./Product.css";
 import SearchIcon from "@mui/icons-material/Search";
 import SliderHome from "./Slider";
+import Ndata from "../../components/new arrivals/Ndata";
+import { useEffect, useState } from "react";
+import ApiIndex from "../../api/index";
 
 const Products = () => {
+
+  const [productsList, setProductList] = useState([]);
+  const [selectedCategory, setCategory] = useState('');
+
+  useEffect( () => {
+    syncProductsByCategory(selectedCategory);
+  }, [selectedCategory]);
+
+
+
+  
+    const data = [
+      {
+        cateImg: "./category/cat1.png",
+        cateName: "Beauty",
+      },
+      {
+        cateImg: "./category/cat7.png",
+        cateName: "Health & Beauty",
+      },
+      {
+        cateImg: "./category/cat2.png",
+        cateName: "Cell Phones & Accessories",
+      },
+      {
+        cateImg: "./category/cat4.png",
+        cateName: "Home & Garden",
+      },
+      {
+        cateImg: "./category/cat3.png",
+        cateName: "Appliances",
+      },
+  
+      {
+        cateImg: "./category/cat5.png",
+        cateName: "Gifts",
+      },
+      {
+        cateImg: "./category/cat6.png",
+        cateName: "Music",
+      },
+  
+      {
+        cateImg: "./category/cat8.png",
+        cateName: "Pets",
+      },
+      {
+        cateImg: "./category/cat9.png",
+        cateName: "Baby Toys",
+      },
+      {
+        cateImg: "./category/cat10.png",
+        cateName: "Groceries",
+      },
+      {
+        cateImg: "./category/cat11.png",
+        cateName: "Books",
+      },
+    ];
+
+    const syncProductsByCategory = async (category) => {
+      try {
+          const response = await ApiIndex.ProductApi.getProductsByCategory(category);
+          setProductList(response.data);
+          console.log(productsList)
+      }
+      catch (error) {
+          console.log(error);
+      }
+    };
+
+
+    const handleCatClick = (category) => {
+      try {
+        setCategory(category);
+       }
+      catch (error) {
+        console.error(error);
+      }
+    }
+
+    
+
+
+
   return (
     <div>
       <Navbar />
@@ -37,8 +125,102 @@ const Products = () => {
         </center>
       </div>
       <div className="container d_flex">
-        <Categories />
-        <NewArrivalAll />
+        {/* <Categories /> */}
+
+        <div className="category">
+          {data.map((category, index) => {
+            return (
+              <div className="box f_flex" key={index} onClick={() => handleCatClick(category.cateName)}>
+                <img src={category.cateImg} alt="" />
+                <span>{category.cateName}</span>
+              </div>
+            );
+          })}
+        </div>
+
+        <section className="NewArrivals background">
+          <div className="container">
+            <div className="heading d_flex">
+              <div className="heading-left row  f_flex">
+                <img src="https://img.icons8.com/glyph-neue/64/26e07f/new.png" />
+                <h2>New Arrival Products </h2>
+              </div>
+              <div className="heading-right row ">
+                <i className="fa-solid fa-caret-right"></i>
+              </div>
+            </div>
+
+            <div className="content grid product">
+              {productsList && productsList.map((val, index) => {
+                return (
+                  <div className="box" key={index}>
+                    <div className="img">
+                      <img src='./arrivals/arrivals1.png' alt="" />
+                    </div>
+                    <h4>{val.productName}</h4>
+                    <span>Rs {val.price}</span>
+                    <br></br>
+                    <h6>{val.offer}</h6>
+                    <div class="flex items-center">
+                      <svg
+                        aria-hidden="true"
+                        class="w-5 h-5 text-yellow-400"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <title>First star</title>
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                      </svg>
+                      <svg
+                        aria-hidden="true"
+                        class="w-5 h-5 text-yellow-400"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <title>Second star</title>
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                      </svg>
+                      <svg
+                        aria-hidden="true"
+                        class="w-5 h-5 text-yellow-400"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <title>Third star</title>
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                      </svg>
+                      <svg
+                        aria-hidden="true"
+                        class="w-5 h-5 text-yellow-400"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <title>Fourth star</title>
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                      </svg>
+                      <svg
+                        aria-hidden="true"
+                        class="w-5 h-5 text-gray-300 dark:text-gray-500"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <title>Fifth star</title>
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                      </svg>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* <NewArrivalAll /> */}
       </div>
 
       <p className="text-xl text-center font-bold">
