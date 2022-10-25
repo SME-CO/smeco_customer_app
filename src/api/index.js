@@ -4,6 +4,8 @@ import purchase from "./purchase";
 import review from "./review";
 import faq from "./faq";
 import merchants from "./merchants";
+import notification from "./notification";
+import { Notifications } from "@mui/icons-material";
 
 export default {
     CustomerApi: customer,
@@ -11,5 +13,7 @@ export default {
     PurchaseApi: purchase,
     ReviewApi: review,
     FaqApi: faq,
-    MerchantApi: merchants
+    MerchantApi: merchants,
+    NotificationApi: notification
+
 }

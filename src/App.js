@@ -20,7 +20,7 @@ import CustomerReview from "./pages/registered_customer/CustomerReviews";
 import CustomerAddReview from "./pages/registered_customer/CustomerAddReviews";
 import CustomerProfile from "./pages/registered_customer/CustomerProfile";
 import CustomerUpdateProfile from "./pages/registered_customer/CustomerUpdateProfile";
-
+import  Notification from "./components/Notification";
 
 import Rewards from "../../smeco_customer_app/src/pages/public_customer/Rewards";
 import Discounts from "../../smeco_customer_app/src/pages/public_customer/Discounts";
@@ -51,11 +51,11 @@ class App extends Component {
           <Route path="/purchaseHistory" element={<PurchaseHistory />} />
           <Route path="/customerChat" element={<CustomerChat />} />
           <Route path="/purchasedShopCard" element={<PurchasedShopCard />} />
-          <Route path="/customerReviews" element={<CustomerReview />} />
+          <Route path="/customerReviews/:productId" element={<CustomerReview />} />
           <Route path="/customerAddReviews" element={<CustomerAddReview/>}/>
-          <Route path="/customerProfile" element={<CustomerProfile/>}/>
-          <Route path="/customerUpdateProfile" element={<CustomerUpdateProfile/>}/>
-          
+          <Route path="/CustomerProfile" element={<CustomerProfile/>}/>
+          <Route path="/CustomerUpdateProfile" element={<CustomerUpdateProfile/>}/>
+          <Route path="/Notification" element={<Notification/>}/>
           
           </Routes>
         </div>

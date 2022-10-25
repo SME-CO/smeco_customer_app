@@ -25,9 +25,9 @@ const CustomerProfile = () => {
       setPage(0);
     };
   
-    const getCustomers = async (id) => {
+    const getLoginUser = async () => {
       try {
-          const response = await ApiIndex.CustomerApi.getCustomers(id=1);
+          const response = await ApiIndex.CustomerApi.getLoginUser();
           setCustomerList(response.data);
       }
       catch (error) {
@@ -36,8 +36,8 @@ const CustomerProfile = () => {
     } 
   
     useEffect((id) => {
-        getCustomers(id=1);
-    },[getCustomers]);
+        getLoginUser();
+    },[getLoginUser]);
 
         
     return (
@@ -45,17 +45,18 @@ const CustomerProfile = () => {
         <Navbarr />
         
             <div>
+              
             {customersList && customersList
                 .slice(page * rowsPerPage, page * rowsPerPage-2)
-                .map((customer,index) => (
+                .map((customerUsers,index) => (
                   <div class="bg-white my-12 pb-6 w-full justify-center items-center overflow-hidden md:max-w-lg rounded-lg shadow-2xl mx-auto">
   <div class="relative h-40">
-  <img className="object-cover w-full h-full" src={img2} alt="" />
+  {/* <img className="object-cover w-full h-full" src={img2} alt="" /> */}
     {/* <img class="absolute h-full w-full object-cover" src="https://images.unsplash.com/photo-1448932133140-b4045783ed9e?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"> */}
   </div>
   <div class="relative shadow-1xl mx-auto h-24 w-24 -my-12 border-white rounded-full overflow-hidden border-4">
     {/* <img class="object-cover w-full h-full" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=200&q=80"> */}
-    <img className="object-cover w-full h-full" src={img} alt="" />
+    {/* <img className="object-cover w-full h-full" src={img} alt="" /> */}
   </div>
   {/* {customersList && customersList
                 .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
@@ -63,11 +64,11 @@ const CustomerProfile = () => {
   <div class="mt-16">
     
     <h1 class="text-lg text-center font-semibold">
-      Hi! I am <b> {customer.firstName}</b>
+      Hi! I am <b> {customerUsers.firstName}</b>
     </h1>
-    <h2 className="text-sm text-left"><b>Mobile Number:</b>{customer.mobile} 
+    <h2 className="text-sm text-left"><b>Mobile Number:</b>{customerUsers.mobile} 
     </h2>
-    <h2 className="text-sm text-left"><b>NIC NO:</b>{customer.nic}</h2>
+    <h2 className="text-sm text-left"><b>NIC NO:</b>{customerUsers.nic}</h2>
     
   </div>
   <div class="mt-6 pt-4 flex flex-wrap mx-6 border-t  grid md:grid-cols-2">

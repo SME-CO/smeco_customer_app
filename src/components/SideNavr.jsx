@@ -76,7 +76,7 @@ function SideNavr() {
                 <AccountIcon className="!w-12 !h-12 text-[#FF8C32] p-3" />
                 <Link
                   className="ml-0.5 font-bold pl-3 text-[#FF8C32]"
-                  to="/customerRecords"
+                  to="/customerProfile"
                 >
                   My Account
                 </Link>

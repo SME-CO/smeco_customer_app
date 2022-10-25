@@ -15,11 +15,15 @@ const  updateCustomer = (id) => {
 const login = (data) => {
     return axios.post(`/customersUsers/login`, data);
 }
+const getLoginUser =()=>{
+    return axios.get(`/customerUsers`)
+}
 
 export default {
     registerCustomer: registerCustomer,
     login: login,
     getCustomers:getCustomers,
-    updateCustomer:updateCustomer
+    updateCustomer:updateCustomer,
+    getLoginUser:getLoginUser
 };
 

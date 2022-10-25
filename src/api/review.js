@@ -1,7 +1,7 @@
 import axios from "../axios"
 
-const  getReviews = () => {
-    return axios.get(`/reviews`);
+const  getReviewsById = (productId) => {
+    return axios.get(`product/reviews/${productId}`);
 }
 
 const  createReview = (data) => {
@@ -10,7 +10,7 @@ const  createReview = (data) => {
 
 
 export default {
-    getReviews: getReviews,
+    getReviewsById: getReviewsById,
     createReview: createReview,
     
 };

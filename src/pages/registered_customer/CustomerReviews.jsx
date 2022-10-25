@@ -4,6 +4,7 @@ import SideNavr from "../../components/SideNavr";
 import watch1 from '../../assets/watch1.jpg';
 import ApiIndex from "../../api/index";
 import { FaStar } from "react-icons/fa";
+import { useParams } from 'react-router-dom';
 import {
   Box,
   Icon,
@@ -45,16 +46,19 @@ const CustomerReviews = () => {
   const handleChangePage = (_, newPage) => {
     setPage(newPage);
   };
+  let { productId } = useParams();
+
 
   const handleChangeRowsPerPage = (event) => {
     setRowsPerPage(+event.target.value);
     setPage(0);
   };
 
-  const getReviews = async (e) => {
+  const getReviewsById = async (productId) => {
     try {
-      const response = await ApiIndex.ReviewApi.getReviews();
+      const response = await ApiIndex.ReviewApi.getReviewsById(productId);
       setReviewList(response.data);
+      console.log()
     }
     catch (error) {
       console.error(error);
@@ -62,8 +66,8 @@ const CustomerReviews = () => {
   }
 
   useEffect(() => {
-    getReviews();
-  }, [getReviews]);
+    getReviewsById(productId);
+  }, [])
   return (
     <div>
       <Navbarr />
@@ -85,7 +89,7 @@ const CustomerReviews = () => {
         
        <div className='max-w-[1800px] mx-auto grid md:grid pt-12 gap-8'>
         <div>
-          <p className='text-3xl text-center font-bold'>Rolex watch</p>
+          {/* <p className='text-3xl text-center font-bold'>Rolex watch</p> */}
         </div>
 
         <div className='max-w-[1240px] mx-auto grid md:grid-rows-2 pb-20  pl-24'>
@@ -129,14 +133,14 @@ const CustomerReviews = () => {
                   </TableRow>
                 ))}
             </TableBody>
-            <div className=' mx-auto grid md:grid-cols-3'>
+            <div className=' mx-auto grid md:grid-cols-2'>
               <div className=' pl-30 pt-12 pl-12'>
                 <form action='../CustomerAddReviews'>
                   <button className='border-none w-[150px] px-2 py-2 rounded-full'>Review</button>
                 </form>
               </div>
               <div className=' pl-8 pt-12 pl-12'>
-                <form action='../CustomerProducts'>
+                <form action='../CustomerPurchases'>
                   <button className='border-none w-[150px] px-2 py-2 rounded-full'>Back</button>
                 </form>
               </div>

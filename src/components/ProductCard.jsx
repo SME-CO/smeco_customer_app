@@ -70,12 +70,14 @@ const ProductCard = () => {
                         <p className='text-xl  pt-3'><b>Type :</b> {product.catagory}<br /></p>
                         <p className='text-xl  pt-3'><b>Description :</b> {product.description}<br /></p>
                     </div>
-                    <div className='pt-44 pl-12 col-span-1'>
-                       <Link to={`/CustomerReviews`}><button className='border-none w-[150px] px-2 py-2 rounded-full'>Review</button></Link> 
+                    
                     </div>
-                    <div className='pt-44 pl-8 col-span-1'>
-                        <button onclick= "" className='border-none w-[150px] px-2 py-2 rounded-full'>Delete</button>
-                    </div>
+                    <div className=' pl-20 row-span-1'>
+                       <Link to={`/CustomerReviews/${product.id}`}><button className='border-none w-[150px] px-2 py-2 rounded-full'>Review</button></Link> 
+                       
+                    {/* </div>
+                    <div className=' pl-20 '> */}
+                        {/* <Link to={`/CustomerPurchases`}><button onclick= "" className='border-none w-[150px] px-2 py-2 rounded-full'>Back</button></Link> */}
                     </div>
                     </>
                     // <TableRow key={index}>
