@@ -27,6 +27,14 @@ import Discounts from "../../smeco_customer_app/src/pages/public_customer/Discou
 
 class App extends Component {
   render() {
+
+    let isLoggedIn = false;
+
+    if(parseInt(window.localStorage.getItem('customerId'))){
+      isLoggedIn = true;
+    }
+
+
     return (
       <BrowserRouter>
         <div>
@@ -42,22 +50,22 @@ class App extends Component {
             <Route path="/Rewards" element={<Rewards />} />
           </Routes>
 
-          <Routes>
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/customerShops" element={<CustomerShops />} />
-          <Route path="/customerProducts/:merchantId" element={<CustomerProducts />} />
-          <Route path="/customerPurchases" element={<CustomerPurchases />} />
-          <Route path="/customerRecords" element={<CustomerRecords />} />
-          <Route path="/purchaseHistory" element={<PurchaseHistory />} />
-          <Route path="/customerChat" element={<CustomerChat />} />
-          <Route path="/purchasedShopCard" element={<PurchasedShopCard />} />
-          <Route path="/customerReviews" element={<CustomerReview />} />
-          <Route path="/customerAddReviews" element={<CustomerAddReview/>}/>
-          <Route path="/customerProfile" element={<CustomerProfile/>}/>
-          <Route path="/customerUpdateProfile" element={<CustomerUpdateProfile/>}/>
+         { isLoggedIn && <Routes>
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/customerShops" element={<CustomerShops />} />
+            <Route path="/customerProducts/:merchantId" element={<CustomerProducts />} />
+            <Route path="/customerPurchases" element={<CustomerPurchases />} />
+            <Route path="/customerRecords" element={<CustomerRecords />} />
+            <Route path="/purchaseHistory" element={<PurchaseHistory />} />
+            <Route path="/customerChat" element={<CustomerChat />} />
+            <Route path="/purchasedShopCard" element={<PurchasedShopCard />} />
+            <Route path="/customerReviews" element={<CustomerReview />} />
+            <Route path="/customerAddReviews" element={<CustomerAddReview/>}/>
+            <Route path="/customerProfile" element={<CustomerProfile/>}/>
+            <Route path="/customerUpdateProfile" element={<CustomerUpdateProfile/>}/>
           
           
-          </Routes>
+          </Routes>}
         </div>
       </BrowserRouter>
     );

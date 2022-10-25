@@ -49,7 +49,7 @@ const ShopCart2 = () => {
               <a href="#" onClick={() => handleClick(merchant.id)}>
                 <div className="box product" key={index}>
                   <div className="img">
-                    <img src='./shop/shop2.png' alt="" width="100%" />
+                    <img src={`./shop/${merchant.shopImage}`} alt="" width="100%" />
                   </div>
                   <br />
                   <h4>{merchant.shopName}</h4>
