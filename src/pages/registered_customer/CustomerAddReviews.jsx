@@ -25,6 +25,7 @@ import logoImg from "../../assets/logo.png";
 //import { useEffect, useState } from "react";
 //import ApiIndex from "../../api/index";
 import signup from "../../assets/sign.png";
+import StarRatingCard from "../../components/StarRatingCard";
 const colors = {
   orange: "#FFBA5A",
   grey: "#a9a9a9"
@@ -46,7 +47,7 @@ const CustomerAddReviews = () => {
 
       const formData = {
           description : state.description,
-          rating:5
+          rating:state.rating,
         
       }
       console.log(formData);
@@ -84,10 +85,10 @@ const CustomerAddReviews = () => {
              <div className='pt-20'>
               
                   
-                  <p className='text-3xl text-center'><b> Rolex watch</b><br></br><br /></p>
+                  {/* <p className='text-3xl text-center'><b> Rolex watch</b><br></br><br /></p> */}
                   </div>
                 
-                <div className='max-w-[1240px] mx-auto grid md:grid-rows-2 pb-20  pl-24'>
+                <div >
                 
       
       <br></br>
@@ -128,8 +129,13 @@ const CustomerAddReviews = () => {
                 id="description"
                 label="Add Your description Here"
                 name="description"
+                autoFocus
                 
               />
+              <Box>
+                <StarRatingCard/>
+                
+              </Box>
              
              
               
