@@ -102,6 +102,7 @@ export default function Login() {
 
       setTimeout(() => {
         navigate("/dashboard");
+        window.location.reload();
       }, 4000);
     } catch (error) {
       console.log(error);
