@@ -11,17 +11,17 @@ import "../top/style.css";
 import ApiIndex from "../../api/index";
 import merchants from "../../api/merchants";
 
-const Dcard = () => {
+const BuyGetCard = () => {
   const [products, setProducts] = useState([]);
   let { merchantId } = useParams();
 
   useEffect(() => {
-    getMerchantProducts();
+    getBuyGetOffers();
   }, []);
 
-  const getMerchantProducts = async () => {
+  const getBuyGetOffers = async () => {
     try {
-      const response = await ApiIndex.ProductApi.getProductsByMerchant(merchantId);
+      const response = await ApiIndex.ProductApi.getBuyGetOffers(merchantId);
       setProducts(response.data);
       console.log(response.data);
     }
@@ -43,7 +43,8 @@ const Dcard = () => {
                   </div>}
                   <img src={`/discount/${product.image}`} alt="" width="100%" />
                 </div>
-                <h4>{product.productName}</h4>
+                <h4>{product.productName}</h4><br />
+                <h4>{product.name}</h4>
                 <span>Rs. {product.price}</span>
                 <h4>{product.Shop}</h4>
                 <Modal />
@@ -56,4 +57,4 @@ const Dcard = () => {
   );
 };
 
-export default Dcard;
+export default BuyGetCard;

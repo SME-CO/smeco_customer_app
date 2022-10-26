@@ -12,6 +12,8 @@ import grinder1 from "../../assets/grinder1.jpg";
 import clock1 from "../../assets/clock1.jpg";
 import watch2 from "../../assets/watch2.jpg";
 import DiscountAll from "../../components/discount/DiscountAll";
+import BuyGetAll from "../../components/discount/BuyGetAll";
+import BundleOffers from "../../components/discount/BundleOffers";
 
 const CustomerProducts = () => {
   return (
@@ -19,6 +21,8 @@ const CustomerProducts = () => {
       <Navbarr />
       <div className="pt-24 md:ml-60">
         <DiscountAll />
+        <BuyGetAll/>
+        <BundleOffers/>
       </div>
       <SideNavr />
     </div>

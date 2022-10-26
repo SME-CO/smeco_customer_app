@@ -36,7 +36,7 @@ const ProductCard = () => {
 
     const getProducts = async () => {
       try {
-          const response = await ApiIndex.ProductApi.getProducts();
+          const response = await ApiIndex.ProductApi.getPurchasedProducts();
           setProductList(response.data);
       }
       catch (error) {
@@ -46,12 +46,13 @@ const ProductCard = () => {
 
     useEffect(() => {
         getProducts();
-    },[getProducts]);
+    },[]);
     return (
         <div>
            <div>
 
             <p className='text-3xl text-center font-bold '>Your Purchased Products</p>
+            <br />
                 
                 {/* <img className='h-30 w-30 shadow-2xl flex flex-col' src={watch1} alt="/" /> */}
                
@@ -62,13 +63,13 @@ const ProductCard = () => {
                   .map((product, index) => (
                     <>
                     <div className='max-w-[1240px] mx-auto gap-4 grid md:grid-cols-5 pl-8 pt-12 pl-44 p-4 '>
-                    <img className='h-50 w-50 shadow-2xl flex flex-col pl-10' src={product.image} alt="/" />
+                    <img className='h-50 w-50 shadow-2xl flex flex-col pl-10' src={`./discount/${product.image}`} alt="/" />
                     <div className='flex flex-col justify-center col-span-2 pl-12'>
                         <p className='text-xl'><b>Name :</b> {product.productName}<br /></p>
-                        <p className='text-xl  pt-3'><b>Shop :</b>{product.shopName} <br /></p>
-                        <p className='text-xl  pt-3'><b>Price :</b>{product.price} <br /></p>
-                        <p className='text-xl  pt-3'><b>Type :</b> {product.catagory}<br /></p>
-                        <p className='text-xl  pt-3'><b>Description :</b> {product.description}<br /></p>
+                        <p className='text-xl  pt-3'><b>Shop :</b> {product.merchantName} <br /></p>
+                        <p className='text-xl  pt-3'><b>Quantity :</b> {product.quantity} <br /></p>
+                        <p className='text-xl  pt-3'><b>Unit Price :</b> Rs. {product.unitPrice}<br /></p>
+                        <p className='text-xl  pt-3'><b>Total Amount :</b> Rs. {product.amount}<br /></p>
                     </div>
                     
                     </div>

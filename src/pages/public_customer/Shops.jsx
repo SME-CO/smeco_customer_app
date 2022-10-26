@@ -12,6 +12,7 @@ import Discount from "../../components/discount/Discount";
 import ShopAll from "../../components/shops/ShopAll";
 import Search from "../../components/Search";
 import SearchIcon from "@mui/icons-material/Search";
+import ShopAllPublic from "../../components/shops/ShopAllPublic";
 const Shops = () => {
   return (
     <div>
@@ -45,7 +46,7 @@ const Shops = () => {
 
       <br></br>
 
-      <ShopAll />
+      <ShopAllPublic />
       {/* <Shop />
       <Shop /> */}
 
