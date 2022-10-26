@@ -5,12 +5,29 @@ import img from '../assets/avatar.png'
 import { NavLink, Link } from 'react-router-dom';
 import BackIcon from "@mui/icons-material/ArrowBack";
 import NotificationIcon from "@mui/icons-material/Notifications";
+import { useEffect } from "react";
 
 
 const Navbarr = () => {
 
     const [nav, setNav] = useState(false)
+    const [isLoggedin, setIsLoggedin] = useState(false)
     const handleClick = () => setNav(!nav)
+
+    const handleLogout =  () => {
+        window.localStorage.clear();
+    }
+
+    useEffect(() => {
+        if(parseInt(window.localStorage.getItem('customerId'))){
+           setIsLoggedin(true)
+        }else{
+            setIsLoggedin(false)
+        }
+    },[isLoggedin])
+
+
+    
     return (
 
         <div className="w-screen h-[80px] z-10 bg-[#03045E] fixed drop-shadow-lg  ">
@@ -22,11 +39,15 @@ const Navbarr = () => {
                         <li><NavLink to="/products">Products</NavLink></li>
                         <li><NavLink to="/aboutus">About Us</NavLink></li>
                         <li><NavLink to="/faq">FAQ</NavLink></li>
+                        {isLoggedin && <li><NavLink to="/dashboard">Dashboard</NavLink></li>}
+
                     </ul>
                 </div>
                 <div className='hidden md:flex pr-10'>
-                    <Link to ="/Notification"><NotificationIcon className="!w-12 !h-12 text-white pr-6" /></Link>
+                    {/* <Link to ="/Notification"><NotificationIcon className="!w-12 !h-12 text-white pr-6" /></Link> */}
+                    <Link to= "/" onClick={handleLogout}><p className="pt-3 text-white pr-6" >Logout</p></Link>
                     <Link to= "/CustomerProfile"><p className="pt-3 text-white pr-6" >Hello, {window.localStorage.getItem('customerName')}</p></Link>
+                   
                     <div className="pr-5">
                         <img className='w-[50px] h-[50px]mx-auto rounded-full' src={img} alt="" />
                     </div>

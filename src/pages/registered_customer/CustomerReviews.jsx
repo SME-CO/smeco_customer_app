@@ -58,7 +58,7 @@ const CustomerReviews = () => {
     try {
       const response = await ApiIndex.ReviewApi.getReviewsById(productId);
       setReviewList(response.data);
-      console.log()
+      console.log(response.data)
     }
     catch (error) {
       console.error(error);
@@ -108,7 +108,7 @@ const CustomerReviews = () => {
                 .map((review, index) => (
                   <TableRow key={index}>
                     <TableCell align="left">{review.description}</TableCell>
-                    <TableCell align="center">the rating is:{review.rating}
+                    <TableCell align="center">the rating is: {review.rating}
                       <div >
 
                         <FaStar

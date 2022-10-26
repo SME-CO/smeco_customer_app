@@ -2,10 +2,24 @@ import React, { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import logoImg from "../assets/logo.png";
 import { NavLink, Link } from "react-router-dom";
+import { useEffect } from "react";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const handleClick = () => setNav(!nav);
+
+
+  const [isLoggedin, setIsLoggedin] = useState(false)
+  
+
+  useEffect(() => {
+      if(parseInt(window.localStorage.getItem('customerId'))){
+          setIsLoggedin(true)
+      }else{
+          setIsLoggedin(false)
+      }
+  },[isLoggedin])
+
   return (
     <div className="w-screen h-[70px] z-10 bg bg-[#ffff] md:drop-shadow-xl fixed drop-shadlow-lg">
       <div className="px-2 flex justify-between items-center w-full h-full">
@@ -66,6 +80,8 @@ const Navbar = () => {
                 FAQ
               </NavLink>
             </li>
+
+            {isLoggedin && <li><NavLink to="/dashboard">Dashboard</NavLink></li>}
           </ul>
         </div>
 

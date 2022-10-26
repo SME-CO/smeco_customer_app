@@ -1,7 +1,7 @@
 import axios from "../axios"
 
 const  getReviewsById = (productId) => {
-    return axios.get(`product/reviews/${productId}`);
+    return axios.get(`reviews/product/${productId}`);
 }
 
 const  createReview = (data) => {

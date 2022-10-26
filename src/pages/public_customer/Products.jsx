@@ -15,84 +15,98 @@ const Products = () => {
   const [productsList, setProductList] = useState([]);
   const [selectedCategory, setCategory] = useState('');
 
-  useEffect( () => {
+  useEffect(() => {
     syncProductsByCategory(selectedCategory);
+    if (selectedCategory == '') {
+      getAllProducts();
+    }
   }, [selectedCategory]);
 
 
 
-  
-    const data = [
-      {
-        cateImg: "./category/cat1.png",
-        cateName: "Beauty",
-      },
-      {
-        cateImg: "./category/cat7.png",
-        cateName: "Health & Beauty",
-      },
-      {
-        cateImg: "./category/cat2.png",
-        cateName: "Cell Phones & Accessories",
-      },
-      {
-        cateImg: "./category/cat4.png",
-        cateName: "Home & Garden",
-      },
-      {
-        cateImg: "./category/cat3.png",
-        cateName: "Appliances",
-      },
-  
-      {
-        cateImg: "./category/cat5.png",
-        cateName: "Gifts",
-      },
-      {
-        cateImg: "./category/cat6.png",
-        cateName: "Music",
-      },
-  
-      {
-        cateImg: "./category/cat8.png",
-        cateName: "Pets",
-      },
-      {
-        cateImg: "./category/cat9.png",
-        cateName: "Baby Toys",
-      },
-      {
-        cateImg: "./category/cat10.png",
-        cateName: "Groceries",
-      },
-      {
-        cateImg: "./category/cat11.png",
-        cateName: "Books",
-      },
-    ];
 
-    const syncProductsByCategory = async (category) => {
-      try {
-          const response = await ApiIndex.ProductApi.getProductsByCategory(category);
-          setProductList(response.data);
-          console.log(productsList)
-      }
-      catch (error) {
-          console.log(error);
-      }
-    };
+  const data = [
+    {
+      cateImg: "./category/cat1.png",
+      cateName: "Beauty",
+    },
+    {
+      cateImg: "./category/cat7.png",
+      cateName: "Health & Beauty",
+    },
+    {
+      cateImg: "./category/cat2.png",
+      cateName: "Cell Phones & Accessories",
+    },
+    {
+      cateImg: "./category/cat4.png",
+      cateName: "Home & Garden",
+    },
+    {
+      cateImg: "./category/cat3.png",
+      cateName: "Appliances",
+    },
 
+    {
+      cateImg: "./category/cat5.png",
+      cateName: "Gifts",
+    },
+    {
+      cateImg: "./category/cat6.png",
+      cateName: "Music",
+    },
 
-    const handleCatClick = (category) => {
-      try {
-        setCategory(category);
-       }
-      catch (error) {
-        console.error(error);
-      }
+    {
+      cateImg: "./category/cat8.png",
+      cateName: "Pets",
+    },
+    {
+      cateImg: "./category/cat9.png",
+      cateName: "Baby Toys",
+    },
+    {
+      cateImg: "./category/cat10.png",
+      cateName: "Groceries",
+    },
+    {
+      cateImg: "./category/cat11.png",
+      cateName: "Books",
+    },
+  ];
+
+  const syncProductsByCategory = async (category) => {
+    try {
+      const response = await ApiIndex.ProductApi.getProductsByCategory(category);
+      setProductList(response.data);
+      console.log(productsList)
     }
+    catch (error) {
+      console.log(error);
+    }
+  };
 
-    
+  const getAllProducts = async () => {
+    try {
+      const response = await ApiIndex.ProductApi.getProducts();
+      setProductList(response.data);
+      console.log(productsList)
+    }
+    catch (error) {
+      console.log(error);
+    }
+  };
+
+
+  const handleCatClick = (category) => {
+    try {
+      setCategory(category);
+    }
+    catch (error) {
+      console.error(error);
+    }
+  }
+
+
 
 
 
@@ -155,7 +169,7 @@ const Products = () => {
                 return (
                   <div className="box" key={index}>
                     <div className="img">
-                      <img src='./arrivals/arrivals1.png' alt="" />
+                      <img src={`./discounts/${val.image}`} alt="" />
                     </div>
                     <h4>{val.productName}</h4>
                     <span>Rs {val.price}</span>
